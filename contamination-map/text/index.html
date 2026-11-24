@@ -72,7 +72,7 @@
     </ul>
     <p class="small muted">Rank among the models scored on each dataset. Every column comes from a single source that evaluated all its models the same way; the source, metric, protocol and licence are given on each benchmark page. Columns without such a source stay empty.</p>
   </div>
-  <div class="table-wrap">
+  <div class="table-wrap map-wrap">
   <table class="map mode-contamination">
     <thead>
       <tr>
@@ -80,6 +80,7 @@
         <th class="group" colspan="8"><a href="../../contamination-map/benchmarks/llm-classic.html" title="Classic LLM benchmarks" style="width: calc(8 * 18px - 10px)">Classic LLM benchmarks</a></th>
         <th class="group" colspan="7"><a href="../../contamination-map/benchmarks/llm-recent.html" title="Recent LLM benchmarks" style="width: calc(7 * 18px - 10px)">Recent LLM benchmarks</a></th>
         <th class="group" colspan="7"><a href="../../contamination-map/benchmarks/llm-multimodal.html" title="Multimodal LLM benchmarks" style="width: calc(7 * 18px - 10px)">Multimodal LLM benchmarks</a></th>
+        <th class="ss" colspan="3"></th>
       </tr>
       <tr>
         <th class="corner muted">Model</th>
@@ -105,7 +106,9 @@
         <th class="col" data-col="llm-multimodal--docvqa" title="DocVQA"><a href="../../contamination-map/datasets/docvqa.html">DocVQA</a></th>
         <th class="col" data-col="llm-multimodal--ai2d" title="AI2D (AI2 Diagrams)"><a href="../../contamination-map/datasets/ai2d.html">AI2D</a></th>
         <th class="col" data-col="llm-multimodal--charxiv" title="CharXiv"><a href="../../contamination-map/datasets/charxiv.html">CharXiv</a></th>
-      </tr>
+        <th class="col stat ss" data-col="known" title="Share of the model's cells whose level is known (not Unknown)"><span>Known</span></th>
+        <th class="col stat" data-col="contaminated" title="Share of the model's cells where test data was seen or possibly seen"><span>Contaminated</span></th>
+<th class="col stat stat-score" data-col="avg-rank" title="Average rank over the datasets with a score: 0 = best, 1 = worst"><span>Avg. rank</span></th>      </tr>
     </thead>
     <tbody>
       <tr>
@@ -132,6 +135,9 @@
         <td class="sq na" title="BLOOM does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="BLOOM does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="BLOOM does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="BLOOM" data-reason="0 of 15 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="BLOOM" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/claude-3.html" title="Claude 3 (Opus, Sonnet, Haiku)">Claude 3 (Opus, Sonnet, Haiku)</a></th>
@@ -157,6 +163,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/claude-3.html#llm-multimodal--docvqa" aria-label="Claude 3 (Opus, Sonnet, Haiku) × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Claude 3 (Opus, Sonnet, Haiku) × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="4" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/claude-3.html#llm-multimodal--ai2d" aria-label="Claude 3 (Opus, Sonnet, Haiku) × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Claude 3 (Opus, Sonnet, Haiku) × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail" data-score="Rank 12 of 13 on this dataset · Accuracy (%) 70.6 (OpenVLM Leaderboard (OpenCompass, VLMEvalKit))"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/claude-3.html#llm-multimodal--charxiv" aria-label="Claude 3 (Opus, Sonnet, Haiku) × CharXiv: Not seen" data-col="llm-multimodal--charxiv" data-level="not_seen" data-label="Not seen" data-pair="Claude 3 (Opus, Sonnet, Haiku) × CharXiv (Multimodal LLM benchmarks)" data-reason="its test items were published from 2024-06-26, after the model&#39;s stated training-data cutoff (2023-08-01)"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.136" data-col="known" data-tip="Known: 14%" data-pair="Claude 3 (Opus, Sonnet, Haiku)" data-reason="3 of 22 benchmark datasets have a known level (not Unknown).">14%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Claude 3 (Opus, Sonnet, Haiku)" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-3 on-dark" data-col="avg-rank" data-tip="Average rank: 0.82" data-pair="Claude 3 (Opus, Sonnet, Haiku)" data-reason="Mean rank over 5 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.82</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/claude-3-5-sonnet.html" title="Claude 3.5 Sonnet">Claude 3.5 Sonnet</a></th>
@@ -182,6 +191,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/claude-3-5-sonnet.html#llm-multimodal--docvqa" aria-label="Claude 3.5 Sonnet × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Claude 3.5 Sonnet × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="3" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/claude-3-5-sonnet.html#llm-multimodal--ai2d" aria-label="Claude 3.5 Sonnet × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Claude 3.5 Sonnet × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail" data-score="Rank 10 of 13 on this dataset · Accuracy (%) 81.2 (OpenVLM Leaderboard (OpenCompass, VLMEvalKit))"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/claude-3-5-sonnet.html#llm-multimodal--charxiv" aria-label="Claude 3.5 Sonnet × CharXiv: Not seen" data-col="llm-multimodal--charxiv" data-level="not_seen" data-label="Not seen" data-pair="Claude 3.5 Sonnet × CharXiv (Multimodal LLM benchmarks)" data-reason="its test items were published from 2024-06-26, after the model&#39;s stated training-data cutoff (2024-04-01)"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.091" data-col="known" data-tip="Known: 9%" data-pair="Claude 3.5 Sonnet" data-reason="2 of 22 benchmark datasets have a known level (not Unknown).">9%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Claude 3.5 Sonnet" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-3 on-dark" data-col="avg-rank" data-tip="Average rank: 0.65" data-pair="Claude 3.5 Sonnet" data-reason="Mean rank over 6 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.65</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/claude-3-7-sonnet.html" title="Claude 3.7 Sonnet">Claude 3.7 Sonnet</a></th>
@@ -207,6 +219,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/claude-3-7-sonnet.html#llm-multimodal--docvqa" aria-label="Claude 3.7 Sonnet × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Claude 3.7 Sonnet × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="2" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/claude-3-7-sonnet.html#llm-multimodal--ai2d" aria-label="Claude 3.7 Sonnet × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Claude 3.7 Sonnet × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail" data-score="Rank 8 of 13 on this dataset · Accuracy (%) 82.5 (OpenVLM Leaderboard (OpenCompass, VLMEvalKit))"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/claude-3-7-sonnet.html#llm-multimodal--charxiv" aria-label="Claude 3.7 Sonnet × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="Claude 3.7 Sonnet × CharXiv (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.045" data-col="known" data-tip="Known: 5%" data-pair="Claude 3.7 Sonnet" data-reason="1 of 22 benchmark datasets have a known level (not Unknown).">5%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Claude 3.7 Sonnet" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.56" data-pair="Claude 3.7 Sonnet" data-reason="Mean rank over 6 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.56</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/claude-fable-5.html" title="Claude Fable 5 / Claude Mythos 5">Claude Fable 5 / Claude Mythos 5</a></th>
@@ -232,6 +247,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/claude-fable-5.html#llm-multimodal--docvqa" aria-label="Claude Fable 5 / Claude Mythos 5 × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Claude Fable 5 / Claude Mythos 5 × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/claude-fable-5.html#llm-multimodal--ai2d" aria-label="Claude Fable 5 / Claude Mythos 5 × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Claude Fable 5 / Claude Mythos 5 × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/claude-fable-5.html#llm-multimodal--charxiv" aria-label="Claude Fable 5 / Claude Mythos 5 × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="Claude Fable 5 / Claude Mythos 5 × CharXiv (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="Claude Fable 5 / Claude Mythos 5" data-reason="0 of 22 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Claude Fable 5 / Claude Mythos 5" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.18" data-pair="Claude Fable 5 / Claude Mythos 5" data-reason="Mean rank over 1 dataset with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.18</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/claude-mythos-preview.html" title="Claude Mythos Preview">Claude Mythos Preview</a></th>
@@ -257,6 +275,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/claude-mythos-preview.html#llm-multimodal--docvqa" aria-label="Claude Mythos Preview × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Claude Mythos Preview × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/claude-mythos-preview.html#llm-multimodal--ai2d" aria-label="Claude Mythos Preview × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Claude Mythos Preview × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-test_seen" data-shade="none" style="--mark: var(--lvl-test_seen)"><a href="../../contamination-map/models/claude-mythos-preview.html#llm-multimodal--charxiv" aria-label="Claude Mythos Preview × CharXiv: Test data seen" data-col="llm-multimodal--charxiv" data-level="test_seen" data-label="Test data seen" data-pair="Claude Mythos Preview × CharXiv (Multimodal LLM benchmarks)" data-reason="a contamination analysis found test examples in the pre-training data (The developer found the majority of CharXiv Reasoning question-answer text pairs in the full pretraining mix by exact-match search, even though evaluation images were filtered at image level. The evaluated items are 1,000 validation-split questions. On a 100-item manually perturbed remix, the developer judged memorisation effects limited.); this contradicts a statement that the data was excluded"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.182" data-col="known" data-tip="Known: 18%" data-pair="Claude Mythos Preview" data-reason="4 of 22 benchmark datasets have a known level (not Unknown).">18%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.136" data-col="contaminated" data-tip="Contaminated: 14%" data-pair="Claude Mythos Preview" data-reason="Test data seen or possibly seen on 3 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">14%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/claude-4.html" title="Claude Opus 4 and Claude Sonnet 4">Claude Opus 4 and Claude Sonnet 4</a></th>
@@ -282,6 +303,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/claude-4.html#llm-multimodal--docvqa" aria-label="Claude Opus 4 and Claude Sonnet 4 × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Claude Opus 4 and Claude Sonnet 4 × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/claude-4.html#llm-multimodal--ai2d" aria-label="Claude Opus 4 and Claude Sonnet 4 × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Claude Opus 4 and Claude Sonnet 4 × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/claude-4.html#llm-multimodal--charxiv" aria-label="Claude Opus 4 and Claude Sonnet 4 × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="Claude Opus 4 and Claude Sonnet 4 × CharXiv (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="Claude Opus 4 and Claude Sonnet 4" data-reason="0 of 22 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Claude Opus 4 and Claude Sonnet 4" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.56" data-pair="Claude Opus 4 and Claude Sonnet 4" data-reason="Mean rank over 3 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.56</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/claude-opus-4-5.html" title="Claude Opus 4.5">Claude Opus 4.5</a></th>
@@ -307,6 +331,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/claude-opus-4-5.html#llm-multimodal--docvqa" aria-label="Claude Opus 4.5 × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Claude Opus 4.5 × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/claude-opus-4-5.html#llm-multimodal--ai2d" aria-label="Claude Opus 4.5 × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Claude Opus 4.5 × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/claude-opus-4-5.html#llm-multimodal--charxiv" aria-label="Claude Opus 4.5 × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="Claude Opus 4.5 × CharXiv (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.136" data-col="known" data-tip="Known: 14%" data-pair="Claude Opus 4.5" data-reason="3 of 22 benchmark datasets have a known level (not Unknown).">14%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.091" data-col="contaminated" data-tip="Contaminated: 9%" data-pair="Claude Opus 4.5" data-reason="Test data seen or possibly seen on 2 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">9%</td>
+        <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.21" data-pair="Claude Opus 4.5" data-reason="Mean rank over 2 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.21</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/claude-opus-5.html" title="Claude Opus 5">Claude Opus 5</a></th>
@@ -332,6 +359,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/claude-opus-5.html#llm-multimodal--docvqa" aria-label="Claude Opus 5 × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Claude Opus 5 × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/claude-opus-5.html#llm-multimodal--ai2d" aria-label="Claude Opus 5 × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Claude Opus 5 × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/claude-opus-5.html#llm-multimodal--charxiv" aria-label="Claude Opus 5 × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="Claude Opus 5 × CharXiv (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="Claude Opus 5" data-reason="0 of 22 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Claude Opus 5" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-0 on-dark" data-col="avg-rank" data-tip="Average rank: 0.04" data-pair="Claude Opus 5" data-reason="Mean rank over 1 dataset with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.04</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/claude-sonnet-5.html" title="Claude Sonnet 5">Claude Sonnet 5</a></th>
@@ -357,6 +387,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/claude-sonnet-5.html#llm-multimodal--docvqa" aria-label="Claude Sonnet 5 × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Claude Sonnet 5 × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/claude-sonnet-5.html#llm-multimodal--ai2d" aria-label="Claude Sonnet 5 × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Claude Sonnet 5 × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/claude-sonnet-5.html#llm-multimodal--charxiv" aria-label="Claude Sonnet 5 × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="Claude Sonnet 5 × CharXiv (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="Claude Sonnet 5" data-reason="0 of 22 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Claude Sonnet 5" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.33" data-pair="Claude Sonnet 5" data-reason="Mean rank over 1 dataset with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.33</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/dclm-7b.html" title="DCLM-7B (DCLM-Baseline-7B)">DCLM-7B (DCLM-Baseline-7B)</a></th>
@@ -382,6 +415,9 @@
         <td class="sq na" title="DCLM-7B (DCLM-Baseline-7B) does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="DCLM-7B (DCLM-Baseline-7B) does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="DCLM-7B (DCLM-Baseline-7B) does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.533" data-col="known" data-tip="Known: 53%" data-pair="DCLM-7B (DCLM-Baseline-7B)" data-reason="8 of 15 benchmark datasets have a known level (not Unknown).">53%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.467" data-col="contaminated" data-tip="Contaminated: 47%" data-pair="DCLM-7B (DCLM-Baseline-7B)" data-reason="Test data seen or possibly seen on 7 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">47%</td>
+        <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.54" data-pair="DCLM-7B (DCLM-Baseline-7B)" data-reason="Mean rank over 5 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.54</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/dclm-7b-it.html" title="DCLM-7B-IT (DCLM-IT-7B)">DCLM-7B-IT (DCLM-IT-7B)</a></th>
@@ -407,6 +443,9 @@
         <td class="sq na" title="DCLM-7B-IT (DCLM-IT-7B) does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="DCLM-7B-IT (DCLM-IT-7B) does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="DCLM-7B-IT (DCLM-IT-7B) does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.267" data-col="known" data-tip="Known: 27%" data-pair="DCLM-7B-IT (DCLM-IT-7B)" data-reason="4 of 15 benchmark datasets have a known level (not Unknown).">27%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.267" data-col="contaminated" data-tip="Contaminated: 27%" data-pair="DCLM-7B-IT (DCLM-IT-7B)" data-reason="Test data seen or possibly seen on 4 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">27%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/deepseek-r1.html" title="DeepSeek-R1">DeepSeek-R1</a></th>
@@ -432,6 +471,9 @@
         <td class="sq na" title="DeepSeek-R1 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="DeepSeek-R1 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="DeepSeek-R1 does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.533" data-col="known" data-tip="Known: 53%" data-pair="DeepSeek-R1" data-reason="8 of 15 benchmark datasets have a known level (not Unknown).">53%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="DeepSeek-R1" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.54" data-pair="DeepSeek-R1" data-reason="Mean rank over 2 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.54</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/deepseek-r1-0528.html" title="DeepSeek-R1-0528">DeepSeek-R1-0528</a></th>
@@ -457,6 +499,9 @@
         <td class="sq na" title="DeepSeek-R1-0528 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="DeepSeek-R1-0528 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="DeepSeek-R1-0528 does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="DeepSeek-R1-0528" data-reason="0 of 15 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="DeepSeek-R1-0528" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.37" data-pair="DeepSeek-R1-0528" data-reason="Mean rank over 2 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.37</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/deepseek-r1-distill.html" title="DeepSeek-R1-Distill">DeepSeek-R1-Distill</a></th>
@@ -482,6 +527,9 @@
         <td class="sq na" title="DeepSeek-R1-Distill does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="DeepSeek-R1-Distill does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="DeepSeek-R1-Distill does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="DeepSeek-R1-Distill" data-reason="0 of 15 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="DeepSeek-R1-Distill" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-3 on-dark" data-col="avg-rank" data-tip="Average rank: 0.69" data-pair="DeepSeek-R1-Distill" data-reason="Mean rank over 2 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.69</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/deepseek-v3.html" title="DeepSeek-V3">DeepSeek-V3</a></th>
@@ -507,6 +555,9 @@
         <td class="sq na" title="DeepSeek-V3 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="DeepSeek-V3 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="DeepSeek-V3 does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.067" data-col="known" data-tip="Known: 7%" data-pair="DeepSeek-V3" data-reason="1 of 15 benchmark datasets have a known level (not Unknown).">7%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="DeepSeek-V3" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.55" data-pair="DeepSeek-V3" data-reason="Mean rank over 3 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.55</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/deepseek-v3-0324.html" title="DeepSeek-V3-0324">DeepSeek-V3-0324</a></th>
@@ -532,6 +583,9 @@
         <td class="sq na" title="DeepSeek-V3-0324 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="DeepSeek-V3-0324 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="DeepSeek-V3-0324 does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="DeepSeek-V3-0324" data-reason="0 of 15 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="DeepSeek-V3-0324" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-3 on-dark" data-col="avg-rank" data-tip="Average rank: 0.65" data-pair="DeepSeek-V3-0324" data-reason="Mean rank over 2 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.65</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/deepseek-v3.1.html" title="DeepSeek-V3.1">DeepSeek-V3.1</a></th>
@@ -557,6 +611,9 @@
         <td class="sq na" title="DeepSeek-V3.1 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="DeepSeek-V3.1 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="DeepSeek-V3.1 does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="DeepSeek-V3.1" data-reason="0 of 15 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="DeepSeek-V3.1" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.24" data-pair="DeepSeek-V3.1" data-reason="Mean rank over 1 dataset with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.24</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/deepseek-v3.2.html" title="DeepSeek-V3.2">DeepSeek-V3.2</a></th>
@@ -582,6 +639,9 @@
         <td class="sq na" title="DeepSeek-V3.2 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="DeepSeek-V3.2 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="DeepSeek-V3.2 does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="DeepSeek-V3.2" data-reason="0 of 15 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="DeepSeek-V3.2" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.20" data-pair="DeepSeek-V3.2" data-reason="Mean rank over 2 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.20</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/deepseek-v3.2-exp.html" title="DeepSeek-V3.2-Exp">DeepSeek-V3.2-Exp</a></th>
@@ -607,6 +667,9 @@
         <td class="sq na" title="DeepSeek-V3.2-Exp does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="DeepSeek-V3.2-Exp does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="DeepSeek-V3.2-Exp does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="DeepSeek-V3.2-Exp" data-reason="0 of 15 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="DeepSeek-V3.2-Exp" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.19" data-pair="DeepSeek-V3.2-Exp" data-reason="Mean rank over 1 dataset with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.19</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/deepseek-v4.html" title="DeepSeek-V4 (Pro / Flash)">DeepSeek-V4 (Pro / Flash)</a></th>
@@ -632,6 +695,9 @@
         <td class="sq na" title="DeepSeek-V4 (Pro / Flash) does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="DeepSeek-V4 (Pro / Flash) does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="DeepSeek-V4 (Pro / Flash) does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="DeepSeek-V4 (Pro / Flash)" data-reason="0 of 15 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="DeepSeek-V4 (Pro / Flash)" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-0 on-dark" data-col="avg-rank" data-tip="Average rank: 0.06" data-pair="DeepSeek-V4 (Pro / Flash)" data-reason="Mean rank over 2 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.06</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/deepseek-v4.1-flash.html" title="DeepSeek-V4.1-Flash">DeepSeek-V4.1-Flash</a></th>
@@ -657,6 +723,9 @@
         <td class="sq na" title="DeepSeek-V4.1-Flash does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="DeepSeek-V4.1-Flash does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="DeepSeek-V4.1-Flash does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="DeepSeek-V4.1-Flash" data-reason="0 of 15 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="DeepSeek-V4.1-Flash" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-0 on-dark" data-col="avg-rank" data-tip="Average rank: 0.09" data-pair="DeepSeek-V4.1-Flash" data-reason="Mean rank over 1 dataset with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.09</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/gemini-1-5.html" title="Gemini 1.5 (Pro, Flash)">Gemini 1.5 (Pro, Flash)</a></th>
@@ -682,6 +751,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gemini-1-5.html#llm-multimodal--docvqa" aria-label="Gemini 1.5 (Pro, Flash) × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Gemini 1.5 (Pro, Flash) × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="2" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gemini-1-5.html#llm-multimodal--ai2d" aria-label="Gemini 1.5 (Pro, Flash) × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Gemini 1.5 (Pro, Flash) × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail" data-score="Rank 7 of 13 on this dataset · Accuracy (%) 83.3 (OpenVLM Leaderboard (OpenCompass, VLMEvalKit))"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/gemini-1-5.html#llm-multimodal--charxiv" aria-label="Gemini 1.5 (Pro, Flash) × CharXiv: Not seen" data-col="llm-multimodal--charxiv" data-level="not_seen" data-label="Not seen" data-pair="Gemini 1.5 (Pro, Flash) × CharXiv (Multimodal LLM benchmarks)" data-reason="its test items were published from 2024-06-26, after the model&#39;s stated training-data cutoff (2023-11-01)"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.136" data-col="known" data-tip="Known: 14%" data-pair="Gemini 1.5 (Pro, Flash)" data-reason="3 of 22 benchmark datasets have a known level (not Unknown).">14%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Gemini 1.5 (Pro, Flash)" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.41" data-pair="Gemini 1.5 (Pro, Flash)" data-reason="Mean rank over 5 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.41</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/gemini-2-5.html" title="Gemini 2.5 (Pro, Flash)">Gemini 2.5 (Pro, Flash)</a></th>
@@ -707,6 +779,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gemini-2-5.html#llm-multimodal--docvqa" aria-label="Gemini 2.5 (Pro, Flash) × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Gemini 2.5 (Pro, Flash) × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gemini-2-5.html#llm-multimodal--ai2d" aria-label="Gemini 2.5 (Pro, Flash) × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Gemini 2.5 (Pro, Flash) × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gemini-2-5.html#llm-multimodal--charxiv" aria-label="Gemini 2.5 (Pro, Flash) × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="Gemini 2.5 (Pro, Flash) × CharXiv (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.045" data-col="known" data-tip="Known: 5%" data-pair="Gemini 2.5 (Pro, Flash)" data-reason="1 of 22 benchmark datasets have a known level (not Unknown).">5%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Gemini 2.5 (Pro, Flash)" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.51" data-pair="Gemini 2.5 (Pro, Flash)" data-reason="Mean rank over 3 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.51</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/gemini-3-pro.html" title="Gemini 3 Pro">Gemini 3 Pro</a></th>
@@ -732,6 +807,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gemini-3-pro.html#llm-multimodal--docvqa" aria-label="Gemini 3 Pro × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Gemini 3 Pro × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gemini-3-pro.html#llm-multimodal--ai2d" aria-label="Gemini 3 Pro × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Gemini 3 Pro × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gemini-3-pro.html#llm-multimodal--charxiv" aria-label="Gemini 3 Pro × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="Gemini 3 Pro × CharXiv (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.045" data-col="known" data-tip="Known: 5%" data-pair="Gemini 3 Pro" data-reason="1 of 22 benchmark datasets have a known level (not Unknown).">5%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Gemini 3 Pro" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.19" data-pair="Gemini 3 Pro" data-reason="Mean rank over 3 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.19</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/gemini-4-argon.html" title="Gemini 4 Argon">Gemini 4 Argon</a></th>
@@ -757,6 +835,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gemini-4-argon.html#llm-multimodal--docvqa" aria-label="Gemini 4 Argon × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Gemini 4 Argon × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gemini-4-argon.html#llm-multimodal--ai2d" aria-label="Gemini 4 Argon × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Gemini 4 Argon × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gemini-4-argon.html#llm-multimodal--charxiv" aria-label="Gemini 4 Argon × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="Gemini 4 Argon × CharXiv (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="Gemini 4 Argon" data-reason="0 of 22 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Gemini 4 Argon" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-0 on-dark" data-col="avg-rank" data-tip="Average rank: 0.00" data-pair="Gemini 4 Argon" data-reason="Mean rank over 1 dataset with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.00</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/gemma-2.html" title="Gemma 2">Gemma 2</a></th>
@@ -782,6 +863,9 @@
         <td class="sq na" title="Gemma 2 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Gemma 2 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Gemma 2 does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="Gemma 2" data-reason="0 of 15 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Gemma 2" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.51" data-pair="Gemma 2" data-reason="Mean rank over 6 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.51</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/gemma-3.html" title="Gemma 3">Gemma 3</a></th>
@@ -807,6 +891,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gemma-3.html#llm-multimodal--docvqa" aria-label="Gemma 3 × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Gemma 3 × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="3" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gemma-3.html#llm-multimodal--ai2d" aria-label="Gemma 3 × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Gemma 3 × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail" data-score="Rank 9 of 13 on this dataset · Accuracy (%) 81.4 (OpenVLM Leaderboard (OpenCompass, VLMEvalKit))"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gemma-3.html#llm-multimodal--charxiv" aria-label="Gemma 3 × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="Gemma 3 × CharXiv (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.045" data-col="known" data-tip="Known: 5%" data-pair="Gemma 3" data-reason="1 of 22 benchmark datasets have a known level (not Unknown).">5%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Gemma 3" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.50" data-pair="Gemma 3" data-reason="Mean rank over 10 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.50</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/gemma-3n.html" title="Gemma 3n">Gemma 3n</a></th>
@@ -832,6 +919,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gemma-3n.html#llm-multimodal--docvqa" aria-label="Gemma 3n × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Gemma 3n × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gemma-3n.html#llm-multimodal--ai2d" aria-label="Gemma 3n × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Gemma 3n × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/gemma-3n.html#llm-multimodal--charxiv" aria-label="Gemma 3n × CharXiv: Not seen" data-col="llm-multimodal--charxiv" data-level="not_seen" data-label="Not seen" data-pair="Gemma 3n × CharXiv (Multimodal LLM benchmarks)" data-reason="its test items were published from 2024-06-26, after the model&#39;s stated training-data cutoff (2024-06-01)"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.091" data-col="known" data-tip="Known: 9%" data-pair="Gemma 3n" data-reason="2 of 22 benchmark datasets have a known level (not Unknown).">9%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Gemma 3n" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/gemma-4.html" title="Gemma 4">Gemma 4</a></th>
@@ -857,6 +947,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gemma-4.html#llm-multimodal--docvqa" aria-label="Gemma 4 × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Gemma 4 × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gemma-4.html#llm-multimodal--ai2d" aria-label="Gemma 4 × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Gemma 4 × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gemma-4.html#llm-multimodal--charxiv" aria-label="Gemma 4 × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="Gemma 4 × CharXiv (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.045" data-col="known" data-tip="Known: 5%" data-pair="Gemma 4" data-reason="1 of 22 benchmark datasets have a known level (not Unknown).">5%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Gemma 4" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.42" data-pair="Gemma 4" data-reason="Mean rank over 1 dataset with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.42</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/gpt-4.html" title="GPT-4">GPT-4</a></th>
@@ -882,6 +975,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gpt-4.html#llm-multimodal--docvqa" aria-label="GPT-4 × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="GPT-4 × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gpt-4.html#llm-multimodal--ai2d" aria-label="GPT-4 × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="GPT-4 × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/gpt-4.html#llm-multimodal--charxiv" aria-label="GPT-4 × CharXiv: Not seen" data-col="llm-multimodal--charxiv" data-level="not_seen" data-label="Not seen" data-pair="GPT-4 × CharXiv (Multimodal LLM benchmarks)" data-reason="its test items were published from 2024-06-26, after the model&#39;s stated training-data cutoff (2021-09-01)"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.591" data-col="known" data-tip="Known: 59%" data-pair="GPT-4" data-reason="13 of 22 benchmark datasets have a known level (not Unknown).">59%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.227" data-col="contaminated" data-tip="Contaminated: 23%" data-pair="GPT-4" data-reason="Test data seen or possibly seen on 5 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">23%</td>
+        <td class="stat stat-score rate score-3 on-dark" data-col="avg-rank" data-tip="Average rank: 0.64" data-pair="GPT-4" data-reason="Mean rank over 2 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.64</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/gpt-4o.html" title="GPT-4o">GPT-4o</a></th>
@@ -907,6 +1003,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gpt-4o.html#llm-multimodal--docvqa" aria-label="GPT-4o × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="GPT-4o × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="1" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gpt-4o.html#llm-multimodal--ai2d" aria-label="GPT-4o × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="GPT-4o × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail" data-score="Rank 5 of 13 on this dataset · Accuracy (%) 84.9 (OpenVLM Leaderboard (OpenCompass, VLMEvalKit))"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/gpt-4o.html#llm-multimodal--charxiv" aria-label="GPT-4o × CharXiv: Not seen" data-col="llm-multimodal--charxiv" data-level="not_seen" data-label="Not seen" data-pair="GPT-4o × CharXiv (Multimodal LLM benchmarks)" data-reason="its test items were published from 2024-06-26, after the model&#39;s stated training-data cutoff (2023-10-01)"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.136" data-col="known" data-tip="Known: 14%" data-pair="GPT-4o" data-reason="3 of 22 benchmark datasets have a known level (not Unknown).">14%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="GPT-4o" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.57" data-pair="GPT-4o" data-reason="Mean rank over 7 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.57</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/gpt-5.html" title="GPT-5">GPT-5</a></th>
@@ -932,6 +1031,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gpt-5.html#llm-multimodal--docvqa" aria-label="GPT-5 × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="GPT-5 × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="0" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gpt-5.html#llm-multimodal--ai2d" aria-label="GPT-5 × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="GPT-5 × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail" data-score="Rank 2 of 13 on this dataset · Accuracy (%) 89.5 (OpenVLM Leaderboard (OpenCompass, VLMEvalKit))"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gpt-5.html#llm-multimodal--charxiv" aria-label="GPT-5 × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="GPT-5 × CharXiv (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.045" data-col="known" data-tip="Known: 5%" data-pair="GPT-5" data-reason="1 of 22 benchmark datasets have a known level (not Unknown).">5%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="GPT-5" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-0 on-dark" data-col="avg-rank" data-tip="Average rank: 0.10" data-pair="GPT-5" data-reason="Mean rank over 6 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.10</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/gpt-5-2.html" title="GPT-5.2">GPT-5.2</a></th>
@@ -957,6 +1059,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gpt-5-2.html#llm-multimodal--docvqa" aria-label="GPT-5.2 × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="GPT-5.2 × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gpt-5-2.html#llm-multimodal--ai2d" aria-label="GPT-5.2 × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="GPT-5.2 × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/gpt-5-2.html#llm-multimodal--charxiv" aria-label="GPT-5.2 × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="GPT-5.2 × CharXiv (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.045" data-col="known" data-tip="Known: 5%" data-pair="GPT-5.2" data-reason="1 of 22 benchmark datasets have a known level (not Unknown).">5%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.045" data-col="contaminated" data-tip="Contaminated: 5%" data-pair="GPT-5.2" data-reason="Test data seen or possibly seen on 1 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">5%</td>
+        <td class="stat stat-score rate score-0 on-dark" data-col="avg-rank" data-tip="Average rank: 0.12" data-pair="GPT-5.2" data-reason="Mean rank over 3 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.12</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/gpt-6-astra.html" title="GPT-6 Astra">GPT-6 Astra</a></th>
@@ -982,6 +1087,9 @@
         <td class="sq na" title="GPT-6 Astra does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="GPT-6 Astra does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="GPT-6 Astra does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="GPT-6 Astra" data-reason="0 of 15 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="GPT-6 Astra" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-0 on-dark" data-col="avg-rank" data-tip="Average rank: 0.02" data-pair="GPT-6 Astra" data-reason="Mean rank over 1 dataset with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.02</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/gpt-oss.html" title="gpt-oss">gpt-oss</a></th>
@@ -1007,6 +1115,9 @@
         <td class="sq na" title="gpt-oss does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="gpt-oss does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="gpt-oss does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.067" data-col="known" data-tip="Known: 7%" data-pair="gpt-oss" data-reason="1 of 15 benchmark datasets have a known level (not Unknown).">7%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="gpt-oss" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.35" data-pair="gpt-oss" data-reason="Mean rank over 2 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.35</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/internvl3.html" title="InternVL3">InternVL3</a></th>
@@ -1032,6 +1143,9 @@
         <td class="sq lvl-seen_split_unclear" data-shade="none" style="--mark: var(--lvl-seen_split_unclear)"><a href="../../contamination-map/models/internvl3.html#llm-multimodal--docvqa" aria-label="InternVL3 × DocVQA: Seen, split unclear" data-col="llm-multimodal--docvqa" data-level="seen_split_unclear" data-label="Seen, split unclear" data-pair="InternVL3 × DocVQA (Multimodal LLM benchmarks)" data-reason="the dataset was used; the source does not say which part"></a></td>
         <td class="sq lvl-seen_split_unclear" data-shade="0" style="--mark: var(--lvl-seen_split_unclear)"><a href="../../contamination-map/models/internvl3.html#llm-multimodal--ai2d" aria-label="InternVL3 × AI2D (AI2 Diagrams): Seen, split unclear" data-col="llm-multimodal--ai2d" data-level="seen_split_unclear" data-label="Seen, split unclear" data-pair="InternVL3 × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="the dataset was used; the source does not say which part" data-score="Rank 1 of 13 on this dataset · Accuracy (%) 89.8 (OpenVLM Leaderboard (OpenCompass, VLMEvalKit))"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/internvl3.html#llm-multimodal--charxiv" aria-label="InternVL3 × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="InternVL3 × CharXiv (Multimodal LLM benchmarks)" data-reason="unknown for its base model Qwen2.5: training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.318" data-col="known" data-tip="Known: 32%" data-pair="InternVL3" data-reason="7 of 22 benchmark datasets have a known level (not Unknown).">32%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.227" data-col="contaminated" data-tip="Contaminated: 23%" data-pair="InternVL3" data-reason="Test data seen or possibly seen on 5 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">23%</td>
+        <td class="stat stat-score rate score-0 on-dark" data-col="avg-rank" data-tip="Average rank: 0.06" data-pair="InternVL3" data-reason="Mean rank over 3 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.06</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/internvl3.5.html" title="InternVL3.5">InternVL3.5</a></th>
@@ -1057,6 +1171,9 @@
         <td class="sq lvl-seen_split_unclear" data-shade="none" style="--mark: var(--lvl-seen_split_unclear)"><a href="../../contamination-map/models/internvl3.5.html#llm-multimodal--docvqa" aria-label="InternVL3.5 × DocVQA: Seen, split unclear" data-col="llm-multimodal--docvqa" data-level="seen_split_unclear" data-label="Seen, split unclear" data-pair="InternVL3.5 × DocVQA (Multimodal LLM benchmarks)" data-reason="in fine-tuning data: the dataset was used; the source does not say which part"></a></td>
         <td class="sq lvl-seen_split_unclear" data-shade="none" style="--mark: var(--lvl-seen_split_unclear)"><a href="../../contamination-map/models/internvl3.5.html#llm-multimodal--ai2d" aria-label="InternVL3.5 × AI2D (AI2 Diagrams): Seen, split unclear" data-col="llm-multimodal--ai2d" data-level="seen_split_unclear" data-label="Seen, split unclear" data-pair="InternVL3.5 × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="in fine-tuning data: the dataset was used; the source does not say which part"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/internvl3.5.html#llm-multimodal--charxiv" aria-label="InternVL3.5 × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="InternVL3.5 × CharXiv (Multimodal LLM benchmarks)" data-reason="unknown for its base model Qwen3: training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.182" data-col="known" data-tip="Known: 18%" data-pair="InternVL3.5" data-reason="4 of 22 benchmark datasets have a known level (not Unknown).">18%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.136" data-col="contaminated" data-tip="Contaminated: 14%" data-pair="InternVL3.5" data-reason="Test data seen or possibly seen on 3 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">14%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/llama-2.html" title="Llama 2">Llama 2</a></th>
@@ -1082,6 +1199,9 @@
         <td class="sq na" title="Llama 2 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Llama 2 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Llama 2 does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.400" data-col="known" data-tip="Known: 40%" data-pair="Llama 2" data-reason="6 of 15 benchmark datasets have a known level (not Unknown).">40%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.133" data-col="contaminated" data-tip="Contaminated: 13%" data-pair="Llama 2" data-reason="Test data seen or possibly seen on 2 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">13%</td>
+        <td class="stat stat-score rate score-3 on-dark" data-col="avg-rank" data-tip="Average rank: 0.75" data-pair="Llama 2" data-reason="Mean rank over 6 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.75</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/llama-3.1.html" title="Llama 3.1">Llama 3.1</a></th>
@@ -1107,6 +1227,9 @@
         <td class="sq na" title="Llama 3.1 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Llama 3.1 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Llama 3.1 does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.667" data-col="known" data-tip="Known: 67%" data-pair="Llama 3.1" data-reason="10 of 15 benchmark datasets have a known level (not Unknown).">67%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.467" data-col="contaminated" data-tip="Contaminated: 47%" data-pair="Llama 3.1" data-reason="Test data seen or possibly seen on 7 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">47%</td>
+        <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.39" data-pair="Llama 3.1" data-reason="Mean rank over 7 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.39</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/llama-3.2.html" title="Llama 3.2 (1B, 3B)">Llama 3.2 (1B, 3B)</a></th>
@@ -1132,6 +1255,9 @@
         <td class="sq na" title="Llama 3.2 (1B, 3B) does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Llama 3.2 (1B, 3B) does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Llama 3.2 (1B, 3B) does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.133" data-col="known" data-tip="Known: 13%" data-pair="Llama 3.2 (1B, 3B)" data-reason="2 of 15 benchmark datasets have a known level (not Unknown).">13%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Llama 3.2 (1B, 3B)" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-4" data-col="avg-rank" data-tip="Average rank: 1.00" data-pair="Llama 3.2 (1B, 3B)" data-reason="Mean rank over 1 dataset with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">1.00</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/llama-3.2-vision.html" title="Llama 3.2-Vision (11B, 90B)">Llama 3.2-Vision (11B, 90B)</a></th>
@@ -1157,6 +1283,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/llama-3.2-vision.html#llm-multimodal--docvqa" aria-label="Llama 3.2-Vision (11B, 90B) × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Llama 3.2-Vision (11B, 90B) × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="4" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/llama-3.2-vision.html#llm-multimodal--ai2d" aria-label="Llama 3.2-Vision (11B, 90B) × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Llama 3.2-Vision (11B, 90B) × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail" data-score="Rank 13 of 13 on this dataset · Accuracy (%) 69.5 (OpenVLM Leaderboard (OpenCompass, VLMEvalKit))"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/llama-3.2-vision.html#llm-multimodal--charxiv" aria-label="Llama 3.2-Vision (11B, 90B) × CharXiv: Not seen" data-col="llm-multimodal--charxiv" data-level="not_seen" data-label="Not seen" data-pair="Llama 3.2-Vision (11B, 90B) × CharXiv (Multimodal LLM benchmarks)" data-reason="its test items were published from 2024-06-26, after the model&#39;s stated training-data cutoff (2023-12-01)"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.136" data-col="known" data-tip="Known: 14%" data-pair="Llama 3.2-Vision (11B, 90B)" data-reason="3 of 22 benchmark datasets have a known level (not Unknown).">14%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Llama 3.2-Vision (11B, 90B)" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-3 on-dark" data-col="avg-rank" data-tip="Average rank: 0.82" data-pair="Llama 3.2-Vision (11B, 90B)" data-reason="Mean rank over 4 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.82</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/llama-3.3.html" title="Llama 3.3 70B">Llama 3.3 70B</a></th>
@@ -1182,6 +1311,9 @@
         <td class="sq na" title="Llama 3.3 70B does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Llama 3.3 70B does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Llama 3.3 70B does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.133" data-col="known" data-tip="Known: 13%" data-pair="Llama 3.3 70B" data-reason="2 of 15 benchmark datasets have a known level (not Unknown).">13%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Llama 3.3 70B" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-3 on-dark" data-col="avg-rank" data-tip="Average rank: 0.80" data-pair="Llama 3.3 70B" data-reason="Mean rank over 1 dataset with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.80</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/llama-4.html" title="Llama 4 (Scout, Maverick)">Llama 4 (Scout, Maverick)</a></th>
@@ -1207,6 +1339,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/llama-4.html#llm-multimodal--docvqa" aria-label="Llama 4 (Scout, Maverick) × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Llama 4 (Scout, Maverick) × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/llama-4.html#llm-multimodal--ai2d" aria-label="Llama 4 (Scout, Maverick) × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Llama 4 (Scout, Maverick) × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/llama-4.html#llm-multimodal--charxiv" aria-label="Llama 4 (Scout, Maverick) × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="Llama 4 (Scout, Maverick) × CharXiv (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.045" data-col="known" data-tip="Known: 5%" data-pair="Llama 4 (Scout, Maverick)" data-reason="1 of 22 benchmark datasets have a known level (not Unknown).">5%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Llama 4 (Scout, Maverick)" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-3 on-dark" data-col="avg-rank" data-tip="Average rank: 0.73" data-pair="Llama 4 (Scout, Maverick)" data-reason="Mean rank over 2 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.73</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/llama-3.html" title="Meta Llama 3">Meta Llama 3</a></th>
@@ -1232,6 +1367,9 @@
         <td class="sq na" title="Meta Llama 3 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Meta Llama 3 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Meta Llama 3 does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.133" data-col="known" data-tip="Known: 13%" data-pair="Meta Llama 3" data-reason="2 of 15 benchmark datasets have a known level (not Unknown).">13%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Meta Llama 3" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-3 on-dark" data-col="avg-rank" data-tip="Average rank: 0.75" data-pair="Meta Llama 3" data-reason="Mean rank over 2 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.75</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/llava-onevision.html" title="LLaVA-OneVision">LLaVA-OneVision</a></th>
@@ -1257,6 +1395,9 @@
         <td class="sq lvl-train_seen" data-shade="none" style="--mark: var(--lvl-train_seen)"><a href="../../contamination-map/models/llava-onevision.html#llm-multimodal--docvqa" aria-label="LLaVA-OneVision × DocVQA: Training data seen" data-col="llm-multimodal--docvqa" data-level="train_seen" data-label="Training data seen" data-pair="LLaVA-OneVision × DocVQA (Multimodal LLM benchmarks)" data-reason="in fine-tuning data: only the training split was used, not the benchmark&#39;s test data"></a></td>
         <td class="sq lvl-train_seen" data-shade="1" style="--mark: var(--lvl-train_seen)"><a href="../../contamination-map/models/llava-onevision.html#llm-multimodal--ai2d" aria-label="LLaVA-OneVision × AI2D (AI2 Diagrams): Training data seen" data-col="llm-multimodal--ai2d" data-level="train_seen" data-label="Training data seen" data-pair="LLaVA-OneVision × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="in fine-tuning data: only the training split was used, not the benchmark&#39;s test data" data-score="Rank 4 of 13 on this dataset · Accuracy (%) 86.2 (OpenVLM Leaderboard (OpenCompass, VLMEvalKit))"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/llava-onevision.html#llm-multimodal--charxiv" aria-label="LLaVA-OneVision × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="LLaVA-OneVision × CharXiv (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.182" data-col="known" data-tip="Known: 18%" data-pair="LLaVA-OneVision" data-reason="4 of 22 benchmark datasets have a known level (not Unknown).">18%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="LLaVA-OneVision" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.42" data-pair="LLaVA-OneVision" data-reason="Mean rank over 3 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.42</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/llava-onevision-1.5.html" title="LLaVA-OneVision-1.5">LLaVA-OneVision-1.5</a></th>
@@ -1282,6 +1423,9 @@
         <td class="sq lvl-train_seen" data-shade="none" style="--mark: var(--lvl-train_seen)"><a href="../../contamination-map/models/llava-onevision-1.5.html#llm-multimodal--docvqa" aria-label="LLaVA-OneVision-1.5 × DocVQA: Training data seen" data-col="llm-multimodal--docvqa" data-level="train_seen" data-label="Training data seen" data-pair="LLaVA-OneVision-1.5 × DocVQA (Multimodal LLM benchmarks)" data-reason="in fine-tuning data: only the training split was used, not the benchmark&#39;s test data"></a></td>
         <td class="sq lvl-seen_split_unclear" data-shade="none" style="--mark: var(--lvl-seen_split_unclear)"><a href="../../contamination-map/models/llava-onevision-1.5.html#llm-multimodal--ai2d" aria-label="LLaVA-OneVision-1.5 × AI2D (AI2 Diagrams): Seen, split unclear" data-col="llm-multimodal--ai2d" data-level="seen_split_unclear" data-label="Seen, split unclear" data-pair="LLaVA-OneVision-1.5 × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="in fine-tuning data: the dataset was used; the source does not say which part"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/llava-onevision-1.5.html#llm-multimodal--charxiv" aria-label="LLaVA-OneVision-1.5 × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="LLaVA-OneVision-1.5 × CharXiv (Multimodal LLM benchmarks)" data-reason="unknown for its base model Qwen3: training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.182" data-col="known" data-tip="Known: 18%" data-pair="LLaVA-OneVision-1.5" data-reason="4 of 22 benchmark datasets have a known level (not Unknown).">18%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.091" data-col="contaminated" data-tip="Contaminated: 9%" data-pair="LLaVA-OneVision-1.5" data-reason="Test data seen or possibly seen on 2 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">9%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/k2-horizon.html" title="K2-Horizon">K2-Horizon</a></th>
@@ -1307,6 +1451,9 @@
         <td class="sq na" title="K2-Horizon does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="K2-Horizon does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="K2-Horizon does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="K2-Horizon" data-reason="0 of 15 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="K2-Horizon" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/k2-v2.html" title="K2-V2">K2-V2</a></th>
@@ -1332,6 +1479,9 @@
         <td class="sq na" title="K2-V2 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="K2-V2 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="K2-V2 does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.067" data-col="known" data-tip="Known: 7%" data-pair="K2-V2" data-reason="1 of 15 benchmark datasets have a known level (not Unknown).">7%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.067" data-col="contaminated" data-tip="Contaminated: 7%" data-pair="K2-V2" data-reason="Test data seen or possibly seen on 1 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">7%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/k2-65b.html" title="LLM360 K2-65B (K2 Diamond)">LLM360 K2-65B (K2 Diamond)</a></th>
@@ -1357,6 +1507,9 @@
         <td class="sq na" title="LLM360 K2-65B (K2 Diamond) does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="LLM360 K2-65B (K2 Diamond) does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="LLM360 K2-65B (K2 Diamond) does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.200" data-col="known" data-tip="Known: 20%" data-pair="LLM360 K2-65B (K2 Diamond)" data-reason="3 of 15 benchmark datasets have a known level (not Unknown).">20%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.133" data-col="contaminated" data-tip="Contaminated: 13%" data-pair="LLM360 K2-65B (K2 Diamond)" data-reason="Test data seen or possibly seen on 2 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">13%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/amber.html" title="LLM360 Amber">LLM360 Amber</a></th>
@@ -1382,6 +1535,9 @@
         <td class="sq na" title="LLM360 Amber does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="LLM360 Amber does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="LLM360 Amber does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="LLM360 Amber" data-reason="0 of 15 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="LLM360 Amber" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-4" data-col="avg-rank" data-tip="Average rank: 1.00" data-pair="LLM360 Amber" data-reason="Mean rank over 5 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">1.00</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/ministral-3.html" title="Ministral 3">Ministral 3</a></th>
@@ -1407,6 +1563,9 @@
         <td class="sq na" title="Ministral 3 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Ministral 3 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Ministral 3 does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="Ministral 3" data-reason="0 of 15 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Ministral 3" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/mistral-7b.html" title="Mistral 7B">Mistral 7B</a></th>
@@ -1432,6 +1591,9 @@
         <td class="sq na" title="Mistral 7B does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Mistral 7B does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Mistral 7B does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="Mistral 7B" data-reason="0 of 15 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Mistral 7B" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-4" data-col="avg-rank" data-tip="Average rank: 1.00" data-pair="Mistral 7B" data-reason="Mean rank over 1 dataset with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">1.00</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/mistral-large-3.html" title="Mistral Large 3">Mistral Large 3</a></th>
@@ -1457,6 +1619,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/mistral-large-3.html#llm-multimodal--docvqa" aria-label="Mistral Large 3 × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Mistral Large 3 × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/mistral-large-3.html#llm-multimodal--ai2d" aria-label="Mistral Large 3 × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Mistral Large 3 × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/mistral-large-3.html#llm-multimodal--charxiv" aria-label="Mistral Large 3 × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="Mistral Large 3 × CharXiv (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="Mistral Large 3" data-reason="0 of 22 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Mistral Large 3" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/mistral-medium-3.5.html" title="Mistral Medium 3.5">Mistral Medium 3.5</a></th>
@@ -1482,6 +1647,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/mistral-medium-3.5.html#llm-multimodal--docvqa" aria-label="Mistral Medium 3.5 × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Mistral Medium 3.5 × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/mistral-medium-3.5.html#llm-multimodal--ai2d" aria-label="Mistral Medium 3.5 × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Mistral Medium 3.5 × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/mistral-medium-3.5.html#llm-multimodal--charxiv" aria-label="Mistral Medium 3.5 × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="Mistral Medium 3.5 × CharXiv (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.045" data-col="known" data-tip="Known: 5%" data-pair="Mistral Medium 3.5" data-reason="1 of 22 benchmark datasets have a known level (not Unknown).">5%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Mistral Medium 3.5" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/mistral-small-4.html" title="Mistral Small 4">Mistral Small 4</a></th>
@@ -1507,6 +1675,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/mistral-small-4.html#llm-multimodal--docvqa" aria-label="Mistral Small 4 × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Mistral Small 4 × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/mistral-small-4.html#llm-multimodal--ai2d" aria-label="Mistral Small 4 × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Mistral Small 4 × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/mistral-small-4.html#llm-multimodal--charxiv" aria-label="Mistral Small 4 × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="Mistral Small 4 × CharXiv (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.045" data-col="known" data-tip="Known: 5%" data-pair="Mistral Small 4" data-reason="1 of 22 benchmark datasets have a known level (not Unknown).">5%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Mistral Small 4" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/mixtral-8x7b.html" title="Mixtral 8x7B">Mixtral 8x7B</a></th>
@@ -1532,6 +1703,9 @@
         <td class="sq na" title="Mixtral 8x7B does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Mixtral 8x7B does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Mixtral 8x7B does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="Mixtral 8x7B" data-reason="0 of 15 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Mixtral 8x7B" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-4" data-col="avg-rank" data-tip="Average rank: 0.92" data-pair="Mixtral 8x7B" data-reason="Mean rank over 2 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.92</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/molmo.html" title="Molmo (0924)">Molmo (0924)</a></th>
@@ -1557,6 +1731,9 @@
         <td class="sq lvl-train_seen" data-shade="none" style="--mark: var(--lvl-train_seen)"><a href="../../contamination-map/models/molmo.html#llm-multimodal--docvqa" aria-label="Molmo (0924) × DocVQA: Training data seen" data-col="llm-multimodal--docvqa" data-level="train_seen" data-label="Training data seen" data-pair="Molmo (0924) × DocVQA (Multimodal LLM benchmarks)" data-reason="in fine-tuning data: only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded"></a></td>
         <td class="sq lvl-train_seen" data-shade="2" style="--mark: var(--lvl-train_seen)"><a href="../../contamination-map/models/molmo.html#llm-multimodal--ai2d" aria-label="Molmo (0924) × AI2D (AI2 Diagrams): Training data seen" data-col="llm-multimodal--ai2d" data-level="train_seen" data-label="Training data seen" data-pair="Molmo (0924) × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="in fine-tuning data: only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded" data-score="Rank 6 of 13 on this dataset · Accuracy (%) 83.4 (OpenVLM Leaderboard (OpenCompass, VLMEvalKit))"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/molmo.html#llm-multimodal--charxiv" aria-label="Molmo (0924) × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="Molmo (0924) × CharXiv (Multimodal LLM benchmarks)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.182" data-col="known" data-tip="Known: 18%" data-pair="Molmo (0924)" data-reason="4 of 22 benchmark datasets have a known level (not Unknown).">18%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Molmo (0924)" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-3 on-dark" data-col="avg-rank" data-tip="Average rank: 0.75" data-pair="Molmo (0924)" data-reason="Mean rank over 3 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.75</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/molmo2.html" title="Molmo2">Molmo2</a></th>
@@ -1582,6 +1759,9 @@
         <td class="sq lvl-train_seen" data-shade="none" style="--mark: var(--lvl-train_seen)"><a href="../../contamination-map/models/molmo2.html#llm-multimodal--docvqa" aria-label="Molmo2 × DocVQA: Training data seen" data-col="llm-multimodal--docvqa" data-level="train_seen" data-label="Training data seen" data-pair="Molmo2 × DocVQA (Multimodal LLM benchmarks)" data-reason="in fine-tuning data: only the training split was used, not the benchmark&#39;s test data"></a></td>
         <td class="sq lvl-train_seen" data-shade="none" style="--mark: var(--lvl-train_seen)"><a href="../../contamination-map/models/molmo2.html#llm-multimodal--ai2d" aria-label="Molmo2 × AI2D (AI2 Diagrams): Training data seen" data-col="llm-multimodal--ai2d" data-level="train_seen" data-label="Training data seen" data-pair="Molmo2 × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="in fine-tuning data: only the training split was used, not the benchmark&#39;s test data"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/molmo2.html#llm-multimodal--charxiv" aria-label="Molmo2 × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="Molmo2 × CharXiv (Multimodal LLM benchmarks)" data-reason="unknown for its base model Qwen3: training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.182" data-col="known" data-tip="Known: 18%" data-pair="Molmo2" data-reason="4 of 22 benchmark datasets have a known level (not Unknown).">18%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Molmo2" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/o1.html" title="OpenAI o1">OpenAI o1</a></th>
@@ -1607,6 +1787,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/o1.html#llm-multimodal--docvqa" aria-label="OpenAI o1 × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="OpenAI o1 × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/o1.html#llm-multimodal--ai2d" aria-label="OpenAI o1 × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="OpenAI o1 × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/o1.html#llm-multimodal--charxiv" aria-label="OpenAI o1 × CharXiv: Not seen" data-col="llm-multimodal--charxiv" data-level="not_seen" data-label="Not seen" data-pair="OpenAI o1 × CharXiv (Multimodal LLM benchmarks)" data-reason="its test items were published from 2024-06-26, after the model&#39;s stated training-data cutoff (2023-10-01)"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.136" data-col="known" data-tip="Known: 14%" data-pair="OpenAI o1" data-reason="3 of 22 benchmark datasets have a known level (not Unknown).">14%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="OpenAI o1" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.28" data-pair="OpenAI o1" data-reason="Mean rank over 3 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.28</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/o3.html" title="OpenAI o3">OpenAI o3</a></th>
@@ -1632,6 +1815,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/o3.html#llm-multimodal--docvqa" aria-label="OpenAI o3 × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="OpenAI o3 × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/o3.html#llm-multimodal--ai2d" aria-label="OpenAI o3 × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="OpenAI o3 × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/o3.html#llm-multimodal--charxiv" aria-label="OpenAI o3 × CharXiv: Not seen" data-col="llm-multimodal--charxiv" data-level="not_seen" data-label="Not seen" data-pair="OpenAI o3 × CharXiv (Multimodal LLM benchmarks)" data-reason="its test items were published from 2024-06-26, after the model&#39;s stated training-data cutoff (2024-06-01)"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.136" data-col="known" data-tip="Known: 14%" data-pair="OpenAI o3" data-reason="3 of 22 benchmark datasets have a known level (not Unknown).">14%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.045" data-col="contaminated" data-tip="Contaminated: 5%" data-pair="OpenAI o3" data-reason="Test data seen or possibly seen on 1 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">5%</td>
+        <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.43" data-pair="OpenAI o3" data-reason="Mean rank over 3 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.43</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/olmo-1.html" title="OLMo (February 2024)">OLMo (February 2024)</a></th>
@@ -1657,6 +1843,9 @@
         <td class="sq na" title="OLMo (February 2024) does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="OLMo (February 2024) does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="OLMo (February 2024) does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.267" data-col="known" data-tip="Known: 27%" data-pair="OLMo (February 2024)" data-reason="4 of 15 benchmark datasets have a known level (not Unknown).">27%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.067" data-col="contaminated" data-tip="Contaminated: 7%" data-pair="OLMo (February 2024)" data-reason="Test data seen or possibly seen on 1 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">7%</td>
+        <td class="stat stat-score rate score-4" data-col="avg-rank" data-tip="Average rank: 0.88" data-pair="OLMo (February 2024)" data-reason="Mean rank over 5 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.88</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/olmo-2-1124.html" title="OLMo 2 (November 2024)">OLMo 2 (November 2024)</a></th>
@@ -1682,6 +1871,9 @@
         <td class="sq na" title="OLMo 2 (November 2024) does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="OLMo 2 (November 2024) does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="OLMo 2 (November 2024) does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.600" data-col="known" data-tip="Known: 60%" data-pair="OLMo 2 (November 2024)" data-reason="9 of 15 benchmark datasets have a known level (not Unknown).">60%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.267" data-col="contaminated" data-tip="Contaminated: 27%" data-pair="OLMo 2 (November 2024)" data-reason="Test data seen or possibly seen on 4 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">27%</td>
+        <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.40" data-pair="OLMo 2 (November 2024)" data-reason="Mean rank over 5 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.40</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/olmo-3.html" title="Olmo 3">Olmo 3</a></th>
@@ -1707,6 +1899,9 @@
         <td class="sq na" title="Olmo 3 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Olmo 3 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Olmo 3 does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.067" data-col="known" data-tip="Known: 7%" data-pair="Olmo 3" data-reason="1 of 15 benchmark datasets have a known level (not Unknown).">7%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Olmo 3" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/olmo-3.1.html" title="Olmo 3.1">Olmo 3.1</a></th>
@@ -1732,6 +1927,9 @@
         <td class="sq na" title="Olmo 3.1 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Olmo 3.1 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Olmo 3.1 does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.067" data-col="known" data-tip="Known: 7%" data-pair="Olmo 3.1" data-reason="1 of 15 benchmark datasets have a known level (not Unknown).">7%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Olmo 3.1" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/olmo-hybrid-7b.html" title="Olmo Hybrid 7B">Olmo Hybrid 7B</a></th>
@@ -1757,6 +1955,9 @@
         <td class="sq na" title="Olmo Hybrid 7B does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Olmo Hybrid 7B does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Olmo Hybrid 7B does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.067" data-col="known" data-tip="Known: 7%" data-pair="Olmo Hybrid 7B" data-reason="1 of 15 benchmark datasets have a known level (not Unknown).">7%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Olmo Hybrid 7B" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/phi-3.html" title="Phi-3 (mini / small / medium)">Phi-3 (mini / small / medium)</a></th>
@@ -1782,6 +1983,9 @@
         <td class="sq na" title="Phi-3 (mini / small / medium) does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Phi-3 (mini / small / medium) does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Phi-3 (mini / small / medium) does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.133" data-col="known" data-tip="Known: 13%" data-pair="Phi-3 (mini / small / medium)" data-reason="2 of 15 benchmark datasets have a known level (not Unknown).">13%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Phi-3 (mini / small / medium)" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-4" data-col="avg-rank" data-tip="Average rank: 0.89" data-pair="Phi-3 (mini / small / medium)" data-reason="Mean rank over 2 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.89</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/phi-3.5.html" title="Phi-3.5 (mini / MoE)">Phi-3.5 (mini / MoE)</a></th>
@@ -1807,6 +2011,9 @@
         <td class="sq na" title="Phi-3.5 (mini / MoE) does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Phi-3.5 (mini / MoE) does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Phi-3.5 (mini / MoE) does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.133" data-col="known" data-tip="Known: 13%" data-pair="Phi-3.5 (mini / MoE)" data-reason="2 of 15 benchmark datasets have a known level (not Unknown).">13%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Phi-3.5 (mini / MoE)" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/phi-4.html" title="Phi-4">Phi-4</a></th>
@@ -1832,6 +2039,9 @@
         <td class="sq na" title="Phi-4 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Phi-4 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Phi-4 does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.600" data-col="known" data-tip="Known: 60%" data-pair="Phi-4" data-reason="9 of 15 benchmark datasets have a known level (not Unknown).">60%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Phi-4" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-3 on-dark" data-col="avg-rank" data-tip="Average rank: 0.64" data-pair="Phi-4" data-reason="Mean rank over 1 dataset with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.64</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/phi-4-mini.html" title="Phi-4-mini">Phi-4-mini</a></th>
@@ -1857,6 +2067,9 @@
         <td class="sq na" title="Phi-4-mini does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Phi-4-mini does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Phi-4-mini does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.067" data-col="known" data-tip="Known: 7%" data-pair="Phi-4-mini" data-reason="1 of 15 benchmark datasets have a known level (not Unknown).">7%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Phi-4-mini" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/phi-4-mini-flash-reasoning.html" title="Phi-4-mini-flash-reasoning">Phi-4-mini-flash-reasoning</a></th>
@@ -1882,6 +2095,9 @@
         <td class="sq na" title="Phi-4-mini-flash-reasoning does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Phi-4-mini-flash-reasoning does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Phi-4-mini-flash-reasoning does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.067" data-col="known" data-tip="Known: 7%" data-pair="Phi-4-mini-flash-reasoning" data-reason="1 of 15 benchmark datasets have a known level (not Unknown).">7%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Phi-4-mini-flash-reasoning" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/phi-4-mini-reasoning.html" title="Phi-4-mini-reasoning">Phi-4-mini-reasoning</a></th>
@@ -1907,6 +2123,9 @@
         <td class="sq na" title="Phi-4-mini-reasoning does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Phi-4-mini-reasoning does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Phi-4-mini-reasoning does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.067" data-col="known" data-tip="Known: 7%" data-pair="Phi-4-mini-reasoning" data-reason="1 of 15 benchmark datasets have a known level (not Unknown).">7%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Phi-4-mini-reasoning" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/phi-4-reasoning.html" title="Phi-4-reasoning / Phi-4-reasoning-plus">Phi-4-reasoning / Phi-4-reasoning-plus</a></th>
@@ -1932,6 +2151,9 @@
         <td class="sq na" title="Phi-4-reasoning / Phi-4-reasoning-plus does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Phi-4-reasoning / Phi-4-reasoning-plus does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Phi-4-reasoning / Phi-4-reasoning-plus does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.067" data-col="known" data-tip="Known: 7%" data-pair="Phi-4-reasoning / Phi-4-reasoning-plus" data-reason="1 of 15 benchmark datasets have a known level (not Unknown).">7%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Phi-4-reasoning / Phi-4-reasoning-plus" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.57" data-pair="Phi-4-reasoning / Phi-4-reasoning-plus" data-reason="Mean rank over 1 dataset with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.57</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/phi-slimmoe.html" title="Phi-mini-MoE / Phi-tiny-MoE (SlimMoE)">Phi-mini-MoE / Phi-tiny-MoE (SlimMoE)</a></th>
@@ -1957,6 +2179,9 @@
         <td class="sq na" title="Phi-mini-MoE / Phi-tiny-MoE (SlimMoE) does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Phi-mini-MoE / Phi-tiny-MoE (SlimMoE) does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Phi-mini-MoE / Phi-tiny-MoE (SlimMoE) does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.133" data-col="known" data-tip="Known: 13%" data-pair="Phi-mini-MoE / Phi-tiny-MoE (SlimMoE)" data-reason="2 of 15 benchmark datasets have a known level (not Unknown).">13%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Phi-mini-MoE / Phi-tiny-MoE (SlimMoE)" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/pixtral-12b.html" title="Pixtral 12B">Pixtral 12B</a></th>
@@ -1982,6 +2207,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/pixtral-12b.html#llm-multimodal--docvqa" aria-label="Pixtral 12B × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Pixtral 12B × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="3" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/pixtral-12b.html#llm-multimodal--ai2d" aria-label="Pixtral 12B × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Pixtral 12B × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail" data-score="Rank 11 of 13 on this dataset · Accuracy (%) 79 (OpenVLM Leaderboard (OpenCompass, VLMEvalKit))"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/pixtral-12b.html#llm-multimodal--charxiv" aria-label="Pixtral 12B × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="Pixtral 12B × CharXiv (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="Pixtral 12B" data-reason="0 of 22 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Pixtral 12B" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-3 on-dark" data-col="avg-rank" data-tip="Average rank: 0.67" data-pair="Pixtral 12B" data-reason="Mean rank over 4 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.67</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/pixtral-large.html" title="Pixtral Large">Pixtral Large</a></th>
@@ -2007,6 +2235,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/pixtral-large.html#llm-multimodal--docvqa" aria-label="Pixtral Large × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Pixtral Large × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/pixtral-large.html#llm-multimodal--ai2d" aria-label="Pixtral Large × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Pixtral Large × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/pixtral-large.html#llm-multimodal--charxiv" aria-label="Pixtral Large × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="Pixtral Large × CharXiv (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="Pixtral Large" data-reason="0 of 22 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Pixtral Large" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/pythia.html" title="Pythia">Pythia</a></th>
@@ -2032,6 +2263,9 @@
         <td class="sq na" title="Pythia does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Pythia does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Pythia does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.200" data-col="known" data-tip="Known: 20%" data-pair="Pythia" data-reason="3 of 15 benchmark datasets have a known level (not Unknown).">20%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.133" data-col="contaminated" data-tip="Contaminated: 13%" data-pair="Pythia" data-reason="Test data seen or possibly seen on 2 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">13%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/pythia-deduped.html" title="Pythia (deduplicated)">Pythia (deduplicated)</a></th>
@@ -2057,6 +2291,9 @@
         <td class="sq na" title="Pythia (deduplicated) does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Pythia (deduplicated) does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Pythia (deduplicated) does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.200" data-col="known" data-tip="Known: 20%" data-pair="Pythia (deduplicated)" data-reason="3 of 15 benchmark datasets have a known level (not Unknown).">20%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.133" data-col="contaminated" data-tip="Contaminated: 13%" data-pair="Pythia (deduplicated)" data-reason="Test data seen or possibly seen on 2 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">13%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/qwen2.5.html" title="Qwen2.5">Qwen2.5</a></th>
@@ -2082,6 +2319,9 @@
         <td class="sq na" title="Qwen2.5 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Qwen2.5 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Qwen2.5 does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.200" data-col="known" data-tip="Known: 20%" data-pair="Qwen2.5" data-reason="3 of 15 benchmark datasets have a known level (not Unknown).">20%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.133" data-col="contaminated" data-tip="Contaminated: 13%" data-pair="Qwen2.5" data-reason="Test data seen or possibly seen on 2 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">13%</td>
+        <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.16" data-pair="Qwen2.5" data-reason="Mean rank over 6 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.16</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/qwen2.5-vl.html" title="Qwen2.5-VL">Qwen2.5-VL</a></th>
@@ -2107,6 +2347,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/qwen2.5-vl.html#llm-multimodal--docvqa" aria-label="Qwen2.5-VL × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Qwen2.5-VL × DocVQA (Multimodal LLM benchmarks)" data-reason="unknown for its base model Qwen2.5: training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="1" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/qwen2.5-vl.html#llm-multimodal--ai2d" aria-label="Qwen2.5-VL × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Qwen2.5-VL × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="unknown for its base model Qwen2.5: training data not disclosed in enough detail" data-score="Rank 3 of 13 on this dataset · Accuracy (%) 88.5 (OpenVLM Leaderboard (OpenCompass, VLMEvalKit))"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/qwen2.5-vl.html#llm-multimodal--charxiv" aria-label="Qwen2.5-VL × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="Qwen2.5-VL × CharXiv (Multimodal LLM benchmarks)" data-reason="unknown for its base model Qwen2.5: training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.136" data-col="known" data-tip="Known: 14%" data-pair="Qwen2.5-VL" data-reason="3 of 22 benchmark datasets have a known level (not Unknown).">14%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.091" data-col="contaminated" data-tip="Contaminated: 9%" data-pair="Qwen2.5-VL" data-reason="Test data seen or possibly seen on 2 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">9%</td>
+        <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.25" data-pair="Qwen2.5-VL" data-reason="Mean rank over 3 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.25</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/qwen3.html" title="Qwen3">Qwen3</a></th>
@@ -2132,6 +2375,9 @@
         <td class="sq na" title="Qwen3 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Qwen3 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Qwen3 does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="Qwen3" data-reason="0 of 15 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Qwen3" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.27" data-pair="Qwen3" data-reason="Mean rank over 7 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.27</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/qwen3-2507.html" title="Qwen3-2507 (Instruct-2507 / Thinking-2507)">Qwen3-2507 (Instruct-2507 / Thinking-2507)</a></th>
@@ -2157,6 +2403,9 @@
         <td class="sq na" title="Qwen3-2507 (Instruct-2507 / Thinking-2507) does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Qwen3-2507 (Instruct-2507 / Thinking-2507) does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Qwen3-2507 (Instruct-2507 / Thinking-2507) does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="Qwen3-2507 (Instruct-2507 / Thinking-2507)" data-reason="0 of 15 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Qwen3-2507 (Instruct-2507 / Thinking-2507)" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.36" data-pair="Qwen3-2507 (Instruct-2507 / Thinking-2507)" data-reason="Mean rank over 1 dataset with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.36</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/qwen3-next.html" title="Qwen3-Next">Qwen3-Next</a></th>
@@ -2182,6 +2431,9 @@
         <td class="sq na" title="Qwen3-Next does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Qwen3-Next does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Qwen3-Next does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="Qwen3-Next" data-reason="0 of 15 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Qwen3-Next" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/qwen3-vl.html" title="Qwen3-VL">Qwen3-VL</a></th>
@@ -2207,6 +2459,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/qwen3-vl.html#llm-multimodal--docvqa" aria-label="Qwen3-VL × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Qwen3-VL × DocVQA (Multimodal LLM benchmarks)" data-reason="unknown for its base model Qwen3: training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/qwen3-vl.html#llm-multimodal--ai2d" aria-label="Qwen3-VL × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Qwen3-VL × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="unknown for its base model Qwen3: training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/qwen3-vl.html#llm-multimodal--charxiv" aria-label="Qwen3-VL × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="Qwen3-VL × CharXiv (Multimodal LLM benchmarks)" data-reason="unknown for its base model Qwen3: training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="Qwen3-VL" data-reason="0 of 22 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Qwen3-VL" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/qwen3.5.html" title="Qwen3.5">Qwen3.5</a></th>
@@ -2232,6 +2487,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/qwen3.5.html#llm-multimodal--docvqa" aria-label="Qwen3.5 × DocVQA: Unknown" data-col="llm-multimodal--docvqa" data-level="unknown" data-label="Unknown" data-pair="Qwen3.5 × DocVQA (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/qwen3.5.html#llm-multimodal--ai2d" aria-label="Qwen3.5 × AI2D (AI2 Diagrams): Unknown" data-col="llm-multimodal--ai2d" data-level="unknown" data-label="Unknown" data-pair="Qwen3.5 × AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/qwen3.5.html#llm-multimodal--charxiv" aria-label="Qwen3.5 × CharXiv: Unknown" data-col="llm-multimodal--charxiv" data-level="unknown" data-label="Unknown" data-pair="Qwen3.5 × CharXiv (Multimodal LLM benchmarks)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="Qwen3.5" data-reason="0 of 22 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Qwen3.5" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.18" data-pair="Qwen3.5" data-reason="Mean rank over 1 dataset with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.18</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/qwen3.6.html" title="Qwen3.6">Qwen3.6</a></th>
@@ -2257,6 +2515,9 @@
         <td class="sq na" title="Qwen3.6 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Qwen3.6 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Qwen3.6 does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="Qwen3.6" data-reason="0 of 15 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Qwen3.6" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.24" data-pair="Qwen3.6" data-reason="Mean rank over 1 dataset with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.24</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/qwen3.8.html" title="Qwen3.8">Qwen3.8</a></th>
@@ -2282,6 +2543,9 @@
         <td class="sq na" title="Qwen3.8 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Qwen3.8 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Qwen3.8 does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="Qwen3.8" data-reason="0 of 15 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Qwen3.8" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/qwen3.8-flash-next.html" title="Qwen3.8-Flash-Next">Qwen3.8-Flash-Next</a></th>
@@ -2307,6 +2571,9 @@
         <td class="sq na" title="Qwen3.8-Flash-Next does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Qwen3.8-Flash-Next does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="Qwen3.8-Flash-Next does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="Qwen3.8-Flash-Next" data-reason="0 of 15 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Qwen3.8-Flash-Next" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/smollm2.html" title="SmolLM2">SmolLM2</a></th>
@@ -2332,6 +2599,9 @@
         <td class="sq na" title="SmolLM2 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="SmolLM2 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="SmolLM2 does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.467" data-col="known" data-tip="Known: 47%" data-pair="SmolLM2" data-reason="7 of 15 benchmark datasets have a known level (not Unknown).">47%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.267" data-col="contaminated" data-tip="Contaminated: 27%" data-pair="SmolLM2" data-reason="Test data seen or possibly seen on 4 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">27%</td>
+        <td class="stat stat-score rate score-3 on-dark" data-col="avg-rank" data-tip="Average rank: 0.80" data-pair="SmolLM2" data-reason="Mean rank over 5 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.80</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/smollm3.html" title="SmolLM3">SmolLM3</a></th>
@@ -2357,11 +2627,70 @@
         <td class="sq na" title="SmolLM3 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="SmolLM3 does not take the inputs Multimodal LLM benchmarks requires"></td>
         <td class="sq na" title="SmolLM3 does not take the inputs Multimodal LLM benchmarks requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="SmolLM3" data-reason="0 of 15 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="SmolLM3" data-reason="Test data seen or possibly seen on 0 of 15 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
     </tbody>
+    <tfoot>
+      <tr class="fs-stat">
+        <th scope="row" class="stat-label">Known</th>
+        <td class="stat vstat gs rate rate-known" style="--v: 0.144" data-col="llm-classic--mmlu" data-tip="Known: 14%" data-pair="MMLU (Measuring Massive Multitask Language Understanding) (Classic LLM benchmarks)" data-reason="13 of 90 models have a known level (not Unknown)."><span>14%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.067" data-col="llm-classic--gsm8k" data-tip="Known: 7%" data-pair="GSM8K (Grade School Math 8K) (Classic LLM benchmarks)" data-reason="6 of 90 models have a known level (not Unknown)."><span>7%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.100" data-col="llm-classic--math" data-tip="Known: 10%" data-pair="MATH (Mathematics Aptitude Test of Heuristics) (Classic LLM benchmarks)" data-reason="9 of 90 models have a known level (not Unknown)."><span>10%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.089" data-col="llm-classic--humaneval" data-tip="Known: 9%" data-pair="HumanEval (Classic LLM benchmarks)" data-reason="8 of 90 models have a known level (not Unknown)."><span>9%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.067" data-col="llm-classic--arc-challenge" data-tip="Known: 7%" data-pair="ARC-Challenge (AI2 Reasoning Challenge, Challenge Set) (Classic LLM benchmarks)" data-reason="6 of 90 models have a known level (not Unknown)."><span>7%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.089" data-col="llm-classic--hellaswag" data-tip="Known: 9%" data-pair="HellaSwag (Classic LLM benchmarks)" data-reason="8 of 90 models have a known level (not Unknown)."><span>9%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.000" data-col="llm-classic--truthfulqa" data-tip="Known: 0%" data-pair="TruthfulQA (Classic LLM benchmarks)" data-reason="0 of 90 models have a known level (not Unknown)."><span>0%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.033" data-col="llm-classic--winogrande" data-tip="Known: 3%" data-pair="WinoGrande (Classic LLM benchmarks)" data-reason="3 of 90 models have a known level (not Unknown)."><span>3%</span></td>
+        <td class="stat vstat gs rate rate-known" style="--v: 0.011" data-col="llm-recent--gpqa-diamond" data-tip="Known: 1%" data-pair="GPQA Diamond (Recent LLM benchmarks)" data-reason="1 of 90 models have a known level (not Unknown)."><span>1%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.133" data-col="llm-recent--mmlu-pro" data-tip="Known: 13%" data-pair="MMLU-Pro (Recent LLM benchmarks)" data-reason="12 of 90 models have a known level (not Unknown)."><span>13%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.044" data-col="llm-recent--livecodebench" data-tip="Known: 4%" data-pair="LiveCodeBench (code generation, release_v6) (Recent LLM benchmarks)" data-reason="4 of 90 models have a known level (not Unknown)."><span>4%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.056" data-col="llm-recent--swe-bench-verified" data-tip="Known: 6%" data-pair="SWE-bench Verified (Recent LLM benchmarks)" data-reason="5 of 90 models have a known level (not Unknown)."><span>6%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.233" data-col="llm-recent--aime-2024" data-tip="Known: 23%" data-pair="AIME 2024 (Recent LLM benchmarks)" data-reason="21 of 90 models have a known level (not Unknown)."><span>23%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.444" data-col="llm-recent--aime-2025" data-tip="Known: 44%" data-pair="AIME 2025 (Recent LLM benchmarks)" data-reason="40 of 90 models have a known level (not Unknown)."><span>44%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.100" data-col="llm-recent--math-500" data-tip="Known: 10%" data-pair="MATH-500 (Recent LLM benchmarks)" data-reason="9 of 90 models have a known level (not Unknown)."><span>10%</span></td>
+        <td class="stat vstat gs rate rate-known" style="--v: 0.026" data-col="llm-multimodal--mmmu" data-tip="Known: 3%" data-pair="MMMU (Massive Multi-discipline Multimodal Understanding and Reasoning) (Multimodal LLM benchmarks)" data-reason="1 of 38 models have a known level (not Unknown)."><span>3%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.026" data-col="llm-multimodal--mmmu-pro" data-tip="Known: 3%" data-pair="MMMU-Pro (Multimodal LLM benchmarks)" data-reason="1 of 38 models have a known level (not Unknown)."><span>3%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.158" data-col="llm-multimodal--mathvista" data-tip="Known: 16%" data-pair="MathVista (Multimodal LLM benchmarks)" data-reason="6 of 38 models have a known level (not Unknown)."><span>16%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.158" data-col="llm-multimodal--chartqa" data-tip="Known: 16%" data-pair="ChartQA (Multimodal LLM benchmarks)" data-reason="6 of 38 models have a known level (not Unknown)."><span>16%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.158" data-col="llm-multimodal--docvqa" data-tip="Known: 16%" data-pair="DocVQA (Multimodal LLM benchmarks)" data-reason="6 of 38 models have a known level (not Unknown)."><span>16%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.158" data-col="llm-multimodal--ai2d" data-tip="Known: 16%" data-pair="AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="6 of 38 models have a known level (not Unknown)."><span>16%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.263" data-col="llm-multimodal--charxiv" data-tip="Known: 26%" data-pair="CharXiv (Multimodal LLM benchmarks)" data-reason="10 of 38 models have a known level (not Unknown)."><span>26%</span></td>
+        <td class="stat stat-total ss rate rate-known" style="--v: 0.112" data-col="known" data-tip="Known, whole map: 11%" data-pair="All text / llm models and benchmark datasets" data-reason="181 of 1616 cells have a known level (not Unknown).">11%</td>
+        <td class="stat"></td>
+<td class="stat stat-score"></td>      </tr>
+      <tr>
+        <th scope="row" class="stat-label">Contaminated</th>
+        <td class="stat vstat gs rate rate-contaminated" style="--v: 0.111" data-col="llm-classic--mmlu" data-tip="Contaminated: 11%" data-pair="MMLU (Measuring Massive Multitask Language Understanding) (Classic LLM benchmarks)" data-reason="10 of 90 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>11%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.033" data-col="llm-classic--gsm8k" data-tip="Contaminated: 3%" data-pair="GSM8K (Grade School Math 8K) (Classic LLM benchmarks)" data-reason="3 of 90 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>3%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.022" data-col="llm-classic--math" data-tip="Contaminated: 2%" data-pair="MATH (Mathematics Aptitude Test of Heuristics) (Classic LLM benchmarks)" data-reason="2 of 90 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>2%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.078" data-col="llm-classic--humaneval" data-tip="Contaminated: 8%" data-pair="HumanEval (Classic LLM benchmarks)" data-reason="7 of 90 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>8%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.056" data-col="llm-classic--arc-challenge" data-tip="Contaminated: 6%" data-pair="ARC-Challenge (AI2 Reasoning Challenge, Challenge Set) (Classic LLM benchmarks)" data-reason="5 of 90 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>6%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.067" data-col="llm-classic--hellaswag" data-tip="Contaminated: 7%" data-pair="HellaSwag (Classic LLM benchmarks)" data-reason="6 of 90 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>7%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.000" data-col="llm-classic--truthfulqa" data-tip="Contaminated: 0%" data-pair="TruthfulQA (Classic LLM benchmarks)" data-reason="0 of 90 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>0%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.022" data-col="llm-classic--winogrande" data-tip="Contaminated: 2%" data-pair="WinoGrande (Classic LLM benchmarks)" data-reason="2 of 90 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>2%</span></td>
+        <td class="stat vstat gs rate rate-contaminated" style="--v: 0.000" data-col="llm-recent--gpqa-diamond" data-tip="Contaminated: 0%" data-pair="GPQA Diamond (Recent LLM benchmarks)" data-reason="0 of 90 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>0%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.056" data-col="llm-recent--mmlu-pro" data-tip="Contaminated: 6%" data-pair="MMLU-Pro (Recent LLM benchmarks)" data-reason="5 of 90 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>6%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.000" data-col="llm-recent--livecodebench" data-tip="Contaminated: 0%" data-pair="LiveCodeBench (code generation, release_v6) (Recent LLM benchmarks)" data-reason="0 of 90 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>0%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.044" data-col="llm-recent--swe-bench-verified" data-tip="Contaminated: 4%" data-pair="SWE-bench Verified (Recent LLM benchmarks)" data-reason="4 of 90 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>4%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.044" data-col="llm-recent--aime-2024" data-tip="Contaminated: 4%" data-pair="AIME 2024 (Recent LLM benchmarks)" data-reason="4 of 90 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>4%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.011" data-col="llm-recent--aime-2025" data-tip="Contaminated: 1%" data-pair="AIME 2025 (Recent LLM benchmarks)" data-reason="1 of 90 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>1%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.033" data-col="llm-recent--math-500" data-tip="Contaminated: 3%" data-pair="MATH-500 (Recent LLM benchmarks)" data-reason="3 of 90 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>3%</span></td>
+        <td class="stat vstat gs rate rate-contaminated" style="--v: 0.000" data-col="llm-multimodal--mmmu" data-tip="Contaminated: 0%" data-pair="MMMU (Massive Multi-discipline Multimodal Understanding and Reasoning) (Multimodal LLM benchmarks)" data-reason="0 of 38 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>0%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.026" data-col="llm-multimodal--mmmu-pro" data-tip="Contaminated: 3%" data-pair="MMMU-Pro (Multimodal LLM benchmarks)" data-reason="1 of 38 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>3%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.000" data-col="llm-multimodal--mathvista" data-tip="Contaminated: 0%" data-pair="MathVista (Multimodal LLM benchmarks)" data-reason="0 of 38 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>0%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.079" data-col="llm-multimodal--chartqa" data-tip="Contaminated: 8%" data-pair="ChartQA (Multimodal LLM benchmarks)" data-reason="3 of 38 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>8%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.053" data-col="llm-multimodal--docvqa" data-tip="Contaminated: 5%" data-pair="DocVQA (Multimodal LLM benchmarks)" data-reason="2 of 38 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>5%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.079" data-col="llm-multimodal--ai2d" data-tip="Contaminated: 8%" data-pair="AI2D (AI2 Diagrams) (Multimodal LLM benchmarks)" data-reason="3 of 38 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>8%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.026" data-col="llm-multimodal--charxiv" data-tip="Contaminated: 3%" data-pair="CharXiv (Multimodal LLM benchmarks)" data-reason="1 of 38 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>3%</span></td>
+        <td class="stat ss"></td>
+        <td class="stat stat-total rate rate-contaminated" style="--v: 0.038" data-col="contaminated" data-tip="Contaminated, whole map: 4%" data-pair="All text / llm models and benchmark datasets" data-reason="62 of 1616 cells have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too.">4%</td>
+<td class="stat stat-score"></td>      </tr>
+    </tfoot>
   </table>
   </div>
-  <p class="muted small">Rows are models, grouped by family; columns are benchmark datasets. Hover a square for the reason, click it for the evidence. Empty outlines mark benchmarks a model cannot take (e.g. image benchmarks for text-only models).</p>
+  <p class="muted small">Rows are models, grouped by family; columns are benchmark datasets. Hover a square for the reason, click it for the evidence. The last columns and rows summarise each model and dataset: <strong>Known</strong> is the share of squares whose level is known, <strong>Contaminated</strong> the share where test data was seen or possibly seen (a lower bound, since Unknown squares may be contaminated too); in Scores mode, <strong>Avg. rank</strong> averages each model's ranks, scaled from 0 (best) to 1 (worst). Empty outlines mark benchmarks a model cannot take (e.g. image benchmarks for text-only models).</p>
 </section>
 
 <section>
@@ -2395,7 +2724,7 @@
   <h2>Models</h2>
   <div class="table-wrap">
   <table class="data">
-    <thead><tr><th>Model</th><th>Organisation</th><th>Released</th><th>Disclosure</th><th title="Share of benchmark cells whose level is not Unknown">Determined</th></tr></thead>
+    <thead><tr><th>Model</th><th>Organisation</th><th>Released</th><th>Disclosure</th><th title="Share of benchmark cells whose level is not Unknown">Known</th></tr></thead>
     <tbody>
       <tr>
         <td><a href="../../contamination-map/models/bloom.html">BLOOM</a></td>
@@ -3073,7 +3402,7 @@
         <img src="../../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24">
       </a>
       <p class="footer__build">
-      Contamination map built 2026-10-19 ·
+      Contamination map built 2026-11-24 ·
       <a href="../../contamination-map/data/matrix.csv">matrix.csv</a> ·
       <a href="../../contamination-map/data/matrix.json">matrix.json</a> ·
       Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.

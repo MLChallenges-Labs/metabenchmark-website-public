@@ -98,6 +98,16 @@
 </section>
 
 <section>
+  <h2>Summary rates</h2>
+  <p>The last columns of the map summarise each model, and its last rows each benchmark dataset:</p>
+  <ul>
+    <li><strong>Known</strong>: the share of squares whose level is not <span class="badge lvl-unknown">Unknown</span>. It measures how much has been disclosed, not how clean the model is.</li>
+    <li><strong>Contaminated</strong>: the share of squares marked <span class="badge lvl-test_seen">Test data seen</span> or <span class="badge lvl-seen_split_unclear">Seen, split unclear</span>, i.e. where the benchmark's test data was, or may have been, in the training data. It is computed over all squares, so it is a lower bound: Unknown squares may be contaminated too.</li>
+  </ul>
+  <p>Benchmarks a model cannot take (empty outlines) are not counted. The bottom-right figures cover the whole map.</p>
+</section>
+
+<section>
   <h2>Models built on other models</h2>
   <p>Many models start from a pre-trained base model (for example an anomaly detector built on CLIP, or a distilled language model). They inherit whatever their base model may have seen: a cell shows the base model's exposure when it is stronger, and “Not seen” requires every base model to be “Not seen” as well.</p>
 </section>
@@ -117,6 +127,7 @@
 <section>
   <h2>Scores mode</h2>
   <p>The map can also show benchmark scores instead of contamination levels. Scores come from one public leaderboard per benchmark (for GIFT-Eval: relative CRPS against Seasonal Naive, from its repository at a fixed commit), so that every score in a column was produced the same way. Each square is shaded by the model's rank among the models scored on that dataset; its contamination level stays visible as a corner mark. Benchmarks without such a leaderboard stay empty rather than mixing numbers from papers that used different settings.</p>
+  <p>In Scores mode, an <strong>Avg. rank</strong> column averages each model's ranks over the datasets it is scored on. Each rank is first scaled from 0 (best of the models scored on that dataset) to 1 (worst), so that a dataset with 4 scored models counts as much as one with 40; datasets with a single scored model are skipped. Models are compared on whichever datasets they were scored on, so two averages are only comparable when they cover similar datasets; the number of datasets is shown on hover.</p>
   <p>A leaderboard entry is linked to a model only when the checkpoint it links to is the released model; entries that cannot be matched (for example results from a retrained or fine-tuned variant) are left out, with the reason recorded in the score file.</p>
 </section>
 
@@ -169,7 +180,7 @@
         <img src="../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24">
       </a>
       <p class="footer__build">
-      Contamination map built 2026-10-19 ·
+      Contamination map built 2026-11-24 ·
       <a href="../contamination-map/data/matrix.csv">matrix.csv</a> ·
       <a href="../contamination-map/data/matrix.json">matrix.json</a> ·
       Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.

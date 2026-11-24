@@ -1,4 +1,5 @@
 // Contamination map: tooltip on hover/focus, plus row and column highlighting.
+// Squares carry data-level; summary cells (rates, average rank) carry data-tip.
 (function () {
   const maps = document.querySelectorAll("table.map");
   if (!maps.length) return;
@@ -13,9 +14,13 @@
     tip.replaceChildren();
     const head = document.createElement("div");
     head.className = "tip-head";
-    const swatch = document.createElement("span");
-    swatch.className = "tip-swatch lvl-" + a.dataset.level;
-    head.append(swatch, a.dataset.label);
+    if (a.dataset.level) {
+      const swatch = document.createElement("span");
+      swatch.className = "tip-swatch lvl-" + a.dataset.level;
+      head.append(swatch, a.dataset.label);
+    } else {
+      head.append(a.dataset.tip);
+    }
     const pair = document.createElement("div");
     pair.className = "tip-pair";
     pair.textContent = a.dataset.pair;
@@ -50,6 +55,8 @@
     if (col) col.classList.toggle("hl", on);
   }
 
+  const TARGET = "a[data-level], [data-tip]";
+
   maps.forEach(function (map) {
     let current = null;
     const enter = function (a) {
@@ -65,7 +72,7 @@
     };
 
     map.addEventListener("mouseover", function (e) {
-      const a = e.target.closest("a[data-level]");
+      const a = e.target.closest(TARGET);
       if (a) enter(a);
       else leave();
     });
@@ -74,7 +81,7 @@
     });
     map.addEventListener("mouseleave", leave);
     map.addEventListener("focusin", function (e) {
-      const a = e.target.closest("a[data-level]");
+      const a = e.target.closest(TARGET);
       if (!a) return;
       enter(a);
       const r = a.getBoundingClientRect();

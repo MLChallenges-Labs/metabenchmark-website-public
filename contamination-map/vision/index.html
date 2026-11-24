@@ -72,7 +72,7 @@
     </ul>
     <p class="small muted">Rank among the models scored on each dataset. Every column comes from a single source that evaluated all its models the same way; the source, metric, protocol and licence are given on each benchmark page. Columns without such a source stay empty.</p>
   </div>
-  <div class="table-wrap">
+  <div class="table-wrap map-wrap">
   <table class="map mode-contamination">
     <thead>
       <tr>
@@ -80,6 +80,7 @@
         <th class="group" colspan="8"><a href="../../contamination-map/benchmarks/industrial-ad.html" title="Industrial anomaly detection" style="width: calc(8 * 18px - 10px)">Industrial anomaly detection</a></th>
         <th class="group" colspan="6"><a href="../../contamination-map/benchmarks/imagenet-shifts.html" title="ImageNet and natural distribution shifts" style="width: calc(6 * 18px - 10px)">ImageNet and natural distribution shifts</a></th>
         <th class="group" colspan="16"><a href="../../contamination-map/benchmarks/zeroshot-transfer.html" title="Zero-shot transfer classification" style="width: calc(16 * 18px - 10px)">Zero-shot transfer classification</a></th>
+        <th class="ss" colspan="3"></th>
       </tr>
       <tr>
         <th class="corner muted">Model</th>
@@ -113,7 +114,9 @@
         <th class="col" data-col="zeroshot-transfer--country211" title="Country211"><a href="../../contamination-map/datasets/country211.html">Country211</a></th>
         <th class="col" data-col="zeroshot-transfer--stl-10" title="STL-10"><a href="../../contamination-map/datasets/stl-10.html">STL-10</a></th>
         <th class="col" data-col="zeroshot-transfer--mnist" title="MNIST"><a href="../../contamination-map/datasets/mnist.html">MNIST</a></th>
-      </tr>
+        <th class="col stat ss" data-col="known" title="Share of the model's cells whose level is known (not Unknown)"><span>Known</span></th>
+        <th class="col stat" data-col="contaminated" title="Share of the model's cells where test data was seen or possibly seen"><span>Contaminated</span></th>
+<th class="col stat stat-score" data-col="avg-rank" title="Average rank over the datasets with a score: 0 = best, 1 = worst"><span>Avg. rank</span></th>      </tr>
     </thead>
     <tbody>
       <tr>
@@ -148,6 +151,9 @@
         <td class="sq na" title="AA-CLIP, trained on MVTec AD (for VisA results) does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AA-CLIP, trained on MVTec AD (for VisA results) does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AA-CLIP, trained on MVTec AD (for VisA results) does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.125" data-col="known" data-tip="Known: 12%" data-pair="AA-CLIP, trained on MVTec AD (for VisA results)" data-reason="1 of 8 benchmark datasets have a known level (not Unknown).">12%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.125" data-col="contaminated" data-tip="Contaminated: 12%" data-pair="AA-CLIP, trained on MVTec AD (for VisA results)" data-reason="Test data seen or possibly seen on 1 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">12%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/aa-clip-visa.html" title="AA-CLIP, trained on VisA">AA-CLIP, trained on VisA</a></th>
@@ -181,6 +187,9 @@
         <td class="sq na" title="AA-CLIP, trained on VisA does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AA-CLIP, trained on VisA does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AA-CLIP, trained on VisA does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.125" data-col="known" data-tip="Known: 12%" data-pair="AA-CLIP, trained on VisA" data-reason="1 of 8 benchmark datasets have a known level (not Unknown).">12%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.125" data-col="contaminated" data-tip="Contaminated: 12%" data-pair="AA-CLIP, trained on VisA" data-reason="Test data seen or possibly seen on 1 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">12%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/adaclip-all.html" title="AdaCLIP, trained on all 14 datasets (demo model)">AdaCLIP, trained on all 14 datasets (demo model)</a></th>
@@ -214,6 +223,9 @@
         <td class="sq na" title="AdaCLIP, trained on all 14 datasets (demo model) does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AdaCLIP, trained on all 14 datasets (demo model) does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AdaCLIP, trained on all 14 datasets (demo model) does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.500" data-col="known" data-tip="Known: 50%" data-pair="AdaCLIP, trained on all 14 datasets (demo model)" data-reason="4 of 8 benchmark datasets have a known level (not Unknown).">50%</td>
+        <td class="stat rate rate-contaminated on-dark" style="--v: 0.500" data-col="contaminated" data-tip="Contaminated: 50%" data-pair="AdaCLIP, trained on all 14 datasets (demo model)" data-reason="Test data seen or possibly seen on 4 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">50%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/adaclip-mvtec-colondb.html" title="AdaCLIP, trained on MVTec AD + ColonDB">AdaCLIP, trained on MVTec AD + ColonDB</a></th>
@@ -247,6 +259,9 @@
         <td class="sq na" title="AdaCLIP, trained on MVTec AD + ColonDB does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AdaCLIP, trained on MVTec AD + ColonDB does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AdaCLIP, trained on MVTec AD + ColonDB does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.125" data-col="known" data-tip="Known: 12%" data-pair="AdaCLIP, trained on MVTec AD + ColonDB" data-reason="1 of 8 benchmark datasets have a known level (not Unknown).">12%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.125" data-col="contaminated" data-tip="Contaminated: 12%" data-pair="AdaCLIP, trained on MVTec AD + ColonDB" data-reason="Test data seen or possibly seen on 1 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">12%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/adaclip-visa-clinicdb.html" title="AdaCLIP, trained on VisA + ClinicDB">AdaCLIP, trained on VisA + ClinicDB</a></th>
@@ -280,6 +295,9 @@
         <td class="sq na" title="AdaCLIP, trained on VisA + ClinicDB does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AdaCLIP, trained on VisA + ClinicDB does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AdaCLIP, trained on VisA + ClinicDB does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.125" data-col="known" data-tip="Known: 12%" data-pair="AdaCLIP, trained on VisA + ClinicDB" data-reason="1 of 8 benchmark datasets have a known level (not Unknown).">12%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.125" data-col="contaminated" data-tip="Contaminated: 12%" data-pair="AdaCLIP, trained on VisA + ClinicDB" data-reason="Test data seen or possibly seen on 1 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">12%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/adaptclip-mvtec.html" title="AdaptCLIP, trained on MVTec AD">AdaptCLIP, trained on MVTec AD</a></th>
@@ -313,6 +331,9 @@
         <td class="sq na" title="AdaptCLIP, trained on MVTec AD does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AdaptCLIP, trained on MVTec AD does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AdaptCLIP, trained on MVTec AD does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.125" data-col="known" data-tip="Known: 12%" data-pair="AdaptCLIP, trained on MVTec AD" data-reason="1 of 8 benchmark datasets have a known level (not Unknown).">12%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.125" data-col="contaminated" data-tip="Contaminated: 12%" data-pair="AdaptCLIP, trained on MVTec AD" data-reason="Test data seen or possibly seen on 1 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">12%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/adaptclip-visa.html" title="AdaptCLIP, trained on VisA">AdaptCLIP, trained on VisA</a></th>
@@ -346,6 +367,9 @@
         <td class="sq na" title="AdaptCLIP, trained on VisA does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AdaptCLIP, trained on VisA does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AdaptCLIP, trained on VisA does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.125" data-col="known" data-tip="Known: 12%" data-pair="AdaptCLIP, trained on VisA" data-reason="1 of 8 benchmark datasets have a known level (not Unknown).">12%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.125" data-col="contaminated" data-tip="Contaminated: 12%" data-pair="AdaptCLIP, trained on VisA" data-reason="Test data seen or possibly seen on 1 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">12%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/anomaly-ov.html" title="Anomaly-OneVision (Anomaly-OV)">Anomaly-OneVision (Anomaly-OV)</a></th>
@@ -379,6 +403,9 @@
         <td class="sq na" title="Anomaly-OneVision (Anomaly-OV) does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="Anomaly-OneVision (Anomaly-OV) does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="Anomaly-OneVision (Anomaly-OV) does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.250" data-col="known" data-tip="Known: 25%" data-pair="Anomaly-OneVision (Anomaly-OV)" data-reason="2 of 8 benchmark datasets have a known level (not Unknown).">25%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.250" data-col="contaminated" data-tip="Contaminated: 25%" data-pair="Anomaly-OneVision (Anomaly-OV)" data-reason="Test data seen or possibly seen on 2 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">25%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/anomalyclip-mvtec.html" title="AnomalyCLIP, trained on MVTec AD">AnomalyCLIP, trained on MVTec AD</a></th>
@@ -412,6 +439,9 @@
         <td class="sq na" title="AnomalyCLIP, trained on MVTec AD does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AnomalyCLIP, trained on MVTec AD does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AnomalyCLIP, trained on MVTec AD does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.125" data-col="known" data-tip="Known: 12%" data-pair="AnomalyCLIP, trained on MVTec AD" data-reason="1 of 8 benchmark datasets have a known level (not Unknown).">12%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.125" data-col="contaminated" data-tip="Contaminated: 12%" data-pair="AnomalyCLIP, trained on MVTec AD" data-reason="Test data seen or possibly seen on 1 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">12%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/anomalyclip-visa.html" title="AnomalyCLIP, trained on VisA">AnomalyCLIP, trained on VisA</a></th>
@@ -445,6 +475,9 @@
         <td class="sq na" title="AnomalyCLIP, trained on VisA does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AnomalyCLIP, trained on VisA does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AnomalyCLIP, trained on VisA does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.125" data-col="known" data-tip="Known: 12%" data-pair="AnomalyCLIP, trained on VisA" data-reason="1 of 8 benchmark datasets have a known level (not Unknown).">12%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.125" data-col="contaminated" data-tip="Contaminated: 12%" data-pair="AnomalyCLIP, trained on VisA" data-reason="Test data seen or possibly seen on 1 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">12%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/anomalydino.html" title="AnomalyDINO">AnomalyDINO</a></th>
@@ -478,6 +511,9 @@
         <td class="sq na" title="AnomalyDINO does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AnomalyDINO does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AnomalyDINO does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="AnomalyDINO" data-reason="0 of 8 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="AnomalyDINO" data-reason="Test data seen or possibly seen on 0 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/anomalygpt-supervised.html" title="AnomalyGPT, supervised (demo model)">AnomalyGPT, supervised (demo model)</a></th>
@@ -511,6 +547,9 @@
         <td class="sq na" title="AnomalyGPT, supervised (demo model) does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AnomalyGPT, supervised (demo model) does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AnomalyGPT, supervised (demo model) does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.375" data-col="known" data-tip="Known: 38%" data-pair="AnomalyGPT, supervised (demo model)" data-reason="3 of 8 benchmark datasets have a known level (not Unknown).">38%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.375" data-col="contaminated" data-tip="Contaminated: 38%" data-pair="AnomalyGPT, supervised (demo model)" data-reason="Test data seen or possibly seen on 3 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">38%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/anomalygpt-mvtec.html" title="AnomalyGPT, unsupervised on MVTec AD">AnomalyGPT, unsupervised on MVTec AD</a></th>
@@ -544,6 +583,9 @@
         <td class="sq na" title="AnomalyGPT, unsupervised on MVTec AD does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AnomalyGPT, unsupervised on MVTec AD does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AnomalyGPT, unsupervised on MVTec AD does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.125" data-col="known" data-tip="Known: 12%" data-pair="AnomalyGPT, unsupervised on MVTec AD" data-reason="1 of 8 benchmark datasets have a known level (not Unknown).">12%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="AnomalyGPT, unsupervised on MVTec AD" data-reason="Test data seen or possibly seen on 0 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/anomalygpt-visa.html" title="AnomalyGPT, unsupervised on VisA">AnomalyGPT, unsupervised on VisA</a></th>
@@ -577,6 +619,9 @@
         <td class="sq na" title="AnomalyGPT, unsupervised on VisA does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AnomalyGPT, unsupervised on VisA does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="AnomalyGPT, unsupervised on VisA does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.125" data-col="known" data-tip="Known: 12%" data-pair="AnomalyGPT, unsupervised on VisA" data-reason="1 of 8 benchmark datasets have a known level (not Unknown).">12%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="AnomalyGPT, unsupervised on VisA" data-reason="Test data seen or possibly seen on 0 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/april-gan-mvtec.html" title="APRIL-GAN (VAND 2023), trained on MVTec AD">APRIL-GAN (VAND 2023), trained on MVTec AD</a></th>
@@ -610,6 +655,9 @@
         <td class="sq na" title="APRIL-GAN (VAND 2023), trained on MVTec AD does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="APRIL-GAN (VAND 2023), trained on MVTec AD does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="APRIL-GAN (VAND 2023), trained on MVTec AD does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.125" data-col="known" data-tip="Known: 12%" data-pair="APRIL-GAN (VAND 2023), trained on MVTec AD" data-reason="1 of 8 benchmark datasets have a known level (not Unknown).">12%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.125" data-col="contaminated" data-tip="Contaminated: 12%" data-pair="APRIL-GAN (VAND 2023), trained on MVTec AD" data-reason="Test data seen or possibly seen on 1 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">12%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/april-gan-visa.html" title="APRIL-GAN (VAND 2023), trained on VisA">APRIL-GAN (VAND 2023), trained on VisA</a></th>
@@ -643,6 +691,9 @@
         <td class="sq na" title="APRIL-GAN (VAND 2023), trained on VisA does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="APRIL-GAN (VAND 2023), trained on VisA does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="APRIL-GAN (VAND 2023), trained on VisA does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.125" data-col="known" data-tip="Known: 12%" data-pair="APRIL-GAN (VAND 2023), trained on VisA" data-reason="1 of 8 benchmark datasets have a known level (not Unknown).">12%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.125" data-col="contaminated" data-tip="Contaminated: 12%" data-pair="APRIL-GAN (VAND 2023), trained on VisA" data-reason="Test data seen or possibly seen on 1 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">12%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/clip-openai.html" title="OpenAI CLIP">OpenAI CLIP</a></th>
@@ -676,6 +727,9 @@
         <td class="sq lvl-test_seen" data-shade="2" style="--mark: var(--lvl-test_seen)"><a href="../../contamination-map/models/clip-openai.html#zeroshot-transfer--country211" aria-label="OpenAI CLIP × Country211: Test data seen" data-col="zeroshot-transfer--country211" data-level="test_seen" data-label="Test data seen" data-pair="OpenAI CLIP × Country211 (Zero-shot transfer classification)" data-reason="a contamination analysis found test examples in the pre-training data (21.5% of Country211 test examples were detected as near-duplicates of WIT training images (the largest overlap of the 35 datasets checked); overall zero-shot accuracy changed by only +0.2 points.) (via WIT (WebImageText), OpenAI CLIP pre-training set)" data-score="Rank 5 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.344 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
         <td class="sq lvl-unknown" data-shade="1" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/clip-openai.html#zeroshot-transfer--stl-10" aria-label="OpenAI CLIP × STL-10: Unknown" data-col="zeroshot-transfer--stl-10" data-level="unknown" data-label="Unknown" data-pair="OpenAI CLIP × STL-10 (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail" data-score="Rank 3 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.994 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
         <td class="sq lvl-unknown" data-shade="2" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/clip-openai.html#zeroshot-transfer--mnist" aria-label="OpenAI CLIP × MNIST: Unknown" data-col="zeroshot-transfer--mnist" data-level="unknown" data-label="Unknown" data-pair="OpenAI CLIP × MNIST (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail" data-score="Rank 5 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.792 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.200" data-col="known" data-tip="Known: 20%" data-pair="OpenAI CLIP" data-reason="6 of 30 benchmark datasets have a known level (not Unknown).">20%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.167" data-col="contaminated" data-tip="Contaminated: 17%" data-pair="OpenAI CLIP" data-reason="Test data seen or possibly seen on 5 of 30 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">17%</td>
+        <td class="stat stat-score rate score-3 on-dark" data-col="avg-rank" data-tip="Average rank: 0.78" data-pair="OpenAI CLIP" data-reason="Mean rank over 22 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.78</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/dfn-clip-2b.html" title="Apple DFN CLIP (DFN-2B checkpoints)">Apple DFN CLIP (DFN-2B checkpoints)</a></th>
@@ -709,6 +763,9 @@
         <td class="sq lvl-not_seen" data-shade="4" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/dfn-clip-2b.html#zeroshot-transfer--country211" aria-label="Apple DFN CLIP (DFN-2B checkpoints) × Country211: Not seen" data-col="zeroshot-transfer--country211" data-level="not_seen" data-label="Not seen" data-pair="Apple DFN CLIP (DFN-2B checkpoints) × Country211 (Zero-shot transfer classification)" data-reason="the authors state its test portion was excluded from training" data-score="Rank 10 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.282 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
         <td class="sq lvl-not_seen" data-shade="4" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/dfn-clip-2b.html#zeroshot-transfer--stl-10" aria-label="Apple DFN CLIP (DFN-2B checkpoints) × STL-10: Not seen" data-col="zeroshot-transfer--stl-10" data-level="not_seen" data-label="Not seen" data-pair="Apple DFN CLIP (DFN-2B checkpoints) × STL-10 (Zero-shot transfer classification)" data-reason="the authors state its test portion was excluded from training" data-score="Rank 11 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.977 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
         <td class="sq lvl-not_seen" data-shade="1" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/dfn-clip-2b.html#zeroshot-transfer--mnist" aria-label="Apple DFN CLIP (DFN-2B checkpoints) × MNIST: Not seen" data-col="zeroshot-transfer--mnist" data-level="not_seen" data-label="Not seen" data-pair="Apple DFN CLIP (DFN-2B checkpoints) × MNIST (Zero-shot transfer classification)" data-reason="the authors state its test portion was excluded from training" data-score="Rank 3 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.847 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="Apple DFN CLIP (DFN-2B checkpoints)" data-reason="22 of 22 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Apple DFN CLIP (DFN-2B checkpoints)" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.45" data-pair="Apple DFN CLIP (DFN-2B checkpoints)" data-reason="Mean rank over 22 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.45</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/dfn-clip-5b.html" title="Apple DFN CLIP (DFN-5B checkpoints)">Apple DFN CLIP (DFN-5B checkpoints)</a></th>
@@ -742,6 +799,9 @@
         <td class="sq lvl-unknown" data-shade="0" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/dfn-clip-5b.html#zeroshot-transfer--country211" aria-label="Apple DFN CLIP (DFN-5B checkpoints) × Country211: Unknown" data-col="zeroshot-transfer--country211" data-level="unknown" data-label="Unknown" data-pair="Apple DFN CLIP (DFN-5B checkpoints) × Country211 (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail" data-score="Rank 1 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.379 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
         <td class="sq lvl-unknown" data-shade="3" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/dfn-clip-5b.html#zeroshot-transfer--stl-10" aria-label="Apple DFN CLIP (DFN-5B checkpoints) × STL-10: Unknown" data-col="zeroshot-transfer--stl-10" data-level="unknown" data-label="Unknown" data-pair="Apple DFN CLIP (DFN-5B checkpoints) × STL-10 (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail" data-score="Rank 8 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.991 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
         <td class="sq lvl-unknown" data-shade="1" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/dfn-clip-5b.html#zeroshot-transfer--mnist" aria-label="Apple DFN CLIP (DFN-5B checkpoints) × MNIST: Unknown" data-col="zeroshot-transfer--mnist" data-level="unknown" data-label="Unknown" data-pair="Apple DFN CLIP (DFN-5B checkpoints) × MNIST (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail" data-score="Rank 4 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.836 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="Apple DFN CLIP (DFN-5B checkpoints)" data-reason="0 of 22 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Apple DFN CLIP (DFN-5B checkpoints)" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.20" data-pair="Apple DFN CLIP (DFN-5B checkpoints)" data-reason="Mean rank over 22 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.20</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/dinov2.html" title="DINOv2">DINOv2</a></th>
@@ -775,6 +835,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/dinov2.html#zeroshot-transfer--country211" aria-label="DINOv2 × Country211: Unknown" data-col="zeroshot-transfer--country211" data-level="unknown" data-label="Unknown" data-pair="DINOv2 × Country211 (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/dinov2.html#zeroshot-transfer--stl-10" aria-label="DINOv2 × STL-10: Unknown" data-col="zeroshot-transfer--stl-10" data-level="unknown" data-label="Unknown" data-pair="DINOv2 × STL-10 (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/dinov2.html#zeroshot-transfer--mnist" aria-label="DINOv2 × MNIST: Unknown" data-col="zeroshot-transfer--mnist" data-level="unknown" data-label="Unknown" data-pair="DINOv2 × MNIST (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.500" data-col="known" data-tip="Known: 50%" data-pair="DINOv2" data-reason="15 of 30 benchmark datasets have a known level (not Unknown).">50%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="DINOv2" data-reason="Test data seen or possibly seen on 0 of 30 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/dinov3.html" title="DINOv3 (web / LVD-1689M models)">DINOv3 (web / LVD-1689M models)</a></th>
@@ -808,6 +871,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/dinov3.html#zeroshot-transfer--country211" aria-label="DINOv3 (web / LVD-1689M models) × Country211: Unknown" data-col="zeroshot-transfer--country211" data-level="unknown" data-label="Unknown" data-pair="DINOv3 (web / LVD-1689M models) × Country211 (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-related" data-shade="none" style="--mark: var(--lvl-related)"><a href="../../contamination-map/models/dinov3.html#zeroshot-transfer--stl-10" aria-label="DINOv3 (web / LVD-1689M models) × STL-10: Related data seen" data-col="zeroshot-transfer--stl-10" data-level="related" data-label="Related data seen" data-pair="DINOv3 (web / LVD-1689M models) × STL-10 (Zero-shot transfer classification)" data-reason="related dataset ImageNet-1k (ILSVRC 2012) was used"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/dinov3.html#zeroshot-transfer--mnist" aria-label="DINOv3 (web / LVD-1689M models) × MNIST: Unknown" data-col="zeroshot-transfer--mnist" data-level="unknown" data-label="Unknown" data-pair="DINOv3 (web / LVD-1689M models) × MNIST (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.100" data-col="known" data-tip="Known: 10%" data-pair="DINOv3 (web / LVD-1689M models)" data-reason="3 of 30 benchmark datasets have a known level (not Unknown).">10%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.033" data-col="contaminated" data-tip="Contaminated: 3%" data-pair="DINOv3 (web / LVD-1689M models)" data-reason="Test data seen or possibly seen on 1 of 30 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">3%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/eva-clip.html" title="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B)">EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B)</a></th>
@@ -841,6 +907,9 @@
         <td class="sq lvl-test_seen" data-shade="2" style="--mark: var(--lvl-test_seen)"><a href="../../contamination-map/models/eva-clip.html#zeroshot-transfer--country211" aria-label="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B) × Country211: Test data seen" data-col="zeroshot-transfer--country211" data-level="test_seen" data-label="Test data seen" data-pair="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B) × Country211 (Zero-shot transfer classification)" data-reason="via base model OpenAI CLIP: a contamination analysis found test examples in the pre-training data (21.5% of Country211 test examples were detected as near-duplicates of WIT training images (the largest overlap of the 35 datasets checked); overall zero-shot accuracy changed by only +0.2 points.) (via WIT (WebImageText), OpenAI CLIP pre-training set)" data-score="Rank 7 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.335 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
         <td class="sq lvl-unknown" data-shade="0" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/eva-clip.html#zeroshot-transfer--stl-10" aria-label="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B) × STL-10: Unknown" data-col="zeroshot-transfer--stl-10" data-level="unknown" data-label="Unknown" data-pair="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B) × STL-10 (Zero-shot transfer classification)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail" data-score="Rank 1 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.997 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
         <td class="sq lvl-unknown" data-shade="4" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/eva-clip.html#zeroshot-transfer--mnist" aria-label="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B) × MNIST: Unknown" data-col="zeroshot-transfer--mnist" data-level="unknown" data-label="Unknown" data-pair="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B) × MNIST (Zero-shot transfer classification)" data-reason="unknown for its base model OpenAI CLIP: training data not disclosed in enough detail" data-score="Rank 10 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.642 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.273" data-col="known" data-tip="Known: 27%" data-pair="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B)" data-reason="6 of 22 benchmark datasets have a known level (not Unknown).">27%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.227" data-col="contaminated" data-tip="Contaminated: 23%" data-pair="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B)" data-reason="Test data seen or possibly seen on 5 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">23%</td>
+        <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.47" data-pair="EVA-02-CLIP (B/16, L/14, L/14-336; Merged-2B)" data-reason="Mean rank over 22 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.47</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/eva-clip-e.html" title="EVA-02-CLIP-E/14 and E/14+ (LAION-2B)">EVA-02-CLIP-E/14 and E/14+ (LAION-2B)</a></th>
@@ -874,6 +943,9 @@
         <td class="sq lvl-unknown" data-shade="1" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/eva-clip-e.html#zeroshot-transfer--country211" aria-label="EVA-02-CLIP-E/14 and E/14+ (LAION-2B) × Country211: Unknown" data-col="zeroshot-transfer--country211" data-level="unknown" data-label="Unknown" data-pair="EVA-02-CLIP-E/14 and E/14+ (LAION-2B) × Country211 (Zero-shot transfer classification)" data-reason="unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail" data-score="Rank 4 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.356 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
         <td class="sq lvl-unknown" data-shade="2" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/eva-clip-e.html#zeroshot-transfer--stl-10" aria-label="EVA-02-CLIP-E/14 and E/14+ (LAION-2B) × STL-10: Unknown" data-col="zeroshot-transfer--stl-10" data-level="unknown" data-label="Unknown" data-pair="EVA-02-CLIP-E/14 and E/14+ (LAION-2B) × STL-10 (Zero-shot transfer classification)" data-reason="unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail" data-score="Rank 6 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.993 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
         <td class="sq lvl-unknown" data-shade="2" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/eva-clip-e.html#zeroshot-transfer--mnist" aria-label="EVA-02-CLIP-E/14 and E/14+ (LAION-2B) × MNIST: Unknown" data-col="zeroshot-transfer--mnist" data-level="unknown" data-label="Unknown" data-pair="EVA-02-CLIP-E/14 and E/14+ (LAION-2B) × MNIST (Zero-shot transfer classification)" data-reason="unknown for its base model OpenCLIP (LAION-2B checkpoints): training data not disclosed in enough detail" data-score="Rank 7 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.746 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="EVA-02-CLIP-E/14 and E/14+ (LAION-2B)" data-reason="0 of 22 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="EVA-02-CLIP-E/14 and E/14+ (LAION-2B)" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.22" data-pair="EVA-02-CLIP-E/14 and E/14+ (LAION-2B)" data-reason="Mean rank over 22 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.22</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/filo-mvtec.html" title="FiLo, trained on MVTec AD">FiLo, trained on MVTec AD</a></th>
@@ -907,6 +979,9 @@
         <td class="sq na" title="FiLo, trained on MVTec AD does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="FiLo, trained on MVTec AD does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="FiLo, trained on MVTec AD does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.125" data-col="known" data-tip="Known: 12%" data-pair="FiLo, trained on MVTec AD" data-reason="1 of 8 benchmark datasets have a known level (not Unknown).">12%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.125" data-col="contaminated" data-tip="Contaminated: 12%" data-pair="FiLo, trained on MVTec AD" data-reason="Test data seen or possibly seen on 1 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">12%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/filo-visa.html" title="FiLo, trained on VisA">FiLo, trained on VisA</a></th>
@@ -940,6 +1015,9 @@
         <td class="sq na" title="FiLo, trained on VisA does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="FiLo, trained on VisA does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="FiLo, trained on VisA does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.125" data-col="known" data-tip="Known: 12%" data-pair="FiLo, trained on VisA" data-reason="1 of 8 benchmark datasets have a known level (not Unknown).">12%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.125" data-col="contaminated" data-tip="Contaminated: 12%" data-pair="FiLo, trained on VisA" data-reason="Test data seen or possibly seen on 1 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">12%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/inctrl-mvtec.html" title="InCTRL, trained on MVTec AD">InCTRL, trained on MVTec AD</a></th>
@@ -973,6 +1051,9 @@
         <td class="sq na" title="InCTRL, trained on MVTec AD does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="InCTRL, trained on MVTec AD does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="InCTRL, trained on MVTec AD does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.625" data-col="known" data-tip="Known: 62%" data-pair="InCTRL, trained on MVTec AD" data-reason="5 of 8 benchmark datasets have a known level (not Unknown).">62%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.125" data-col="contaminated" data-tip="Contaminated: 12%" data-pair="InCTRL, trained on MVTec AD" data-reason="Test data seen or possibly seen on 1 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">12%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/inctrl-visa.html" title="InCTRL, trained on VisA">InCTRL, trained on VisA</a></th>
@@ -1006,6 +1087,9 @@
         <td class="sq na" title="InCTRL, trained on VisA does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="InCTRL, trained on VisA does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="InCTRL, trained on VisA does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.500" data-col="known" data-tip="Known: 50%" data-pair="InCTRL, trained on VisA" data-reason="4 of 8 benchmark datasets have a known level (not Unknown).">50%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.125" data-col="contaminated" data-tip="Contaminated: 12%" data-pair="InCTRL, trained on VisA" data-reason="Test data seen or possibly seen on 1 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">12%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/metaclip-2.html" title="Meta CLIP 2 (worldwide)">Meta CLIP 2 (worldwide)</a></th>
@@ -1039,6 +1123,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/metaclip-2.html#zeroshot-transfer--country211" aria-label="Meta CLIP 2 (worldwide) × Country211: Unknown" data-col="zeroshot-transfer--country211" data-level="unknown" data-label="Unknown" data-pair="Meta CLIP 2 (worldwide) × Country211 (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/metaclip-2.html#zeroshot-transfer--stl-10" aria-label="Meta CLIP 2 (worldwide) × STL-10: Unknown" data-col="zeroshot-transfer--stl-10" data-level="unknown" data-label="Unknown" data-pair="Meta CLIP 2 (worldwide) × STL-10 (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/metaclip-2.html#zeroshot-transfer--mnist" aria-label="Meta CLIP 2 (worldwide) × MNIST: Unknown" data-col="zeroshot-transfer--mnist" data-level="unknown" data-label="Unknown" data-pair="Meta CLIP 2 (worldwide) × MNIST (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.045" data-col="known" data-tip="Known: 5%" data-pair="Meta CLIP 2 (worldwide)" data-reason="1 of 22 benchmark datasets have a known level (not Unknown).">5%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Meta CLIP 2 (worldwide)" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/metaclip-2.5b.html" title="MetaCLIP (2.5B / fullcc checkpoints)">MetaCLIP (2.5B / fullcc checkpoints)</a></th>
@@ -1072,6 +1159,9 @@
         <td class="sq lvl-unknown" data-shade="0" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/metaclip-2.5b.html#zeroshot-transfer--country211" aria-label="MetaCLIP (2.5B / fullcc checkpoints) × Country211: Unknown" data-col="zeroshot-transfer--country211" data-level="unknown" data-label="Unknown" data-pair="MetaCLIP (2.5B / fullcc checkpoints) × Country211 (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail" data-score="Rank 2 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.372 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
         <td class="sq lvl-unknown" data-shade="0" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/metaclip-2.5b.html#zeroshot-transfer--stl-10" aria-label="MetaCLIP (2.5B / fullcc checkpoints) × STL-10: Unknown" data-col="zeroshot-transfer--stl-10" data-level="unknown" data-label="Unknown" data-pair="MetaCLIP (2.5B / fullcc checkpoints) × STL-10 (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail" data-score="Rank 2 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.994 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
         <td class="sq lvl-unknown" data-shade="3" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/metaclip-2.5b.html#zeroshot-transfer--mnist" aria-label="MetaCLIP (2.5B / fullcc checkpoints) × MNIST: Unknown" data-col="zeroshot-transfer--mnist" data-level="unknown" data-label="Unknown" data-pair="MetaCLIP (2.5B / fullcc checkpoints) × MNIST (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail" data-score="Rank 8 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.727 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.045" data-col="known" data-tip="Known: 5%" data-pair="MetaCLIP (2.5B / fullcc checkpoints)" data-reason="1 of 22 benchmark datasets have a known level (not Unknown).">5%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="MetaCLIP (2.5B / fullcc checkpoints)" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.39" data-pair="MetaCLIP (2.5B / fullcc checkpoints)" data-reason="Mean rank over 22 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.39</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/metaclip-400m.html" title="MetaCLIP (400M checkpoints)">MetaCLIP (400M checkpoints)</a></th>
@@ -1105,6 +1195,9 @@
         <td class="sq lvl-unknown" data-shade="3" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/metaclip-400m.html#zeroshot-transfer--country211" aria-label="MetaCLIP (400M checkpoints) × Country211: Unknown" data-col="zeroshot-transfer--country211" data-level="unknown" data-label="Unknown" data-pair="MetaCLIP (400M checkpoints) × Country211 (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail" data-score="Rank 9 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.308 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
         <td class="sq lvl-unknown" data-shade="2" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/metaclip-400m.html#zeroshot-transfer--stl-10" aria-label="MetaCLIP (400M checkpoints) × STL-10: Unknown" data-col="zeroshot-transfer--stl-10" data-level="unknown" data-label="Unknown" data-pair="MetaCLIP (400M checkpoints) × STL-10 (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail" data-score="Rank 5 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.993 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
         <td class="sq lvl-unknown" data-shade="4" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/metaclip-400m.html#zeroshot-transfer--mnist" aria-label="MetaCLIP (400M checkpoints) × MNIST: Unknown" data-col="zeroshot-transfer--mnist" data-level="unknown" data-label="Unknown" data-pair="MetaCLIP (400M checkpoints) × MNIST (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail" data-score="Rank 11 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.619 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.045" data-col="known" data-tip="Known: 5%" data-pair="MetaCLIP (400M checkpoints)" data-reason="1 of 22 benchmark datasets have a known level (not Unknown).">5%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="MetaCLIP (400M checkpoints)" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-3 on-dark" data-col="avg-rank" data-tip="Average rank: 0.84" data-pair="MetaCLIP (400M checkpoints)" data-reason="Mean rank over 22 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.84</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/metauas.html" title="MetaUAS">MetaUAS</a></th>
@@ -1138,6 +1231,9 @@
         <td class="sq na" title="MetaUAS does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="MetaUAS does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="MetaUAS does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="MetaUAS" data-reason="0 of 8 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="MetaUAS" data-reason="Test data seen or possibly seen on 0 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/musc.html" title="MuSc">MuSc</a></th>
@@ -1171,6 +1267,9 @@
         <td class="sq na" title="MuSc does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="MuSc does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="MuSc does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="MuSc" data-reason="0 of 8 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="MuSc" data-reason="Test data seen or possibly seen on 0 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/datacomp-clip.html" title="DataComp CLIP (DataComp-1B checkpoints)">DataComp CLIP (DataComp-1B checkpoints)</a></th>
@@ -1204,6 +1303,9 @@
         <td class="sq lvl-not_seen" data-shade="3" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/datacomp-clip.html#zeroshot-transfer--country211" aria-label="DataComp CLIP (DataComp-1B checkpoints) × Country211: Not seen" data-col="zeroshot-transfer--country211" data-level="not_seen" data-label="Not seen" data-pair="DataComp CLIP (DataComp-1B checkpoints) × Country211 (Zero-shot transfer classification)" data-reason="the authors state its test portion was excluded from training" data-score="Rank 8 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.316 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
         <td class="sq lvl-not_seen" data-shade="2" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/datacomp-clip.html#zeroshot-transfer--stl-10" aria-label="DataComp CLIP (DataComp-1B checkpoints) × STL-10: Not seen" data-col="zeroshot-transfer--stl-10" data-level="not_seen" data-label="Not seen" data-pair="DataComp CLIP (DataComp-1B checkpoints) × STL-10 (Zero-shot transfer classification)" data-reason="the authors state its test portion was excluded from training" data-score="Rank 7 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.993 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
         <td class="sq lvl-not_seen" data-shade="0" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/datacomp-clip.html#zeroshot-transfer--mnist" aria-label="DataComp CLIP (DataComp-1B checkpoints) × MNIST: Not seen" data-col="zeroshot-transfer--mnist" data-level="not_seen" data-label="Not seen" data-pair="DataComp CLIP (DataComp-1B checkpoints) × MNIST (Zero-shot transfer classification)" data-reason="the authors state its test portion was excluded from training" data-score="Rank 2 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.866 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="DataComp CLIP (DataComp-1B checkpoints)" data-reason="22 of 22 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="DataComp CLIP (DataComp-1B checkpoints)" data-reason="Test data seen or possibly seen on 0 of 22 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.54" data-pair="DataComp CLIP (DataComp-1B checkpoints)" data-reason="Mean rank over 22 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.54</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/openclip-laion2b.html" title="OpenCLIP (LAION-2B checkpoints)">OpenCLIP (LAION-2B checkpoints)</a></th>
@@ -1237,6 +1339,9 @@
         <td class="sq lvl-unknown" data-shade="2" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/openclip-laion2b.html#zeroshot-transfer--country211" aria-label="OpenCLIP (LAION-2B checkpoints) × Country211: Unknown" data-col="zeroshot-transfer--country211" data-level="unknown" data-label="Unknown" data-pair="OpenCLIP (LAION-2B checkpoints) × Country211 (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail" data-score="Rank 6 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.338 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
         <td class="sq lvl-unknown" data-shade="3" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/openclip-laion2b.html#zeroshot-transfer--stl-10" aria-label="OpenCLIP (LAION-2B checkpoints) × STL-10: Unknown" data-col="zeroshot-transfer--stl-10" data-level="unknown" data-label="Unknown" data-pair="OpenCLIP (LAION-2B checkpoints) × STL-10 (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail" data-score="Rank 9 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.985 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
         <td class="sq lvl-unknown" data-shade="3" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/openclip-laion2b.html#zeroshot-transfer--mnist" aria-label="OpenCLIP (LAION-2B checkpoints) × MNIST: Unknown" data-col="zeroshot-transfer--mnist" data-level="unknown" data-label="Unknown" data-pair="OpenCLIP (LAION-2B checkpoints) × MNIST (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail" data-score="Rank 9 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.716 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.133" data-col="known" data-tip="Known: 13%" data-pair="OpenCLIP (LAION-2B checkpoints)" data-reason="4 of 30 benchmark datasets have a known level (not Unknown).">13%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="OpenCLIP (LAION-2B checkpoints)" data-reason="Test data seen or possibly seen on 0 of 30 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.52" data-pair="OpenCLIP (LAION-2B checkpoints)" data-reason="Mean rank over 22 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.52</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/openclip-laion400m.html" title="OpenCLIP (LAION-400M checkpoints)">OpenCLIP (LAION-400M checkpoints)</a></th>
@@ -1270,6 +1375,9 @@
         <td class="sq lvl-unknown" data-shade="4" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/openclip-laion400m.html#zeroshot-transfer--country211" aria-label="OpenCLIP (LAION-400M checkpoints) × Country211: Unknown" data-col="zeroshot-transfer--country211" data-level="unknown" data-label="Unknown" data-pair="OpenCLIP (LAION-400M checkpoints) × Country211 (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail" data-score="Rank 11 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.23 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
         <td class="sq lvl-related" data-shade="4" style="--mark: var(--lvl-related)"><a href="../../contamination-map/models/openclip-laion400m.html#zeroshot-transfer--stl-10" aria-label="OpenCLIP (LAION-400M checkpoints) × STL-10: Related data seen" data-col="zeroshot-transfer--stl-10" data-level="related" data-label="Related data seen" data-pair="OpenCLIP (LAION-400M checkpoints) × STL-10 (Zero-shot transfer classification)" data-reason="a contamination analysis found test examples of the related dataset ImageNet-1k (ILSVRC 2012) (1.02% of the ImageNet evaluation images had a pHash match in LAION-400M.) (via LAION-400M)" data-score="Rank 10 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.981 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
         <td class="sq lvl-unknown" data-shade="2" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/openclip-laion400m.html#zeroshot-transfer--mnist" aria-label="OpenCLIP (LAION-400M checkpoints) × MNIST: Unknown" data-col="zeroshot-transfer--mnist" data-level="unknown" data-label="Unknown" data-pair="OpenCLIP (LAION-400M checkpoints) × MNIST (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail" data-score="Rank 6 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.761 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.433" data-col="known" data-tip="Known: 43%" data-pair="OpenCLIP (LAION-400M checkpoints)" data-reason="13 of 30 benchmark datasets have a known level (not Unknown).">43%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.267" data-col="contaminated" data-tip="Contaminated: 27%" data-pair="OpenCLIP (LAION-400M checkpoints)" data-reason="Test data seen or possibly seen on 8 of 30 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">27%</td>
+        <td class="stat stat-score rate score-4" data-col="avg-rank" data-tip="Average rank: 0.91" data-pair="OpenCLIP (LAION-400M checkpoints)" data-reason="Mean rank over 22 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.91</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/imagenet-wrn50.html" title="WideResNet-50-2 (supervised ImageNet-1k, torchvision)">WideResNet-50-2 (supervised ImageNet-1k, torchvision)</a></th>
@@ -1303,6 +1411,9 @@
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/imagenet-wrn50.html#zeroshot-transfer--country211" aria-label="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × Country211: Not seen" data-col="zeroshot-transfer--country211" data-level="not_seen" data-label="Not seen" data-pair="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × Country211 (Zero-shot transfer classification)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-related" data-shade="none" style="--mark: var(--lvl-related)"><a href="../../contamination-map/models/imagenet-wrn50.html#zeroshot-transfer--stl-10" aria-label="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × STL-10: Related data seen" data-col="zeroshot-transfer--stl-10" data-level="related" data-label="Related data seen" data-pair="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × STL-10 (Zero-shot transfer classification)" data-reason="related dataset ImageNet-1k (ILSVRC 2012) was used"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/imagenet-wrn50.html#zeroshot-transfer--mnist" aria-label="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × MNIST: Not seen" data-col="zeroshot-transfer--mnist" data-level="not_seen" data-label="Not seen" data-pair="WideResNet-50-2 (supervised ImageNet-1k, torchvision) × MNIST (Zero-shot transfer classification)" data-reason="absent from the complete list of training data"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="WideResNet-50-2 (supervised ImageNet-1k, torchvision)" data-reason="30 of 30 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="WideResNet-50-2 (supervised ImageNet-1k, torchvision)" data-reason="Test data seen or possibly seen on 0 of 30 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/saa-plus.html" title="Segment Any Anomaly (SAA / SAA+)">Segment Any Anomaly (SAA / SAA+)</a></th>
@@ -1336,6 +1447,9 @@
         <td class="sq na" title="Segment Any Anomaly (SAA / SAA+) does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="Segment Any Anomaly (SAA / SAA+) does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="Segment Any Anomaly (SAA / SAA+) does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="Segment Any Anomaly (SAA / SAA+)" data-reason="0 of 8 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Segment Any Anomaly (SAA / SAA+)" data-reason="Test data seen or possibly seen on 0 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/sam-2.html" title="SAM 2 / SAM 2.1">SAM 2 / SAM 2.1</a></th>
@@ -1369,6 +1483,9 @@
         <td class="sq na" title="SAM 2 / SAM 2.1 does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="SAM 2 / SAM 2.1 does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="SAM 2 / SAM 2.1 does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="SAM 2 / SAM 2.1" data-reason="0 of 8 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="SAM 2 / SAM 2.1" data-reason="Test data seen or possibly seen on 0 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/sam.html" title="Segment Anything Model (SAM)">Segment Anything Model (SAM)</a></th>
@@ -1402,6 +1519,9 @@
         <td class="sq na" title="Segment Anything Model (SAM) does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="Segment Anything Model (SAM) does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="Segment Anything Model (SAM) does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.250" data-col="known" data-tip="Known: 25%" data-pair="Segment Anything Model (SAM)" data-reason="2 of 8 benchmark datasets have a known level (not Unknown).">25%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Segment Anything Model (SAM)" data-reason="Test data seen or possibly seen on 0 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/siglip.html" title="SigLIP">SigLIP</a></th>
@@ -1435,6 +1555,9 @@
         <td class="sq lvl-unknown" data-shade="1" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/siglip.html#zeroshot-transfer--country211" aria-label="SigLIP × Country211: Unknown" data-col="zeroshot-transfer--country211" data-level="unknown" data-label="Unknown" data-pair="SigLIP × Country211 (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail" data-score="Rank 3 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.364 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
         <td class="sq lvl-unknown" data-shade="1" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/siglip.html#zeroshot-transfer--stl-10" aria-label="SigLIP × STL-10: Unknown" data-col="zeroshot-transfer--stl-10" data-level="unknown" data-label="Unknown" data-pair="SigLIP × STL-10 (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail" data-score="Rank 4 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.993 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
         <td class="sq lvl-unknown" data-shade="0" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/siglip.html#zeroshot-transfer--mnist" aria-label="SigLIP × MNIST: Unknown" data-col="zeroshot-transfer--mnist" data-level="unknown" data-label="Unknown" data-pair="SigLIP × MNIST (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail" data-score="Rank 1 of 11 on this dataset · Zero-shot top-1 accuracy (0-1) 0.886 (OpenCLIP pretrained-model zero-shot classification results)"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.067" data-col="known" data-tip="Known: 7%" data-pair="SigLIP" data-reason="2 of 30 benchmark datasets have a known level (not Unknown).">7%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="SigLIP" data-reason="Test data seen or possibly seen on 0 of 30 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.19" data-pair="SigLIP" data-reason="Mean rank over 22 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.19</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/siglip-2.html" title="SigLIP 2">SigLIP 2</a></th>
@@ -1468,6 +1591,9 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/siglip-2.html#zeroshot-transfer--country211" aria-label="SigLIP 2 × Country211: Unknown" data-col="zeroshot-transfer--country211" data-level="unknown" data-label="Unknown" data-pair="SigLIP 2 × Country211 (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/siglip-2.html#zeroshot-transfer--stl-10" aria-label="SigLIP 2 × STL-10: Unknown" data-col="zeroshot-transfer--stl-10" data-level="unknown" data-label="Unknown" data-pair="SigLIP 2 × STL-10 (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/siglip-2.html#zeroshot-transfer--mnist" aria-label="SigLIP 2 × MNIST: Unknown" data-col="zeroshot-transfer--mnist" data-level="unknown" data-label="Unknown" data-pair="SigLIP 2 × MNIST (Zero-shot transfer classification)" data-reason="training data not disclosed in enough detail"></a></td>
+        <td class="stat ss rate rate-known" style="--v: 0.067" data-col="known" data-tip="Known: 7%" data-pair="SigLIP 2" data-reason="2 of 30 benchmark datasets have a known level (not Unknown).">7%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="SigLIP 2" data-reason="Test data seen or possibly seen on 0 of 30 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/univad.html" title="UniVAD">UniVAD</a></th>
@@ -1501,6 +1627,9 @@
         <td class="sq na" title="UniVAD does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="UniVAD does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="UniVAD does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="UniVAD" data-reason="0 of 8 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="UniVAD" data-reason="Test data seen or possibly seen on 0 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/vcp-clip-mvtec.html" title="VCP-CLIP, trained on MVTec-AD">VCP-CLIP, trained on MVTec-AD</a></th>
@@ -1534,6 +1663,9 @@
         <td class="sq na" title="VCP-CLIP, trained on MVTec-AD does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="VCP-CLIP, trained on MVTec-AD does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="VCP-CLIP, trained on MVTec-AD does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.125" data-col="known" data-tip="Known: 12%" data-pair="VCP-CLIP, trained on MVTec-AD" data-reason="1 of 8 benchmark datasets have a known level (not Unknown).">12%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.125" data-col="contaminated" data-tip="Contaminated: 12%" data-pair="VCP-CLIP, trained on MVTec-AD" data-reason="Test data seen or possibly seen on 1 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">12%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr>
         <th scope="row"><a href="../../contamination-map/models/vcp-clip-visa.html" title="VCP-CLIP, trained on VisA">VCP-CLIP, trained on VisA</a></th>
@@ -1567,6 +1699,9 @@
         <td class="sq na" title="VCP-CLIP, trained on VisA does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="VCP-CLIP, trained on VisA does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="VCP-CLIP, trained on VisA does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.125" data-col="known" data-tip="Known: 12%" data-pair="VCP-CLIP, trained on VisA" data-reason="1 of 8 benchmark datasets have a known level (not Unknown).">12%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.125" data-col="contaminated" data-tip="Contaminated: 12%" data-pair="VCP-CLIP, trained on VisA" data-reason="Test data seen or possibly seen on 1 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">12%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
       <tr class="fs">
         <th scope="row"><a href="../../contamination-map/models/winclip.html" title="WinCLIP / WinCLIP+">WinCLIP / WinCLIP+</a></th>
@@ -1600,11 +1735,86 @@
         <td class="sq na" title="WinCLIP / WinCLIP+ does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="WinCLIP / WinCLIP+ does not take the inputs Zero-shot transfer classification requires"></td>
         <td class="sq na" title="WinCLIP / WinCLIP+ does not take the inputs Zero-shot transfer classification requires"></td>
+        <td class="stat ss rate rate-known" style="--v: 0.500" data-col="known" data-tip="Known: 50%" data-pair="WinCLIP / WinCLIP+" data-reason="4 of 8 benchmark datasets have a known level (not Unknown).">50%</td>
+        <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="WinCLIP / WinCLIP+" data-reason="Test data seen or possibly seen on 0 of 8 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
+        <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
     </tbody>
+    <tfoot>
+      <tr class="fs-stat">
+        <th scope="row" class="stat-label">Known</th>
+        <td class="stat vstat gs rate rate-known" style="--v: 0.351" data-col="industrial-ad--mvtec-ad" data-tip="Known: 35%" data-pair="MVTec AD (Industrial anomaly detection)" data-reason="13 of 37 models have a known level (not Unknown)."><span>35%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.243" data-col="industrial-ad--mvtec-ad-2" data-tip="Known: 24%" data-pair="MVTec AD 2 (Industrial anomaly detection)" data-reason="9 of 37 models have a known level (not Unknown)."><span>24%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.189" data-col="industrial-ad--mvtec-loco-ad" data-tip="Known: 19%" data-pair="MVTec LOCO AD (Industrial anomaly detection)" data-reason="7 of 37 models have a known level (not Unknown)."><span>19%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.459" data-col="industrial-ad--visa" data-tip="Known: 46%" data-pair="VisA (Industrial anomaly detection)" data-reason="17 of 37 models have a known level (not Unknown)."><span>46%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.243" data-col="industrial-ad--real-iad" data-tip="Known: 24%" data-pair="Real-IAD (Industrial anomaly detection)" data-reason="9 of 37 models have a known level (not Unknown)."><span>24%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.054" data-col="industrial-ad--mpdd" data-tip="Known: 5%" data-pair="MPDD (Industrial anomaly detection)" data-reason="2 of 37 models have a known level (not Unknown)."><span>5%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.054" data-col="industrial-ad--btad" data-tip="Known: 5%" data-pair="BTAD (Industrial anomaly detection)" data-reason="2 of 37 models have a known level (not Unknown)."><span>5%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.027" data-col="industrial-ad--ksdd2" data-tip="Known: 3%" data-pair="KolektorSDD2 (Industrial anomaly detection)" data-reason="1 of 37 models have a known level (not Unknown)."><span>3%</span></td>
+        <td class="stat vstat gs rate rate-known" style="--v: 0.562" data-col="imagenet-shifts--imagenet-1k" data-tip="Known: 56%" data-pair="ImageNet-1k (ILSVRC 2012) (ImageNet and natural distribution shifts)" data-reason="9 of 16 models have a known level (not Unknown)."><span>56%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.375" data-col="imagenet-shifts--imagenet-v2" data-tip="Known: 38%" data-pair="ImageNetV2 (MatchedFrequency) (ImageNet and natural distribution shifts)" data-reason="6 of 16 models have a known level (not Unknown)."><span>38%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.438" data-col="imagenet-shifts--imagenet-sketch" data-tip="Known: 44%" data-pair="ImageNet-Sketch (ImageNet and natural distribution shifts)" data-reason="7 of 16 models have a known level (not Unknown)."><span>44%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.438" data-col="imagenet-shifts--imagenet-r" data-tip="Known: 44%" data-pair="ImageNet-R (Renditions) (ImageNet and natural distribution shifts)" data-reason="7 of 16 models have a known level (not Unknown)."><span>44%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.312" data-col="imagenet-shifts--imagenet-a" data-tip="Known: 31%" data-pair="ImageNet-A (ImageNet and natural distribution shifts)" data-reason="5 of 16 models have a known level (not Unknown)."><span>31%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.250" data-col="imagenet-shifts--objectnet" data-tip="Known: 25%" data-pair="ObjectNet (ImageNet and natural distribution shifts)" data-reason="4 of 16 models have a known level (not Unknown)."><span>25%</span></td>
+        <td class="stat vstat gs rate rate-known" style="--v: 0.312" data-col="zeroshot-transfer--cifar-10" data-tip="Known: 31%" data-pair="CIFAR-10 (Zero-shot transfer classification)" data-reason="5 of 16 models have a known level (not Unknown)."><span>31%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.438" data-col="zeroshot-transfer--cifar-100" data-tip="Known: 44%" data-pair="CIFAR-100 (Zero-shot transfer classification)" data-reason="7 of 16 models have a known level (not Unknown)."><span>44%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.250" data-col="zeroshot-transfer--food-101" data-tip="Known: 25%" data-pair="Food-101 (Zero-shot transfer classification)" data-reason="4 of 16 models have a known level (not Unknown)."><span>25%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.375" data-col="zeroshot-transfer--stanford-cars" data-tip="Known: 38%" data-pair="Stanford Cars (Zero-shot transfer classification)" data-reason="6 of 16 models have a known level (not Unknown)."><span>38%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.250" data-col="zeroshot-transfer--fgvc-aircraft" data-tip="Known: 25%" data-pair="FGVC-Aircraft (Zero-shot transfer classification)" data-reason="4 of 16 models have a known level (not Unknown)."><span>25%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.250" data-col="zeroshot-transfer--oxford-pets" data-tip="Known: 25%" data-pair="Oxford-IIIT Pet (Zero-shot transfer classification)" data-reason="4 of 16 models have a known level (not Unknown)."><span>25%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.250" data-col="zeroshot-transfer--flowers-102" data-tip="Known: 25%" data-pair="Oxford Flowers-102 (Zero-shot transfer classification)" data-reason="4 of 16 models have a known level (not Unknown)."><span>25%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.250" data-col="zeroshot-transfer--dtd" data-tip="Known: 25%" data-pair="Describable Textures Dataset (DTD) (Zero-shot transfer classification)" data-reason="4 of 16 models have a known level (not Unknown)."><span>25%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.188" data-col="zeroshot-transfer--eurosat" data-tip="Known: 19%" data-pair="EuroSAT (Zero-shot transfer classification)" data-reason="3 of 16 models have a known level (not Unknown)."><span>19%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.375" data-col="zeroshot-transfer--sun397" data-tip="Known: 38%" data-pair="SUN397 (Zero-shot transfer classification)" data-reason="6 of 16 models have a known level (not Unknown)."><span>38%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.250" data-col="zeroshot-transfer--caltech-101" data-tip="Known: 25%" data-pair="Caltech-101 (Zero-shot transfer classification)" data-reason="4 of 16 models have a known level (not Unknown)."><span>25%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.188" data-col="zeroshot-transfer--gtsrb" data-tip="Known: 19%" data-pair="GTSRB (Zero-shot transfer classification)" data-reason="3 of 16 models have a known level (not Unknown)."><span>19%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.188" data-col="zeroshot-transfer--resisc45" data-tip="Known: 19%" data-pair="NWPU-RESISC45 (Zero-shot transfer classification)" data-reason="3 of 16 models have a known level (not Unknown)."><span>19%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.312" data-col="zeroshot-transfer--country211" data-tip="Known: 31%" data-pair="Country211 (Zero-shot transfer classification)" data-reason="5 of 16 models have a known level (not Unknown)."><span>31%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.312" data-col="zeroshot-transfer--stl-10" data-tip="Known: 31%" data-pair="STL-10 (Zero-shot transfer classification)" data-reason="5 of 16 models have a known level (not Unknown)."><span>31%</span></td>
+        <td class="stat vstat rate rate-known" style="--v: 0.188" data-col="zeroshot-transfer--mnist" data-tip="Known: 19%" data-pair="MNIST (Zero-shot transfer classification)" data-reason="3 of 16 models have a known level (not Unknown)."><span>19%</span></td>
+        <td class="stat stat-total ss rate rate-known" style="--v: 0.259" data-col="known" data-tip="Known, whole map: 26%" data-pair="All vision models and benchmark datasets" data-reason="168 of 648 cells have a known level (not Unknown).">26%</td>
+        <td class="stat"></td>
+<td class="stat stat-score"></td>      </tr>
+      <tr>
+        <th scope="row" class="stat-label">Contaminated</th>
+        <td class="stat vstat gs rate rate-contaminated" style="--v: 0.297" data-col="industrial-ad--mvtec-ad" data-tip="Contaminated: 30%" data-pair="MVTec AD (Industrial anomaly detection)" data-reason="11 of 37 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>30%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.000" data-col="industrial-ad--mvtec-ad-2" data-tip="Contaminated: 0%" data-pair="MVTec AD 2 (Industrial anomaly detection)" data-reason="0 of 37 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>0%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.027" data-col="industrial-ad--mvtec-loco-ad" data-tip="Contaminated: 3%" data-pair="MVTec LOCO AD (Industrial anomaly detection)" data-reason="1 of 37 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>3%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.297" data-col="industrial-ad--visa" data-tip="Contaminated: 30%" data-pair="VisA (Industrial anomaly detection)" data-reason="11 of 37 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>30%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.000" data-col="industrial-ad--real-iad" data-tip="Contaminated: 0%" data-pair="Real-IAD (Industrial anomaly detection)" data-reason="0 of 37 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>0%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.027" data-col="industrial-ad--mpdd" data-tip="Contaminated: 3%" data-pair="MPDD (Industrial anomaly detection)" data-reason="1 of 37 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>3%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.027" data-col="industrial-ad--btad" data-tip="Contaminated: 3%" data-pair="BTAD (Industrial anomaly detection)" data-reason="1 of 37 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>3%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.000" data-col="industrial-ad--ksdd2" data-tip="Contaminated: 0%" data-pair="KolektorSDD2 (Industrial anomaly detection)" data-reason="0 of 37 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>0%</span></td>
+        <td class="stat vstat gs rate rate-contaminated" style="--v: 0.125" data-col="imagenet-shifts--imagenet-1k" data-tip="Contaminated: 12%" data-pair="ImageNet-1k (ILSVRC 2012) (ImageNet and natural distribution shifts)" data-reason="2 of 16 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>12%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.062" data-col="imagenet-shifts--imagenet-v2" data-tip="Contaminated: 6%" data-pair="ImageNetV2 (MatchedFrequency) (ImageNet and natural distribution shifts)" data-reason="1 of 16 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>6%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.188" data-col="imagenet-shifts--imagenet-sketch" data-tip="Contaminated: 19%" data-pair="ImageNet-Sketch (ImageNet and natural distribution shifts)" data-reason="3 of 16 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>19%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.062" data-col="imagenet-shifts--imagenet-r" data-tip="Contaminated: 6%" data-pair="ImageNet-R (Renditions) (ImageNet and natural distribution shifts)" data-reason="1 of 16 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>6%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.062" data-col="imagenet-shifts--imagenet-a" data-tip="Contaminated: 6%" data-pair="ImageNet-A (ImageNet and natural distribution shifts)" data-reason="1 of 16 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>6%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.062" data-col="imagenet-shifts--objectnet" data-tip="Contaminated: 6%" data-pair="ObjectNet (ImageNet and natural distribution shifts)" data-reason="1 of 16 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>6%</span></td>
+        <td class="stat vstat gs rate rate-contaminated" style="--v: 0.062" data-col="zeroshot-transfer--cifar-10" data-tip="Contaminated: 6%" data-pair="CIFAR-10 (Zero-shot transfer classification)" data-reason="1 of 16 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>6%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.188" data-col="zeroshot-transfer--cifar-100" data-tip="Contaminated: 19%" data-pair="CIFAR-100 (Zero-shot transfer classification)" data-reason="3 of 16 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>19%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.000" data-col="zeroshot-transfer--food-101" data-tip="Contaminated: 0%" data-pair="Food-101 (Zero-shot transfer classification)" data-reason="0 of 16 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>0%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.125" data-col="zeroshot-transfer--stanford-cars" data-tip="Contaminated: 12%" data-pair="Stanford Cars (Zero-shot transfer classification)" data-reason="2 of 16 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>12%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.000" data-col="zeroshot-transfer--fgvc-aircraft" data-tip="Contaminated: 0%" data-pair="FGVC-Aircraft (Zero-shot transfer classification)" data-reason="0 of 16 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>0%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.000" data-col="zeroshot-transfer--oxford-pets" data-tip="Contaminated: 0%" data-pair="Oxford-IIIT Pet (Zero-shot transfer classification)" data-reason="0 of 16 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>0%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.000" data-col="zeroshot-transfer--flowers-102" data-tip="Contaminated: 0%" data-pair="Oxford Flowers-102 (Zero-shot transfer classification)" data-reason="0 of 16 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>0%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.000" data-col="zeroshot-transfer--dtd" data-tip="Contaminated: 0%" data-pair="Describable Textures Dataset (DTD) (Zero-shot transfer classification)" data-reason="0 of 16 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>0%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.000" data-col="zeroshot-transfer--eurosat" data-tip="Contaminated: 0%" data-pair="EuroSAT (Zero-shot transfer classification)" data-reason="0 of 16 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>0%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.125" data-col="zeroshot-transfer--sun397" data-tip="Contaminated: 12%" data-pair="SUN397 (Zero-shot transfer classification)" data-reason="2 of 16 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>12%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.000" data-col="zeroshot-transfer--caltech-101" data-tip="Contaminated: 0%" data-pair="Caltech-101 (Zero-shot transfer classification)" data-reason="0 of 16 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>0%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.000" data-col="zeroshot-transfer--gtsrb" data-tip="Contaminated: 0%" data-pair="GTSRB (Zero-shot transfer classification)" data-reason="0 of 16 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>0%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.000" data-col="zeroshot-transfer--resisc45" data-tip="Contaminated: 0%" data-pair="NWPU-RESISC45 (Zero-shot transfer classification)" data-reason="0 of 16 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>0%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.125" data-col="zeroshot-transfer--country211" data-tip="Contaminated: 12%" data-pair="Country211 (Zero-shot transfer classification)" data-reason="2 of 16 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>12%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.000" data-col="zeroshot-transfer--stl-10" data-tip="Contaminated: 0%" data-pair="STL-10 (Zero-shot transfer classification)" data-reason="0 of 16 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>0%</span></td>
+        <td class="stat vstat rate rate-contaminated" style="--v: 0.000" data-col="zeroshot-transfer--mnist" data-tip="Contaminated: 0%" data-pair="MNIST (Zero-shot transfer classification)" data-reason="0 of 16 models have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too."><span>0%</span></td>
+        <td class="stat ss"></td>
+        <td class="stat stat-total rate rate-contaminated" style="--v: 0.068" data-col="contaminated" data-tip="Contaminated, whole map: 7%" data-pair="All vision models and benchmark datasets" data-reason="44 of 648 cells have test data seen or possibly seen. A lower bound: Unknown cells may be contaminated too.">7%</td>
+<td class="stat stat-score"></td>      </tr>
+    </tfoot>
   </table>
   </div>
-  <p class="muted small">Rows are models, grouped by family; columns are benchmark datasets. Hover a square for the reason, click it for the evidence. Empty outlines mark benchmarks a model cannot take (e.g. image benchmarks for text-only models).</p>
+  <p class="muted small">Rows are models, grouped by family; columns are benchmark datasets. Hover a square for the reason, click it for the evidence. The last columns and rows summarise each model and dataset: <strong>Known</strong> is the share of squares whose level is known, <strong>Contaminated</strong> the share where test data was seen or possibly seen (a lower bound, since Unknown squares may be contaminated too); in Scores mode, <strong>Avg. rank</strong> averages each model's ranks, scaled from 0 (best) to 1 (worst). Empty outlines mark benchmarks a model cannot take (e.g. image benchmarks for text-only models).</p>
 </section>
 
 <section>
@@ -1638,7 +1848,7 @@
   <h2>Models</h2>
   <div class="table-wrap">
   <table class="data">
-    <thead><tr><th>Model</th><th>Organisation</th><th>Released</th><th>Disclosure</th><th title="Share of benchmark cells whose level is not Unknown">Determined</th></tr></thead>
+    <thead><tr><th>Model</th><th>Organisation</th><th>Released</th><th>Disclosure</th><th title="Share of benchmark cells whose level is not Unknown">Known</th></tr></thead>
     <tbody>
       <tr>
         <td><a href="../../contamination-map/models/aa-clip-mvtec.html">AA-CLIP, trained on MVTec AD (for VisA results)</a></td>
@@ -2001,7 +2211,7 @@
         <img src="../../static/mlchallenges-logo.svg" alt="ML Challenges" width="124" height="24">
       </a>
       <p class="footer__build">
-      Contamination map built 2026-10-19 ·
+      Contamination map built 2026-11-24 ·
       <a href="../../contamination-map/data/matrix.csv">matrix.csv</a> ·
       <a href="../../contamination-map/data/matrix.json">matrix.json</a> ·
       Every claim links to its source; absence of evidence is shown as “Unknown”, never as “Not seen”.
