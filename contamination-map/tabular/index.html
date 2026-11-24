@@ -133,7 +133,7 @@
         <th class="col" data-col="tabarena--website-phishing" title="website_phishing"><a href="../../contamination-map/datasets/website-phishing.html">website_phishing</a></th>
         <th class="col" data-col="tabarena--wine-quality" title="wine_quality"><a href="../../contamination-map/datasets/wine-quality.html">wine_quality</a></th>
         <th class="col" data-col="tabarena--jm1" title="jm1"><a href="../../contamination-map/datasets/jm1.html">jm1</a></th>
-        <th class="col stat ss" data-col="known" title="Share of the model's cells whose level is known (not Unknown)"><span>Known</span></th>
+        <th class="col stat ss" data-col="unknown" title="Share of the model's cells whose level is Unknown (not enough disclosed to tell)"><span>Unknown</span></th>
         <th class="col stat" data-col="contaminated" title="Share of the model's cells where test data was seen or possibly seen"><span>Contaminated</span></th>
 <th class="col stat stat-score" data-col="avg-rank" title="Average rank over the datasets with a score: 0 = best, 1 = worst"><span>Avg. rank</span></th>      </tr>
     </thead>
@@ -191,7 +191,7 @@
         <td class="sq lvl-not_seen" data-shade="4" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/limix-v1.html#tabarena--website-phishing" aria-label="LimiX × website_phishing: Not seen" data-col="tabarena--website-phishing" data-level="not_seen" data-label="Not seen" data-pair="LimiX × website_phishing (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 14 of 14 on this dataset · Normalized error (TabArena) 0.765 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-not_seen" data-shade="3" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/limix-v1.html#tabarena--wine-quality" aria-label="LimiX × wine_quality: Not seen" data-col="tabarena--wine-quality" data-level="not_seen" data-label="Not seen" data-pair="LimiX × wine_quality (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 11 of 13 on this dataset · Normalized error (TabArena) 1 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-not_seen" data-shade="3" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/limix-v1.html#tabarena--jm1" aria-label="LimiX × jm1: Not seen" data-col="tabarena--jm1" data-level="not_seen" data-label="Not seen" data-pair="LimiX × jm1 (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 11 of 14 on this dataset · Normalized error (TabArena) 0.771 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="LimiX" data-reason="51 of 51 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="LimiX" data-reason="Not enough disclosed to tell on 0 of 51 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="LimiX" data-reason="Test data seen or possibly seen on 0 of 51 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score rate score-3 on-dark" data-col="avg-rank" data-tip="Average rank: 0.71" data-pair="LimiX" data-reason="Mean rank over 51 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.71</td>
       </tr>
@@ -248,7 +248,7 @@
         <td class="sq lvl-not_seen" data-shade="0" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/limix-2.html#tabarena--website-phishing" aria-label="LimiX-2 × website_phishing: Not seen" data-col="tabarena--website-phishing" data-level="not_seen" data-label="Not seen" data-pair="LimiX-2 × website_phishing (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 1 of 14 on this dataset · Normalized error (TabArena) 0 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-not_seen" data-shade="1" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/limix-2.html#tabarena--wine-quality" aria-label="LimiX-2 × wine_quality: Not seen" data-col="tabarena--wine-quality" data-level="not_seen" data-label="Not seen" data-pair="LimiX-2 × wine_quality (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 3 of 13 on this dataset · Normalized error (TabArena) 0.0814 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-not_seen" data-shade="0" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/limix-2.html#tabarena--jm1" aria-label="LimiX-2 × jm1: Not seen" data-col="tabarena--jm1" data-level="not_seen" data-label="Not seen" data-pair="LimiX-2 × jm1 (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 1 of 14 on this dataset · Normalized error (TabArena) 0.0442 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="LimiX-2" data-reason="51 of 51 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="LimiX-2" data-reason="Not enough disclosed to tell on 0 of 51 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="LimiX-2" data-reason="Test data seen or possibly seen on 0 of 51 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score rate score-0 on-dark" data-col="avg-rank" data-tip="Average rank: 0.06" data-pair="LimiX-2" data-reason="Mean rank over 51 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.06</td>
       </tr>
@@ -305,7 +305,7 @@
         <td class="sq lvl-not_seen" data-shade="3" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/mitra-v1.html#tabarena--website-phishing" aria-label="Mitra × website_phishing: Not seen" data-col="tabarena--website-phishing" data-level="not_seen" data-label="Not seen" data-pair="Mitra × website_phishing (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 10 of 14 on this dataset · Normalized error (TabArena) 0.502 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-not_seen" data-shade="3" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/mitra-v1.html#tabarena--wine-quality" aria-label="Mitra × wine_quality: Not seen" data-col="tabarena--wine-quality" data-level="not_seen" data-label="Not seen" data-pair="Mitra × wine_quality (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 10 of 13 on this dataset · Normalized error (TabArena) 0.98 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-not_seen" data-shade="4" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/mitra-v1.html#tabarena--jm1" aria-label="Mitra × jm1: Not seen" data-col="tabarena--jm1" data-level="not_seen" data-label="Not seen" data-pair="Mitra × jm1 (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 13 of 14 on this dataset · Normalized error (TabArena) 1 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="Mitra" data-reason="51 of 51 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="Mitra" data-reason="Not enough disclosed to tell on 0 of 51 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Mitra" data-reason="Test data seen or possibly seen on 0 of 51 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score rate score-3 on-dark" data-col="avg-rank" data-tip="Average rank: 0.65" data-pair="Mitra" data-reason="Mean rank over 33 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.65</td>
       </tr>
@@ -362,7 +362,7 @@
         <td class="sq lvl-not_seen" data-shade="0" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/mitra-v2.html#tabarena--website-phishing" aria-label="Mitra-v2 × website_phishing: Not seen" data-col="tabarena--website-phishing" data-level="not_seen" data-label="Not seen" data-pair="Mitra-v2 × website_phishing (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 2 of 14 on this dataset · Normalized error (TabArena) 0.203 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-not_seen" data-shade="2" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/mitra-v2.html#tabarena--wine-quality" aria-label="Mitra-v2 × wine_quality: Not seen" data-col="tabarena--wine-quality" data-level="not_seen" data-label="Not seen" data-pair="Mitra-v2 × wine_quality (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 6 of 13 on this dataset · Normalized error (TabArena) 0.138 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-not_seen" data-shade="1" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/mitra-v2.html#tabarena--jm1" aria-label="Mitra-v2 × jm1: Not seen" data-col="tabarena--jm1" data-level="not_seen" data-label="Not seen" data-pair="Mitra-v2 × jm1 (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 5 of 14 on this dataset · Normalized error (TabArena) 0.195 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="Mitra-v2" data-reason="51 of 51 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="Mitra-v2" data-reason="Not enough disclosed to tell on 0 of 51 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Mitra-v2" data-reason="Test data seen or possibly seen on 0 of 51 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.22" data-pair="Mitra-v2" data-reason="Mean rank over 51 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.22</td>
       </tr>
@@ -419,7 +419,7 @@
         <td class="sq lvl-unknown" data-shade="3" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/tabdpt-v1.html#tabarena--website-phishing" aria-label="TabDPT × website_phishing: Unknown" data-col="tabarena--website-phishing" data-level="unknown" data-label="Unknown" data-pair="TabDPT × website_phishing (TabArena)" data-reason="training data not disclosed in enough detail" data-score="Rank 11 of 14 on this dataset · Normalized error (TabArena) 0.516 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-seen_split_unclear" data-shade="1" style="--mark: var(--lvl-seen_split_unclear)"><a href="../../contamination-map/models/tabdpt-v1.html#tabarena--wine-quality" aria-label="TabDPT × wine_quality: Seen, split unclear" data-col="tabarena--wine-quality" data-level="seen_split_unclear" data-label="Seen, split unclear" data-pair="TabDPT × wine_quality (TabArena)" data-reason="the dataset was used; the source does not say which part" data-score="Rank 5 of 13 on this dataset · Normalized error (TabArena) 0.117 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-unknown" data-shade="2" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/tabdpt-v1.html#tabarena--jm1" aria-label="TabDPT × jm1: Unknown" data-col="tabarena--jm1" data-level="unknown" data-label="Unknown" data-pair="TabDPT × jm1 (TabArena)" data-reason="training data not disclosed in enough detail" data-score="Rank 6 of 14 on this dataset · Normalized error (TabArena) 0.353 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.137" data-col="known" data-tip="Known: 14%" data-pair="TabDPT" data-reason="7 of 51 benchmark datasets have a known level (not Unknown).">14%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.863" data-col="unknown" data-tip="Unknown: 86%" data-pair="TabDPT" data-reason="Not enough disclosed to tell on 44 of 51 benchmark datasets.">86%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.137" data-col="contaminated" data-tip="Contaminated: 14%" data-pair="TabDPT" data-reason="Test data seen or possibly seen on 7 of 51 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">14%</td>
         <td class="stat stat-score rate score-3 on-dark" data-col="avg-rank" data-tip="Average rank: 0.74" data-pair="TabDPT" data-reason="Mean rank over 51 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.74</td>
       </tr>
@@ -476,7 +476,7 @@
         <td class="sq lvl-unknown" data-shade="1" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/tabdpt-v1-3.html#tabarena--website-phishing" aria-label="TabDPT v1.3 × website_phishing: Unknown" data-col="tabarena--website-phishing" data-level="unknown" data-label="Unknown" data-pair="TabDPT v1.3 × website_phishing (TabArena)" data-reason="training data not disclosed in enough detail" data-score="Rank 4 of 14 on this dataset · Normalized error (TabArena) 0.313 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-unknown" data-shade="1" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/tabdpt-v1-3.html#tabarena--wine-quality" aria-label="TabDPT v1.3 × wine_quality: Unknown" data-col="tabarena--wine-quality" data-level="unknown" data-label="Unknown" data-pair="TabDPT v1.3 × wine_quality (TabArena)" data-reason="training data not disclosed in enough detail" data-score="Rank 4 of 13 on this dataset · Normalized error (TabArena) 0.11 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-unknown" data-shade="0" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/tabdpt-v1-3.html#tabarena--jm1" aria-label="TabDPT v1.3 × jm1: Unknown" data-col="tabarena--jm1" data-level="unknown" data-label="Unknown" data-pair="TabDPT v1.3 × jm1 (TabArena)" data-reason="training data not disclosed in enough detail" data-score="Rank 2 of 14 on this dataset · Normalized error (TabArena) 0.106 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="TabDPT v1.3" data-reason="0 of 51 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 1.000" data-col="unknown" data-tip="Unknown: 100%" data-pair="TabDPT v1.3" data-reason="Not enough disclosed to tell on 51 of 51 benchmark datasets.">100%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="TabDPT v1.3" data-reason="Test data seen or possibly seen on 0 of 51 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.49" data-pair="TabDPT v1.3" data-reason="Mean rank over 51 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.49</td>
       </tr>
@@ -533,7 +533,7 @@
         <td class="sq lvl-not_seen" data-shade="2" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabdpt-v1-2.html#tabarena--website-phishing" aria-label="TabDPT-Turbo (TabDPT v1.2) × website_phishing: Not seen" data-col="tabarena--website-phishing" data-level="not_seen" data-label="Not seen" data-pair="TabDPT-Turbo (TabDPT v1.2) × website_phishing (TabArena)" data-reason="the authors state the dataset was excluded from training" data-score="Rank 8 of 14 on this dataset · Normalized error (TabArena) 0.458 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-not_seen" data-shade="0" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabdpt-v1-2.html#tabarena--wine-quality" aria-label="TabDPT-Turbo (TabDPT v1.2) × wine_quality: Not seen" data-col="tabarena--wine-quality" data-level="not_seen" data-label="Not seen" data-pair="TabDPT-Turbo (TabDPT v1.2) × wine_quality (TabArena)" data-reason="the authors state the dataset was excluded from training" data-score="Rank 2 of 13 on this dataset · Normalized error (TabArena) 0.0802 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-not_seen" data-shade="1" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabdpt-v1-2.html#tabarena--jm1" aria-label="TabDPT-Turbo (TabDPT v1.2) × jm1: Not seen" data-col="tabarena--jm1" data-level="not_seen" data-label="Not seen" data-pair="TabDPT-Turbo (TabDPT v1.2) × jm1 (TabArena)" data-reason="the authors state the dataset was excluded from training" data-score="Rank 4 of 14 on this dataset · Normalized error (TabArena) 0.166 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="TabDPT-Turbo (TabDPT v1.2)" data-reason="51 of 51 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="TabDPT-Turbo (TabDPT v1.2)" data-reason="Not enough disclosed to tell on 0 of 51 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="TabDPT-Turbo (TabDPT v1.2)" data-reason="Test data seen or possibly seen on 0 of 51 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score rate score-3 on-dark" data-col="avg-rank" data-tip="Average rank: 0.66" data-pair="TabDPT-Turbo (TabDPT v1.2)" data-reason="Mean rank over 51 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.66</td>
       </tr>
@@ -590,7 +590,7 @@
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabicl-v1.html#tabarena--website-phishing" aria-label="TabICL × website_phishing: Not seen" data-col="tabarena--website-phishing" data-level="not_seen" data-label="Not seen" data-pair="TabICL × website_phishing (TabArena)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabicl-v1.html#tabarena--wine-quality" aria-label="TabICL × wine_quality: Not seen" data-col="tabarena--wine-quality" data-level="not_seen" data-label="Not seen" data-pair="TabICL × wine_quality (TabArena)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabicl-v1.html#tabarena--jm1" aria-label="TabICL × jm1: Not seen" data-col="tabarena--jm1" data-level="not_seen" data-label="Not seen" data-pair="TabICL × jm1 (TabArena)" data-reason="absent from the complete list of training data"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="TabICL" data-reason="51 of 51 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="TabICL" data-reason="Not enough disclosed to tell on 0 of 51 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="TabICL" data-reason="Test data seen or possibly seen on 0 of 51 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
@@ -647,7 +647,7 @@
         <td class="sq lvl-not_seen" data-shade="3" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabicl-v1-1.html#tabarena--website-phishing" aria-label="TabICL v1.1 × website_phishing: Not seen" data-col="tabarena--website-phishing" data-level="not_seen" data-label="Not seen" data-pair="TabICL v1.1 × website_phishing (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 12 of 14 on this dataset · Normalized error (TabArena) 0.584 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabicl-v1-1.html#tabarena--wine-quality" aria-label="TabICL v1.1 × wine_quality: Not seen" data-col="tabarena--wine-quality" data-level="not_seen" data-label="Not seen" data-pair="TabICL v1.1 × wine_quality (TabArena)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen" data-shade="2" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabicl-v1-1.html#tabarena--jm1" aria-label="TabICL v1.1 × jm1: Not seen" data-col="tabarena--jm1" data-level="not_seen" data-label="Not seen" data-pair="TabICL v1.1 × jm1 (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 7 of 14 on this dataset · Normalized error (TabArena) 0.367 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="TabICL v1.1" data-reason="51 of 51 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="TabICL v1.1" data-reason="Not enough disclosed to tell on 0 of 51 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="TabICL v1.1" data-reason="Test data seen or possibly seen on 0 of 51 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score rate score-3 on-dark" data-col="avg-rank" data-tip="Average rank: 0.71" data-pair="TabICL v1.1" data-reason="Mean rank over 36 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.71</td>
       </tr>
@@ -704,7 +704,7 @@
         <td class="sq lvl-not_seen" data-shade="2" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabicl-v2.html#tabarena--website-phishing" aria-label="TabICLv2 × website_phishing: Not seen" data-col="tabarena--website-phishing" data-level="not_seen" data-label="Not seen" data-pair="TabICLv2 × website_phishing (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 7 of 14 on this dataset · Normalized error (TabArena) 0.45 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-not_seen" data-shade="3" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabicl-v2.html#tabarena--wine-quality" aria-label="TabICLv2 × wine_quality: Not seen" data-col="tabarena--wine-quality" data-level="not_seen" data-label="Not seen" data-pair="TabICLv2 × wine_quality (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 9 of 13 on this dataset · Normalized error (TabArena) 0.353 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-not_seen" data-shade="2" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabicl-v2.html#tabarena--jm1" aria-label="TabICLv2 × jm1: Not seen" data-col="tabarena--jm1" data-level="not_seen" data-label="Not seen" data-pair="TabICLv2 × jm1 (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 8 of 14 on this dataset · Normalized error (TabArena) 0.414 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="TabICLv2" data-reason="51 of 51 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="TabICLv2" data-reason="Not enough disclosed to tell on 0 of 51 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="TabICLv2" data-reason="Test data seen or possibly seen on 0 of 51 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.43" data-pair="TabICLv2" data-reason="Mean rank over 51 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.43</td>
       </tr>
@@ -761,7 +761,7 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/real-tabpfn.html#tabarena--website-phishing" aria-label="Real-TabPFN × website_phishing: Unknown" data-col="tabarena--website-phishing" data-level="unknown" data-label="Unknown" data-pair="Real-TabPFN × website_phishing (TabArena)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/real-tabpfn.html#tabarena--wine-quality" aria-label="Real-TabPFN × wine_quality: Unknown" data-col="tabarena--wine-quality" data-level="unknown" data-label="Unknown" data-pair="Real-TabPFN × wine_quality (TabArena)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../../contamination-map/models/real-tabpfn.html#tabarena--jm1" aria-label="Real-TabPFN × jm1: Unknown" data-col="tabarena--jm1" data-level="unknown" data-label="Unknown" data-pair="Real-TabPFN × jm1 (TabArena)" data-reason="training data not disclosed in enough detail"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.059" data-col="known" data-tip="Known: 6%" data-pair="Real-TabPFN" data-reason="3 of 51 benchmark datasets have a known level (not Unknown).">6%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.941" data-col="unknown" data-tip="Unknown: 94%" data-pair="Real-TabPFN" data-reason="Not enough disclosed to tell on 48 of 51 benchmark datasets.">94%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.059" data-col="contaminated" data-tip="Contaminated: 6%" data-pair="Real-TabPFN" data-reason="Test data seen or possibly seen on 3 of 51 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">6%</td>
         <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
@@ -818,7 +818,7 @@
         <td class="sq lvl-not_seen" data-shade="2" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/real-tabpfn-2-5.html#tabarena--website-phishing" aria-label="Real-TabPFN-2.5 × website_phishing: Not seen" data-col="tabarena--website-phishing" data-level="not_seen" data-label="Not seen" data-pair="Real-TabPFN-2.5 × website_phishing (TabArena)" data-reason="the authors state the dataset was excluded from training" data-score="Rank 9 of 14 on this dataset · Normalized error (TabArena) 0.469 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-not_seen" data-shade="3" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/real-tabpfn-2-5.html#tabarena--wine-quality" aria-label="Real-TabPFN-2.5 × wine_quality: Not seen" data-col="tabarena--wine-quality" data-level="not_seen" data-label="Not seen" data-pair="Real-TabPFN-2.5 × wine_quality (TabArena)" data-reason="the authors state the dataset was excluded from training" data-score="Rank 11 of 13 on this dataset · Normalized error (TabArena) 1 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-not_seen" data-shade="3" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/real-tabpfn-2-5.html#tabarena--jm1" aria-label="Real-TabPFN-2.5 × jm1: Not seen" data-col="tabarena--jm1" data-level="not_seen" data-label="Not seen" data-pair="Real-TabPFN-2.5 × jm1 (TabArena)" data-reason="the authors state the dataset was excluded from training" data-score="Rank 12 of 14 on this dataset · Normalized error (TabArena) 0.87 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="Real-TabPFN-2.5" data-reason="51 of 51 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="Real-TabPFN-2.5" data-reason="Not enough disclosed to tell on 0 of 51 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Real-TabPFN-2.5" data-reason="Test data seen or possibly seen on 0 of 51 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.59" data-pair="Real-TabPFN-2.5" data-reason="Mean rank over 51 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.59</td>
       </tr>
@@ -875,7 +875,7 @@
         <td class="sq lvl-not_seen" data-shade="4" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabpfn-v2.html#tabarena--website-phishing" aria-label="TabPFN v2 × website_phishing: Not seen" data-col="tabarena--website-phishing" data-level="not_seen" data-label="Not seen" data-pair="TabPFN v2 × website_phishing (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 13 of 14 on this dataset · Normalized error (TabArena) 0.601 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-not_seen" data-shade="3" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabpfn-v2.html#tabarena--wine-quality" aria-label="TabPFN v2 × wine_quality: Not seen" data-col="tabarena--wine-quality" data-level="not_seen" data-label="Not seen" data-pair="TabPFN v2 × wine_quality (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 11 of 13 on this dataset · Normalized error (TabArena) 1 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-not_seen" data-shade="4" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabpfn-v2.html#tabarena--jm1" aria-label="TabPFN v2 × jm1: Not seen" data-col="tabarena--jm1" data-level="not_seen" data-label="Not seen" data-pair="TabPFN v2 × jm1 (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 13 of 14 on this dataset · Normalized error (TabArena) 1 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="TabPFN v2" data-reason="51 of 51 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="TabPFN v2" data-reason="Not enough disclosed to tell on 0 of 51 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="TabPFN v2" data-reason="Test data seen or possibly seen on 0 of 51 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score rate score-3 on-dark" data-col="avg-rank" data-tip="Average rank: 0.73" data-pair="TabPFN v2" data-reason="Mean rank over 33 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.73</td>
       </tr>
@@ -932,7 +932,7 @@
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabpfn-2-5.html#tabarena--website-phishing" aria-label="TabPFN-2.5 × website_phishing: Not seen" data-col="tabarena--website-phishing" data-level="not_seen" data-label="Not seen" data-pair="TabPFN-2.5 × website_phishing (TabArena)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabpfn-2-5.html#tabarena--wine-quality" aria-label="TabPFN-2.5 × wine_quality: Not seen" data-col="tabarena--wine-quality" data-level="not_seen" data-label="Not seen" data-pair="TabPFN-2.5 × wine_quality (TabArena)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabpfn-2-5.html#tabarena--jm1" aria-label="TabPFN-2.5 × jm1: Not seen" data-col="tabarena--jm1" data-level="not_seen" data-label="Not seen" data-pair="TabPFN-2.5 × jm1 (TabArena)" data-reason="absent from the complete list of training data"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="TabPFN-2.5" data-reason="51 of 51 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="TabPFN-2.5" data-reason="Not enough disclosed to tell on 0 of 51 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="TabPFN-2.5" data-reason="Test data seen or possibly seen on 0 of 51 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
@@ -989,7 +989,7 @@
         <td class="sq lvl-not_seen" data-shade="2" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabpfn-2-6.html#tabarena--website-phishing" aria-label="TabPFN-2.6 × website_phishing: Not seen" data-col="tabarena--website-phishing" data-level="not_seen" data-label="Not seen" data-pair="TabPFN-2.6 × website_phishing (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 6 of 14 on this dataset · Normalized error (TabArena) 0.434 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-not_seen" data-shade="2" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabpfn-2-6.html#tabarena--wine-quality" aria-label="TabPFN-2.6 × wine_quality: Not seen" data-col="tabarena--wine-quality" data-level="not_seen" data-label="Not seen" data-pair="TabPFN-2.6 × wine_quality (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 8 of 13 on this dataset · Normalized error (TabArena) 0.298 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-not_seen" data-shade="2" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabpfn-2-6.html#tabarena--jm1" aria-label="TabPFN-2.6 × jm1: Not seen" data-col="tabarena--jm1" data-level="not_seen" data-label="Not seen" data-pair="TabPFN-2.6 × jm1 (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 9 of 14 on this dataset · Normalized error (TabArena) 0.447 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="TabPFN-2.6" data-reason="51 of 51 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="TabPFN-2.6" data-reason="Not enough disclosed to tell on 0 of 51 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="TabPFN-2.6" data-reason="Test data seen or possibly seen on 0 of 51 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.49" data-pair="TabPFN-2.6" data-reason="Mean rank over 51 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.49</td>
       </tr>
@@ -1046,7 +1046,7 @@
         <td class="sq lvl-not_seen" data-shade="1" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabpfn-3.html#tabarena--website-phishing" aria-label="TabPFN-3 × website_phishing: Not seen" data-col="tabarena--website-phishing" data-level="not_seen" data-label="Not seen" data-pair="TabPFN-3 × website_phishing (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 5 of 14 on this dataset · Normalized error (TabArena) 0.327 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-not_seen" data-shade="2" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabpfn-3.html#tabarena--wine-quality" aria-label="TabPFN-3 × wine_quality: Not seen" data-col="tabarena--wine-quality" data-level="not_seen" data-label="Not seen" data-pair="TabPFN-3 × wine_quality (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 7 of 13 on this dataset · Normalized error (TabArena) 0.166 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-not_seen" data-shade="3" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabpfn-3.html#tabarena--jm1" aria-label="TabPFN-3 × jm1: Not seen" data-col="tabarena--jm1" data-level="not_seen" data-label="Not seen" data-pair="TabPFN-3 × jm1 (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 10 of 14 on this dataset · Normalized error (TabArena) 0.456 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="TabPFN-3" data-reason="51 of 51 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="TabPFN-3" data-reason="Not enough disclosed to tell on 0 of 51 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="TabPFN-3" data-reason="Test data seen or possibly seen on 0 of 51 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.39" data-pair="TabPFN-3" data-reason="Mean rank over 51 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.39</td>
       </tr>
@@ -1103,66 +1103,66 @@
         <td class="sq lvl-not_seen" data-shade="1" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabpfn-3-5.html#tabarena--website-phishing" aria-label="TabPFN-3.5 × website_phishing: Not seen" data-col="tabarena--website-phishing" data-level="not_seen" data-label="Not seen" data-pair="TabPFN-3.5 × website_phishing (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 3 of 14 on this dataset · Normalized error (TabArena) 0.231 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-not_seen" data-shade="0" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabpfn-3-5.html#tabarena--wine-quality" aria-label="TabPFN-3.5 × wine_quality: Not seen" data-col="tabarena--wine-quality" data-level="not_seen" data-label="Not seen" data-pair="TabPFN-3.5 × wine_quality (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 1 of 13 on this dataset · Normalized error (TabArena) 0.0241 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
         <td class="sq lvl-not_seen" data-shade="1" style="--mark: var(--lvl-not_seen)"><a href="../../contamination-map/models/tabpfn-3-5.html#tabarena--jm1" aria-label="TabPFN-3.5 × jm1: Not seen" data-col="tabarena--jm1" data-level="not_seen" data-label="Not seen" data-pair="TabPFN-3.5 × jm1 (TabArena)" data-reason="absent from the complete list of training data" data-score="Rank 3 of 14 on this dataset · Normalized error (TabArena) 0.12 (TabArena-v0.1 living leaderboard, per-dataset results (results_per_split.csv))"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="TabPFN-3.5" data-reason="51 of 51 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="TabPFN-3.5" data-reason="Not enough disclosed to tell on 0 of 51 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="TabPFN-3.5" data-reason="Test data seen or possibly seen on 0 of 51 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score rate score-0 on-dark" data-col="avg-rank" data-tip="Average rank: 0.12" data-pair="TabPFN-3.5" data-reason="Mean rank over 51 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.12</td>
       </tr>
     </tbody>
     <tfoot>
       <tr class="fs-stat">
-        <th scope="row" class="stat-label">Known</th>
-        <td class="stat vstat gs rate rate-known" style="--v: 0.824" data-col="tabarena--airfoil-self-noise" data-tip="Known: 82%" data-pair="airfoil_self_noise (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.941" data-col="tabarena--amazon-employee-access" data-tip="Known: 94%" data-pair="Amazon_employee_access (TabArena)" data-reason="16 of 17 models have a known level (not Unknown)."><span>94%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--anneal" data-tip="Known: 82%" data-pair="anneal (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--another-dataset-on-used-fiat-500" data-tip="Known: 82%" data-pair="Another-Dataset-on-used-Fiat-500 (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.882" data-col="tabarena--apsfailure" data-tip="Known: 88%" data-pair="APSFailure (TabArena)" data-reason="15 of 17 models have a known level (not Unknown)."><span>88%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.882" data-col="tabarena--bank-marketing" data-tip="Known: 88%" data-pair="bank-marketing (TabArena)" data-reason="15 of 17 models have a known level (not Unknown)."><span>88%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--bank-customer-churn" data-tip="Known: 82%" data-pair="Bank_Customer_Churn (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--bioresponse" data-tip="Known: 82%" data-pair="Bioresponse (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--blood-transfusion-service-center" data-tip="Known: 82%" data-pair="blood-transfusion-service-center (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--churn" data-tip="Known: 82%" data-pair="churn (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--coil2000-insurance-policies" data-tip="Known: 82%" data-pair="coil2000_insurance_policies (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--concrete-compressive-strength" data-tip="Known: 82%" data-pair="concrete_compressive_strength (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--credit-g" data-tip="Known: 82%" data-pair="credit-g (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--credit-card-clients-default" data-tip="Known: 82%" data-pair="credit_card_clients_default (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--customer-satisfaction-in-airline" data-tip="Known: 82%" data-pair="customer_satisfaction_in_airline (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--diabetes" data-tip="Known: 82%" data-pair="diabetes (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.882" data-col="tabarena--diabetes130us" data-tip="Known: 88%" data-pair="Diabetes130US (TabArena)" data-reason="15 of 17 models have a known level (not Unknown)."><span>88%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--diamonds" data-tip="Known: 82%" data-pair="diamonds (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--e-commere-shipping-data" data-tip="Known: 82%" data-pair="E-CommereShippingData (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--fitness-club" data-tip="Known: 82%" data-pair="Fitness_Club (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--food-delivery-time" data-tip="Known: 82%" data-pair="Food_Delivery_Time (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--give-me-some-credit" data-tip="Known: 82%" data-pair="GiveMeSomeCredit (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--hazelnut-spread-contaminant-detection" data-tip="Known: 82%" data-pair="hazelnut-spread-contaminant-detection (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--healthcare-insurance-expenses" data-tip="Known: 82%" data-pair="healthcare_insurance_expenses (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.882" data-col="tabarena--heloc" data-tip="Known: 88%" data-pair="heloc (TabArena)" data-reason="15 of 17 models have a known level (not Unknown)."><span>88%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--hiva-agnostic" data-tip="Known: 82%" data-pair="hiva_agnostic (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--houses" data-tip="Known: 82%" data-pair="houses (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--hr-analytics-job-change-of-data-scientists" data-tip="Known: 82%" data-pair="HR_Analytics_Job_Change_of_Data_Scientists (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--in-vehicle-coupon-recommendation" data-tip="Known: 82%" data-pair="in_vehicle_coupon_recommendation (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--is-this-a-good-customer" data-tip="Known: 82%" data-pair="Is-this-a-good-customer (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.882" data-col="tabarena--kddcup09-appetency" data-tip="Known: 88%" data-pair="kddcup09_appetency (TabArena)" data-reason="15 of 17 models have a known level (not Unknown)."><span>88%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--marketing-campaign" data-tip="Known: 82%" data-pair="Marketing_Campaign (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--maternal-health-risk" data-tip="Known: 82%" data-pair="maternal_health_risk (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--miami-housing" data-tip="Known: 82%" data-pair="miami_housing (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--mic" data-tip="Known: 82%" data-pair="MIC (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--naticusdroid" data-tip="Known: 82%" data-pair="NATICUSdroid (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.882" data-col="tabarena--online-shoppers-intention" data-tip="Known: 88%" data-pair="online_shoppers_intention (TabArena)" data-reason="15 of 17 models have a known level (not Unknown)."><span>88%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--physiochemical-protein" data-tip="Known: 82%" data-pair="physiochemical_protein (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--polish-companies-bankruptcy" data-tip="Known: 82%" data-pair="polish_companies_bankruptcy (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--qsar-biodeg" data-tip="Known: 82%" data-pair="qsar-biodeg (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.882" data-col="tabarena--qsar-tid-11" data-tip="Known: 88%" data-pair="QSAR-TID-11 (TabArena)" data-reason="15 of 17 models have a known level (not Unknown)."><span>88%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--qsar-fish-toxicity" data-tip="Known: 82%" data-pair="QSAR_fish_toxicity (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--sdss17" data-tip="Known: 82%" data-pair="SDSS17 (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--seismic-bumps" data-tip="Known: 82%" data-pair="seismic-bumps (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--splice" data-tip="Known: 82%" data-pair="splice (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--students-dropout-and-academic-success" data-tip="Known: 82%" data-pair="students_dropout_and_academic_success (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--superconductivity" data-tip="Known: 82%" data-pair="superconductivity (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--taiwanese-bankruptcy-prediction" data-tip="Known: 82%" data-pair="taiwanese_bankruptcy_prediction (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--website-phishing" data-tip="Known: 82%" data-pair="website_phishing (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.882" data-col="tabarena--wine-quality" data-tip="Known: 88%" data-pair="wine_quality (TabArena)" data-reason="15 of 17 models have a known level (not Unknown)."><span>88%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.824" data-col="tabarena--jm1" data-tip="Known: 82%" data-pair="jm1 (TabArena)" data-reason="14 of 17 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat stat-total ss rate rate-known" style="--v: 0.835" data-col="known" data-tip="Known, whole map: 84%" data-pair="All tabular models and benchmark datasets" data-reason="724 of 867 cells have a known level (not Unknown).">84%</td>
+        <th scope="row" class="stat-label">Unknown</th>
+        <td class="stat vstat gs rate rate-unknown" style="--v: 0.176" data-col="tabarena--airfoil-self-noise" data-tip="Unknown: 18%" data-pair="airfoil_self_noise (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.059" data-col="tabarena--amazon-employee-access" data-tip="Unknown: 6%" data-pair="Amazon_employee_access (TabArena)" data-reason="1 of 17 models have an Unknown level (not enough disclosed to tell)."><span>6%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--anneal" data-tip="Unknown: 18%" data-pair="anneal (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--another-dataset-on-used-fiat-500" data-tip="Unknown: 18%" data-pair="Another-Dataset-on-used-Fiat-500 (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.118" data-col="tabarena--apsfailure" data-tip="Unknown: 12%" data-pair="APSFailure (TabArena)" data-reason="2 of 17 models have an Unknown level (not enough disclosed to tell)."><span>12%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.118" data-col="tabarena--bank-marketing" data-tip="Unknown: 12%" data-pair="bank-marketing (TabArena)" data-reason="2 of 17 models have an Unknown level (not enough disclosed to tell)."><span>12%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--bank-customer-churn" data-tip="Unknown: 18%" data-pair="Bank_Customer_Churn (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--bioresponse" data-tip="Unknown: 18%" data-pair="Bioresponse (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--blood-transfusion-service-center" data-tip="Unknown: 18%" data-pair="blood-transfusion-service-center (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--churn" data-tip="Unknown: 18%" data-pair="churn (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--coil2000-insurance-policies" data-tip="Unknown: 18%" data-pair="coil2000_insurance_policies (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--concrete-compressive-strength" data-tip="Unknown: 18%" data-pair="concrete_compressive_strength (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--credit-g" data-tip="Unknown: 18%" data-pair="credit-g (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--credit-card-clients-default" data-tip="Unknown: 18%" data-pair="credit_card_clients_default (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--customer-satisfaction-in-airline" data-tip="Unknown: 18%" data-pair="customer_satisfaction_in_airline (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--diabetes" data-tip="Unknown: 18%" data-pair="diabetes (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.118" data-col="tabarena--diabetes130us" data-tip="Unknown: 12%" data-pair="Diabetes130US (TabArena)" data-reason="2 of 17 models have an Unknown level (not enough disclosed to tell)."><span>12%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--diamonds" data-tip="Unknown: 18%" data-pair="diamonds (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--e-commere-shipping-data" data-tip="Unknown: 18%" data-pair="E-CommereShippingData (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--fitness-club" data-tip="Unknown: 18%" data-pair="Fitness_Club (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--food-delivery-time" data-tip="Unknown: 18%" data-pair="Food_Delivery_Time (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--give-me-some-credit" data-tip="Unknown: 18%" data-pair="GiveMeSomeCredit (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--hazelnut-spread-contaminant-detection" data-tip="Unknown: 18%" data-pair="hazelnut-spread-contaminant-detection (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--healthcare-insurance-expenses" data-tip="Unknown: 18%" data-pair="healthcare_insurance_expenses (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.118" data-col="tabarena--heloc" data-tip="Unknown: 12%" data-pair="heloc (TabArena)" data-reason="2 of 17 models have an Unknown level (not enough disclosed to tell)."><span>12%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--hiva-agnostic" data-tip="Unknown: 18%" data-pair="hiva_agnostic (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--houses" data-tip="Unknown: 18%" data-pair="houses (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--hr-analytics-job-change-of-data-scientists" data-tip="Unknown: 18%" data-pair="HR_Analytics_Job_Change_of_Data_Scientists (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--in-vehicle-coupon-recommendation" data-tip="Unknown: 18%" data-pair="in_vehicle_coupon_recommendation (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--is-this-a-good-customer" data-tip="Unknown: 18%" data-pair="Is-this-a-good-customer (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.118" data-col="tabarena--kddcup09-appetency" data-tip="Unknown: 12%" data-pair="kddcup09_appetency (TabArena)" data-reason="2 of 17 models have an Unknown level (not enough disclosed to tell)."><span>12%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--marketing-campaign" data-tip="Unknown: 18%" data-pair="Marketing_Campaign (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--maternal-health-risk" data-tip="Unknown: 18%" data-pair="maternal_health_risk (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--miami-housing" data-tip="Unknown: 18%" data-pair="miami_housing (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--mic" data-tip="Unknown: 18%" data-pair="MIC (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--naticusdroid" data-tip="Unknown: 18%" data-pair="NATICUSdroid (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.118" data-col="tabarena--online-shoppers-intention" data-tip="Unknown: 12%" data-pair="online_shoppers_intention (TabArena)" data-reason="2 of 17 models have an Unknown level (not enough disclosed to tell)."><span>12%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--physiochemical-protein" data-tip="Unknown: 18%" data-pair="physiochemical_protein (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--polish-companies-bankruptcy" data-tip="Unknown: 18%" data-pair="polish_companies_bankruptcy (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--qsar-biodeg" data-tip="Unknown: 18%" data-pair="qsar-biodeg (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.118" data-col="tabarena--qsar-tid-11" data-tip="Unknown: 12%" data-pair="QSAR-TID-11 (TabArena)" data-reason="2 of 17 models have an Unknown level (not enough disclosed to tell)."><span>12%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--qsar-fish-toxicity" data-tip="Unknown: 18%" data-pair="QSAR_fish_toxicity (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--sdss17" data-tip="Unknown: 18%" data-pair="SDSS17 (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--seismic-bumps" data-tip="Unknown: 18%" data-pair="seismic-bumps (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--splice" data-tip="Unknown: 18%" data-pair="splice (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--students-dropout-and-academic-success" data-tip="Unknown: 18%" data-pair="students_dropout_and_academic_success (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--superconductivity" data-tip="Unknown: 18%" data-pair="superconductivity (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--taiwanese-bankruptcy-prediction" data-tip="Unknown: 18%" data-pair="taiwanese_bankruptcy_prediction (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--website-phishing" data-tip="Unknown: 18%" data-pair="website_phishing (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.118" data-col="tabarena--wine-quality" data-tip="Unknown: 12%" data-pair="wine_quality (TabArena)" data-reason="2 of 17 models have an Unknown level (not enough disclosed to tell)."><span>12%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.176" data-col="tabarena--jm1" data-tip="Unknown: 18%" data-pair="jm1 (TabArena)" data-reason="3 of 17 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat stat-total ss rate rate-unknown" style="--v: 0.165" data-col="unknown" data-tip="Unknown, whole map: 16%" data-pair="All tabular models and benchmark datasets" data-reason="143 of 867 cells have an Unknown level (not enough disclosed to tell).">16%</td>
         <td class="stat"></td>
 <td class="stat stat-score"></td>      </tr>
       <tr>
@@ -1224,7 +1224,7 @@
     </tfoot>
   </table>
   </div>
-  <p class="muted small">Rows are models, grouped by family; columns are benchmark datasets. Hover a square for the reason, click it for the evidence. The last columns and rows summarise each model and dataset: <strong>Known</strong> is the share of squares whose level is known, <strong>Contaminated</strong> the share where test data was seen or possibly seen (a lower bound, since Unknown squares may be contaminated too); in Scores mode, <strong>Avg. rank</strong> averages each model's ranks, scaled from 0 (best) to 1 (worst). Empty outlines mark benchmarks a model cannot take (e.g. image benchmarks for text-only models).</p>
+  <p class="muted small">Rows are models, grouped by family; columns are benchmark datasets. Hover a square for the reason, click it for the evidence. The last columns and rows summarise each model and dataset: <strong>Unknown</strong> is the share of grey squares (not enough disclosed to tell), <strong>Contaminated</strong> the share where test data was seen or possibly seen (a lower bound, since Unknown squares may be contaminated too); in Scores mode, <strong>Avg. rank</strong> averages each model's ranks, scaled from 0 (best) to 1 (worst). Empty outlines mark benchmarks a model cannot take (e.g. image benchmarks for text-only models).</p>
 </section>
 
 <section>
@@ -1244,126 +1244,126 @@
   <h2>Models</h2>
   <div class="table-wrap">
   <table class="data">
-    <thead><tr><th>Model</th><th>Organisation</th><th>Released</th><th>Disclosure</th><th title="Share of benchmark cells whose level is not Unknown">Known</th></tr></thead>
+    <thead><tr><th>Model</th><th>Organisation</th><th>Released</th><th>Disclosure</th><th title="Share of benchmark cells whose level is Unknown">Unknown</th></tr></thead>
     <tbody>
       <tr>
         <td><a href="../../contamination-map/models/limix-v1.html">LimiX</a></td>
         <td>Stable AI Technology Co., Ltd. (LimiX team)</td>
         <td class="num">2025-08-29</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../../contamination-map/models/limix-2.html">LimiX-2</a></td>
         <td>Stable AI Technology Co., Ltd. (LimiX team)</td>
         <td class="num">2026-09-16</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../../contamination-map/models/mitra-v1.html">Mitra</a></td>
         <td>Amazon</td>
         <td class="num">2025-06-22</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../../contamination-map/models/mitra-v2.html">Mitra-v2</a></td>
         <td>Amazon</td>
         <td class="num">2026-09-03</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../../contamination-map/models/tabdpt-v1.html">TabDPT</a></td>
         <td>Layer 6 AI (TD Bank)</td>
         <td class="num">2024-10-23</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">13%</td>
+        <td class="num">86%</td>
       </tr>
       <tr>
         <td><a href="../../contamination-map/models/tabdpt-v1-3.html">TabDPT v1.3</a></td>
         <td>Layer 6 AI (TD Bank)</td>
         <td class="num">2026-09-08</td>
         <td><span class="disc disc-vague">Vague</span></td>
-        <td class="num">0%</td>
+        <td class="num">100%</td>
       </tr>
       <tr>
         <td><a href="../../contamination-map/models/tabdpt-v1-2.html">TabDPT-Turbo (TabDPT v1.2)</a></td>
         <td>Layer 6 AI (TD Bank)</td>
         <td class="num">2026-06-17</td>
         <td><span class="disc disc-vague">Vague</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../../contamination-map/models/tabicl-v1.html">TabICL</a></td>
         <td>Inria (SODA team)</td>
         <td class="num">2025-02-08</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../../contamination-map/models/tabicl-v1-1.html">TabICL v1.1</a></td>
         <td>Inria (SODA team)</td>
         <td class="num">—</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../../contamination-map/models/tabicl-v2.html">TabICLv2</a></td>
         <td>Inria (SODA team)</td>
         <td class="num">2026-02-11</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../../contamination-map/models/real-tabpfn.html">Real-TabPFN</a></td>
         <td>Prior Labs</td>
         <td class="num">2025-07-05</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">5%</td>
+        <td class="num">94%</td>
       </tr>
       <tr>
         <td><a href="../../contamination-map/models/real-tabpfn-2-5.html">Real-TabPFN-2.5</a></td>
         <td>Prior Labs</td>
         <td class="num">2025-11-11</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../../contamination-map/models/tabpfn-v2.html">TabPFN v2</a></td>
         <td>Prior Labs / University of Freiburg</td>
         <td class="num">2025-01-08</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../../contamination-map/models/tabpfn-2-5.html">TabPFN-2.5</a></td>
         <td>Prior Labs</td>
         <td class="num">2025-11-11</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../../contamination-map/models/tabpfn-2-6.html">TabPFN-2.6</a></td>
         <td>Prior Labs</td>
         <td class="num">2026-03-24</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../../contamination-map/models/tabpfn-3.html">TabPFN-3</a></td>
         <td>Prior Labs</td>
         <td class="num">2026-05-13</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../../contamination-map/models/tabpfn-3-5.html">TabPFN-3.5</a></td>
         <td>Prior Labs</td>
         <td class="num">2026-09-15</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
     </tbody>
   </table>

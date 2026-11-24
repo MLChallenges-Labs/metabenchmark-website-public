@@ -99,9 +99,9 @@
 
 <section>
   <h2>Summary rates</h2>
-  <p>The last columns of the map summarise each model, and its last rows each benchmark dataset:</p>
+  <p>The last columns of the map summarise each model, and its last rows each benchmark dataset. Lower is better for both rates:</p>
   <ul>
-    <li><strong>Known</strong>: the share of squares whose level is not <span class="badge lvl-unknown">Unknown</span>. It measures how much has been disclosed, not how clean the model is.</li>
+    <li><strong>Unknown</strong>: the share of squares marked <span class="badge lvl-unknown">Unknown</span>, where not enough has been disclosed to tell. It measures missing disclosure, not contamination.</li>
     <li><strong>Contaminated</strong>: the share of squares marked <span class="badge lvl-test_seen">Test data seen</span> or <span class="badge lvl-seen_split_unclear">Seen, split unclear</span>, i.e. where the benchmark's test data was, or may have been, in the training data. It is computed over all squares, so it is a lower bound: Unknown squares may be contaminated too.</li>
   </ul>
   <p>Benchmarks a model cannot take (empty outlines) are not counted. The bottom-right figures cover the whole map.</p>

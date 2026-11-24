@@ -284,9 +284,9 @@ table.map.mode-scores td.sq a::after {
 
 /* Map summaries: per-model rates and average rank (last columns), per-dataset rates (footer).
    Rate cells are filled in proportion to their value, mixed in OKLab from the surface to one
-   hue: dark red (the "Test data seen" colour) for Contaminated, a light neutral slate for Known
+   hue: dark red (the "Test data seen" colour) for Contaminated, a light neutral slate for Unknown
    (recessive, and neither "not seen" blue nor good/bad). Contaminated text turns white from 50%,
-   where APCA favours it; Known text stays dark (Lc 52 at 100%). Avg. rank cells use the five score shades of the squares. */
+   where APCA favours it; Unknown text stays dark (Lc 52 at 100%). Avg. rank cells use the five score shades of the squares. */
 table.map .ss { border-left: 16px solid var(--surface); background-clip: padding-box; }
 table.map th.col.stat span { writing-mode: vertical-rl; transform: rotate(180deg); display: inline-block; color: var(--ink); font-size: 0.75rem; font-weight: 600; line-height: 16px; }
 table.map th.col.stat.hl span { text-decoration: underline; text-underline-offset: 2px; }

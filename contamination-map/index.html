@@ -134,7 +134,7 @@
         <th class="col" data-col="ts-anomaly--nab" title="Numenta Anomaly Benchmark (NAB)"><a href="../contamination-map/datasets/nab.html">Numenta Anomaly Benchma…</a></th>
         <th class="col gs" data-col="ts-classification--ucr-archive" title="UCR Time Series Classification Archive (2018)"><a href="../contamination-map/datasets/ucr-archive.html">UCR Time Series Classif…</a></th>
         <th class="col" data-col="ts-classification--uea-archive" title="UEA Multivariate Time Series Classification Archive (2018)"><a href="../contamination-map/datasets/uea-archive.html">UEA Multivariate Time S…</a></th>
-        <th class="col stat ss" data-col="known" title="Share of the model's cells whose level is known (not Unknown)"><span>Known</span></th>
+        <th class="col stat ss" data-col="unknown" title="Share of the model's cells whose level is Unknown (not enough disclosed to tell)"><span>Unknown</span></th>
         <th class="col stat" data-col="contaminated" title="Share of the model's cells where test data was seen or possibly seen"><span>Contaminated</span></th>
 <th class="col stat stat-score" data-col="avg-rank" title="Average rank over the datasets with a score: 0 = best, 1 = worst"><span>Avg. rank</span></th>      </tr>
     </thead>
@@ -190,7 +190,7 @@
         <td class="sq lvl-not_seen" data-shade="4" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/chronos-t5.html#ts-anomaly--nab" aria-label="Chronos (T5) × Numenta Anomaly Benchmark (NAB): Not seen" data-col="ts-anomaly--nab" data-level="not_seen" data-label="Not seen" data-pair="Chronos (T5) × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="absent from the complete list of training data" data-score="Rank 6 of 6 on this dataset · VUS-PR 0.175 (TSB-AD benchmark results and leaderboard (VUS-PR))"></a></td>
         <td class="sq lvl-not_seen gs" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/chronos-t5.html#ts-classification--ucr-archive" aria-label="Chronos (T5) × UCR Time Series Classification Archive (2018): Not seen" data-col="ts-classification--ucr-archive" data-level="not_seen" data-label="Not seen" data-pair="Chronos (T5) × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/chronos-t5.html#ts-classification--uea-archive" aria-label="Chronos (T5) × UEA Multivariate Time Series Classification Archive (2018): Not seen" data-col="ts-classification--uea-archive" data-level="not_seen" data-label="Not seen" data-pair="Chronos (T5) × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="Chronos (T5)" data-reason="49 of 49 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="Chronos (T5)" data-reason="Not enough disclosed to tell on 0 of 49 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.163" data-col="contaminated" data-tip="Contaminated: 16%" data-pair="Chronos (T5)" data-reason="Test data seen or possibly seen on 8 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">16%</td>
         <td class="stat stat-score rate score-3 on-dark" data-col="avg-rank" data-tip="Average rank: 0.70" data-pair="Chronos (T5)" data-reason="Mean rank over 41 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.70</td>
       </tr>
@@ -245,7 +245,7 @@
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/chronos-2.html#ts-anomaly--nab" aria-label="Chronos-2 × Numenta Anomaly Benchmark (NAB): Not seen" data-col="ts-anomaly--nab" data-level="not_seen" data-label="Not seen" data-pair="Chronos-2 × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen gs" data-shade="2" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/chronos-2.html#ts-classification--ucr-archive" aria-label="Chronos-2 × UCR Time Series Classification Archive (2018): Not seen" data-col="ts-classification--ucr-archive" data-level="not_seen" data-label="Not seen" data-pair="Chronos-2 × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data" data-score="Rank 3 of 6 on this dataset · Accuracy (frozen encoder + logistic regression) 0.824 (MantisV2 paper (Feofanov et al., arXiv 2602.17868v1): zero-shot feature-extraction comparison on UCR and UEA-27)"></a></td>
         <td class="sq lvl-not_seen" data-shade="3" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/chronos-2.html#ts-classification--uea-archive" aria-label="Chronos-2 × UEA Multivariate Time Series Classification Archive (2018): Not seen" data-col="ts-classification--uea-archive" data-level="not_seen" data-label="Not seen" data-pair="Chronos-2 × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data" data-score="Rank 5 of 6 on this dataset · Accuracy (frozen encoder + logistic regression) 0.724 (MantisV2 paper (Feofanov et al., arXiv 2602.17868v1): zero-shot feature-extraction comparison on UCR and UEA-27)"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="Chronos-2" data-reason="49 of 49 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="Chronos-2" data-reason="Not enough disclosed to tell on 0 of 49 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Chronos-2" data-reason="Test data seen or possibly seen on 0 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.30" data-pair="Chronos-2" data-reason="Mean rank over 30 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.30</td>
       </tr>
@@ -300,7 +300,7 @@
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/chronos-2-synth.html#ts-anomaly--nab" aria-label="Chronos-2-Synth × Numenta Anomaly Benchmark (NAB): Not seen" data-col="ts-anomaly--nab" data-level="not_seen" data-label="Not seen" data-pair="Chronos-2-Synth × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen gs" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/chronos-2-synth.html#ts-classification--ucr-archive" aria-label="Chronos-2-Synth × UCR Time Series Classification Archive (2018): Not seen" data-col="ts-classification--ucr-archive" data-level="not_seen" data-label="Not seen" data-pair="Chronos-2-Synth × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/chronos-2-synth.html#ts-classification--uea-archive" aria-label="Chronos-2-Synth × UEA Multivariate Time Series Classification Archive (2018): Not seen" data-col="ts-classification--uea-archive" data-level="not_seen" data-label="Not seen" data-pair="Chronos-2-Synth × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="Chronos-2-Synth" data-reason="49 of 49 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="Chronos-2-Synth" data-reason="Not enough disclosed to tell on 0 of 49 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Chronos-2-Synth" data-reason="Test data seen or possibly seen on 0 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.38" data-pair="Chronos-2-Synth" data-reason="Mean rank over 28 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.38</td>
       </tr>
@@ -355,7 +355,7 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/chronos-bolt.html#ts-anomaly--nab" aria-label="Chronos-Bolt × Numenta Anomaly Benchmark (NAB): Unknown" data-col="ts-anomaly--nab" data-level="unknown" data-label="Unknown" data-pair="Chronos-Bolt × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown gs" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/chronos-bolt.html#ts-classification--ucr-archive" aria-label="Chronos-Bolt × UCR Time Series Classification Archive (2018): Unknown" data-col="ts-classification--ucr-archive" data-level="unknown" data-label="Unknown" data-pair="Chronos-Bolt × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/chronos-bolt.html#ts-classification--uea-archive" aria-label="Chronos-Bolt × UEA Multivariate Time Series Classification Archive (2018): Unknown" data-col="ts-classification--uea-archive" data-level="unknown" data-label="Unknown" data-pair="Chronos-Bolt × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.184" data-col="known" data-tip="Known: 18%" data-pair="Chronos-Bolt" data-reason="9 of 49 benchmark datasets have a known level (not Unknown).">18%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.816" data-col="unknown" data-tip="Unknown: 82%" data-pair="Chronos-Bolt" data-reason="Not enough disclosed to tell on 40 of 49 benchmark datasets.">82%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.163" data-col="contaminated" data-tip="Contaminated: 16%" data-pair="Chronos-Bolt" data-reason="Test data seen or possibly seen on 8 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">16%</td>
         <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.58" data-pair="Chronos-Bolt" data-reason="Mean rank over 28 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.58</td>
       </tr>
@@ -410,7 +410,7 @@
         <td class="sq lvl-related" data-shade="none" style="--mark: var(--lvl-related)"><a href="../contamination-map/models/dada.html#ts-anomaly--nab" aria-label="DADA (General Time Series Anomaly Detector with Adaptive Bottlenecks and Dual Adversarial Decoders) × Numenta Anomaly Benchmark (NAB): Related data seen" data-col="ts-anomaly--nab" data-level="related" data-label="Related data seen" data-pair="DADA (General Time Series Anomaly Detector with Adaptive Bottlenecks and Dual Adversarial Decoders) × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="a contamination analysis found test examples of the related dataset TSB-AD-U (TSB-AD univariate) (Third-party (TimeRCD authors): DADA&#39;s pre-training corpus (IOPS, MGAB, YAHOO) heavily overlaps their zero-shot test benchmarks drawn from TSB-AD.) [third-party study]"></a></td>
         <td class="sq lvl-unknown gs" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/dada.html#ts-classification--ucr-archive" aria-label="DADA (General Time Series Anomaly Detector with Adaptive Bottlenecks and Dual Adversarial Decoders) × UCR Time Series Classification Archive (2018): Unknown" data-col="ts-classification--ucr-archive" data-level="unknown" data-label="Unknown" data-pair="DADA (General Time Series Anomaly Detector with Adaptive Bottlenecks and Dual Adversarial Decoders) × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/dada.html#ts-classification--uea-archive" aria-label="DADA (General Time Series Anomaly Detector with Adaptive Bottlenecks and Dual Adversarial Decoders) × UEA Multivariate Time Series Classification Archive (2018): Unknown" data-col="ts-classification--uea-archive" data-level="unknown" data-label="Unknown" data-pair="DADA (General Time Series Anomaly Detector with Adaptive Bottlenecks and Dual Adversarial Decoders) × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.245" data-col="known" data-tip="Known: 24%" data-pair="DADA (General Time Series Anomaly Detector with Adaptive Bottlenecks and Dual Adversarial Decoders)" data-reason="12 of 49 benchmark datasets have a known level (not Unknown).">24%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.755" data-col="unknown" data-tip="Unknown: 76%" data-pair="DADA (General Time Series Anomaly Detector with Adaptive Bottlenecks and Dual Adversarial Decoders)" data-reason="Not enough disclosed to tell on 37 of 49 benchmark datasets.">76%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.102" data-col="contaminated" data-tip="Contaminated: 10%" data-pair="DADA (General Time Series Anomaly Detector with Adaptive Bottlenecks and Dual Adversarial Decoders)" data-reason="Test data seen or possibly seen on 5 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">10%</td>
         <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
@@ -465,7 +465,7 @@
         <td class="sq lvl-not_seen" data-shade="0" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/tspulse-r1.html#ts-anomaly--nab" aria-label="TSPulse r1 × Numenta Anomaly Benchmark (NAB): Not seen" data-col="ts-anomaly--nab" data-level="not_seen" data-label="Not seen" data-pair="TSPulse r1 × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="absent from the complete list of training data" data-score="Rank 1 of 6 on this dataset · VUS-PR 0.51 (TSB-AD benchmark results and leaderboard (VUS-PR))"></a></td>
         <td class="sq lvl-not_seen gs" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/tspulse-r1.html#ts-classification--ucr-archive" aria-label="TSPulse r1 × UCR Time Series Classification Archive (2018): Not seen" data-col="ts-classification--ucr-archive" data-level="not_seen" data-label="Not seen" data-pair="TSPulse r1 × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/tspulse-r1.html#ts-classification--uea-archive" aria-label="TSPulse r1 × UEA Multivariate Time Series Classification Archive (2018): Not seen" data-col="ts-classification--uea-archive" data-level="not_seen" data-label="Not seen" data-pair="TSPulse r1 × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="the authors state the dataset was excluded from training"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="TSPulse r1" data-reason="49 of 49 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="TSPulse r1" data-reason="Not enough disclosed to tell on 0 of 49 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.082" data-col="contaminated" data-tip="Contaminated: 8%" data-pair="TSPulse r1" data-reason="Test data seen or possibly seen on 4 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">8%</td>
         <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.22" data-pair="TSPulse r1" data-reason="Mean rank over 10 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.22</td>
       </tr>
@@ -520,7 +520,7 @@
         <td class="sq lvl-not_seen" data-shade="3" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/lag-llama.html#ts-anomaly--nab" aria-label="Lag-Llama × Numenta Anomaly Benchmark (NAB): Not seen" data-col="ts-anomaly--nab" data-level="not_seen" data-label="Not seen" data-pair="Lag-Llama × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="absent from the complete list of training data" data-score="Rank 5 of 6 on this dataset · VUS-PR 0.182 (TSB-AD benchmark results and leaderboard (VUS-PR))"></a></td>
         <td class="sq lvl-not_seen gs" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/lag-llama.html#ts-classification--ucr-archive" aria-label="Lag-Llama × UCR Time Series Classification Archive (2018): Not seen" data-col="ts-classification--ucr-archive" data-level="not_seen" data-label="Not seen" data-pair="Lag-Llama × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/lag-llama.html#ts-classification--uea-archive" aria-label="Lag-Llama × UEA Multivariate Time Series Classification Archive (2018): Not seen" data-col="ts-classification--uea-archive" data-level="not_seen" data-label="Not seen" data-pair="Lag-Llama × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="Lag-Llama" data-reason="49 of 49 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="Lag-Llama" data-reason="Not enough disclosed to tell on 0 of 49 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.143" data-col="contaminated" data-tip="Contaminated: 14%" data-pair="Lag-Llama" data-reason="Test data seen or possibly seen on 7 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">14%</td>
         <td class="stat stat-score rate score-4" data-col="avg-rank" data-tip="Average rank: 0.90" data-pair="Lag-Llama" data-reason="Mean rank over 36 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.90</td>
       </tr>
@@ -575,7 +575,7 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/mantis-8m.html#ts-anomaly--nab" aria-label="Mantis (Mantis-8M) × Numenta Anomaly Benchmark (NAB): Unknown" data-col="ts-anomaly--nab" data-level="unknown" data-label="Unknown" data-pair="Mantis (Mantis-8M) × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-train_seen gs" data-shade="none" style="--mark: var(--lvl-train_seen)"><a href="../contamination-map/models/mantis-8m.html#ts-classification--ucr-archive" aria-label="Mantis (Mantis-8M) × UCR Time Series Classification Archive (2018): Training data seen" data-col="ts-classification--ucr-archive" data-level="train_seen" data-label="Training data seen" data-pair="Mantis (Mantis-8M) × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded"></a></td>
         <td class="sq lvl-train_seen" data-shade="none" style="--mark: var(--lvl-train_seen)"><a href="../contamination-map/models/mantis-8m.html#ts-classification--uea-archive" aria-label="Mantis (Mantis-8M) × UEA Multivariate Time Series Classification Archive (2018): Training data seen" data-col="ts-classification--uea-archive" data-level="train_seen" data-label="Training data seen" data-pair="Mantis (Mantis-8M) × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.041" data-col="known" data-tip="Known: 4%" data-pair="Mantis (Mantis-8M)" data-reason="2 of 49 benchmark datasets have a known level (not Unknown).">4%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.959" data-col="unknown" data-tip="Unknown: 96%" data-pair="Mantis (Mantis-8M)" data-reason="Not enough disclosed to tell on 47 of 49 benchmark datasets.">96%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Mantis (Mantis-8M)" data-reason="Test data seen or possibly seen on 0 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
@@ -630,7 +630,7 @@
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/mantis-plus.html#ts-anomaly--nab" aria-label="Mantis+ (MantisPlus) × Numenta Anomaly Benchmark (NAB): Not seen" data-col="ts-anomaly--nab" data-level="not_seen" data-label="Not seen" data-pair="Mantis+ (MantisPlus) × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen gs" data-shade="1" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/mantis-plus.html#ts-classification--ucr-archive" aria-label="Mantis+ (MantisPlus) × UCR Time Series Classification Archive (2018): Not seen" data-col="ts-classification--ucr-archive" data-level="not_seen" data-label="Not seen" data-pair="Mantis+ (MantisPlus) × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data" data-score="Rank 2 of 6 on this dataset · Accuracy (frozen encoder + logistic regression) 0.828 (MantisV2 paper (Feofanov et al., arXiv 2602.17868v1): zero-shot feature-extraction comparison on UCR and UEA-27)"></a></td>
         <td class="sq lvl-not_seen" data-shade="1" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/mantis-plus.html#ts-classification--uea-archive" aria-label="Mantis+ (MantisPlus) × UEA Multivariate Time Series Classification Archive (2018): Not seen" data-col="ts-classification--uea-archive" data-level="not_seen" data-label="Not seen" data-pair="Mantis+ (MantisPlus) × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data" data-score="Rank 2 of 6 on this dataset · Accuracy (frozen encoder + logistic regression) 0.755 (MantisV2 paper (Feofanov et al., arXiv 2602.17868v1): zero-shot feature-extraction comparison on UCR and UEA-27)"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="Mantis+ (MantisPlus)" data-reason="49 of 49 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="Mantis+ (MantisPlus)" data-reason="Not enough disclosed to tell on 0 of 49 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Mantis+ (MantisPlus)" data-reason="Test data seen or possibly seen on 0 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.20" data-pair="Mantis+ (MantisPlus)" data-reason="Mean rank over 2 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.20</td>
       </tr>
@@ -685,7 +685,7 @@
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/mantis-v2.html#ts-anomaly--nab" aria-label="MantisV2 × Numenta Anomaly Benchmark (NAB): Not seen" data-col="ts-anomaly--nab" data-level="not_seen" data-label="Not seen" data-pair="MantisV2 × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen gs" data-shade="0" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/mantis-v2.html#ts-classification--ucr-archive" aria-label="MantisV2 × UCR Time Series Classification Archive (2018): Not seen" data-col="ts-classification--ucr-archive" data-level="not_seen" data-label="Not seen" data-pair="MantisV2 × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data" data-score="Rank 1 of 6 on this dataset · Accuracy (frozen encoder + logistic regression) 0.836 (MantisV2 paper (Feofanov et al., arXiv 2602.17868v1): zero-shot feature-extraction comparison on UCR and UEA-27)"></a></td>
         <td class="sq lvl-not_seen" data-shade="0" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/mantis-v2.html#ts-classification--uea-archive" aria-label="MantisV2 × UEA Multivariate Time Series Classification Archive (2018): Not seen" data-col="ts-classification--uea-archive" data-level="not_seen" data-label="Not seen" data-pair="MantisV2 × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data" data-score="Rank 1 of 6 on this dataset · Accuracy (frozen encoder + logistic regression) 0.755 (MantisV2 paper (Feofanov et al., arXiv 2602.17868v1): zero-shot feature-extraction comparison on UCR and UEA-27)"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="MantisV2" data-reason="49 of 49 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="MantisV2" data-reason="Not enough disclosed to tell on 0 of 49 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="MantisV2" data-reason="Test data seen or possibly seen on 0 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score rate score-0 on-dark" data-col="avg-rank" data-tip="Average rank: 0.00" data-pair="MantisV2" data-reason="Mean rank over 2 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.00</td>
       </tr>
@@ -740,7 +740,7 @@
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/moirai-1.0-r.html#ts-anomaly--nab" aria-label="Moirai-1.0-R × Numenta Anomaly Benchmark (NAB): Not seen" data-col="ts-anomaly--nab" data-level="not_seen" data-label="Not seen" data-pair="Moirai-1.0-R × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen gs" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/moirai-1.0-r.html#ts-classification--ucr-archive" aria-label="Moirai-1.0-R × UCR Time Series Classification Archive (2018): Not seen" data-col="ts-classification--ucr-archive" data-level="not_seen" data-label="Not seen" data-pair="Moirai-1.0-R × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/moirai-1.0-r.html#ts-classification--uea-archive" aria-label="Moirai-1.0-R × UEA Multivariate Time Series Classification Archive (2018): Not seen" data-col="ts-classification--uea-archive" data-level="not_seen" data-label="Not seen" data-pair="Moirai-1.0-R × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="Moirai-1.0-R" data-reason="49 of 49 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="Moirai-1.0-R" data-reason="Not enough disclosed to tell on 0 of 49 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.388" data-col="contaminated" data-tip="Contaminated: 39%" data-pair="Moirai-1.0-R" data-reason="Test data seen or possibly seen on 19 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">39%</td>
         <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.53" data-pair="Moirai-1.0-R" data-reason="Mean rank over 5 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.53</td>
       </tr>
@@ -795,7 +795,7 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/moirai-1.1-r.html#ts-anomaly--nab" aria-label="Moirai-1.1-R × Numenta Anomaly Benchmark (NAB): Unknown" data-col="ts-anomaly--nab" data-level="unknown" data-label="Unknown" data-pair="Moirai-1.1-R × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown gs" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/moirai-1.1-r.html#ts-classification--ucr-archive" aria-label="Moirai-1.1-R × UCR Time Series Classification Archive (2018): Unknown" data-col="ts-classification--ucr-archive" data-level="unknown" data-label="Unknown" data-pair="Moirai-1.1-R × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/moirai-1.1-r.html#ts-classification--uea-archive" aria-label="Moirai-1.1-R × UEA Multivariate Time Series Classification Archive (2018): Unknown" data-col="ts-classification--uea-archive" data-level="unknown" data-label="Unknown" data-pair="Moirai-1.1-R × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="Moirai-1.1-R" data-reason="0 of 49 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 1.000" data-col="unknown" data-tip="Unknown: 100%" data-pair="Moirai-1.1-R" data-reason="Not enough disclosed to tell on 49 of 49 benchmark datasets.">100%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Moirai-1.1-R" data-reason="Test data seen or possibly seen on 0 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
@@ -850,7 +850,7 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/moirai-2.0-r.html#ts-anomaly--nab" aria-label="Moirai-2.0-R × Numenta Anomaly Benchmark (NAB): Unknown" data-col="ts-anomaly--nab" data-level="unknown" data-label="Unknown" data-pair="Moirai-2.0-R × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown gs" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/moirai-2.0-r.html#ts-classification--ucr-archive" aria-label="Moirai-2.0-R × UCR Time Series Classification Archive (2018): Unknown" data-col="ts-classification--ucr-archive" data-level="unknown" data-label="Unknown" data-pair="Moirai-2.0-R × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/moirai-2.0-r.html#ts-classification--uea-archive" aria-label="Moirai-2.0-R × UEA Multivariate Time Series Classification Archive (2018): Unknown" data-col="ts-classification--uea-archive" data-level="unknown" data-label="Unknown" data-pair="Moirai-2.0-R × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.735" data-col="known" data-tip="Known: 73%" data-pair="Moirai-2.0-R" data-reason="36 of 49 benchmark datasets have a known level (not Unknown).">73%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.265" data-col="unknown" data-tip="Unknown: 27%" data-pair="Moirai-2.0-R" data-reason="Not enough disclosed to tell on 13 of 49 benchmark datasets.">27%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.020" data-col="contaminated" data-tip="Contaminated: 2%" data-pair="Moirai-2.0-R" data-reason="Test data seen or possibly seen on 1 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">2%</td>
         <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.48" data-pair="Moirai-2.0-R" data-reason="Mean rank over 28 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.48</td>
       </tr>
@@ -905,7 +905,7 @@
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/moirai-moe-1.0-r.html#ts-anomaly--nab" aria-label="Moirai-MoE-1.0-R × Numenta Anomaly Benchmark (NAB): Not seen" data-col="ts-anomaly--nab" data-level="not_seen" data-label="Not seen" data-pair="Moirai-MoE-1.0-R × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen gs" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/moirai-moe-1.0-r.html#ts-classification--ucr-archive" aria-label="Moirai-MoE-1.0-R × UCR Time Series Classification Archive (2018): Not seen" data-col="ts-classification--ucr-archive" data-level="not_seen" data-label="Not seen" data-pair="Moirai-MoE-1.0-R × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/moirai-moe-1.0-r.html#ts-classification--uea-archive" aria-label="Moirai-MoE-1.0-R × UEA Multivariate Time Series Classification Archive (2018): Not seen" data-col="ts-classification--uea-archive" data-level="not_seen" data-label="Not seen" data-pair="Moirai-MoE-1.0-R × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="Moirai-MoE-1.0-R" data-reason="49 of 49 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="Moirai-MoE-1.0-R" data-reason="Not enough disclosed to tell on 0 of 49 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.388" data-col="contaminated" data-tip="Contaminated: 39%" data-pair="Moirai-MoE-1.0-R" data-reason="Test data seen or possibly seen on 19 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">39%</td>
         <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
@@ -960,7 +960,7 @@
         <td class="sq lvl-train_seen" data-shade="2" style="--mark: var(--lvl-train_seen)"><a href="../contamination-map/models/moment-1.html#ts-anomaly--nab" aria-label="MOMENT-1 × Numenta Anomaly Benchmark (NAB): Training data seen" data-col="ts-anomaly--nab" data-level="train_seen" data-label="Training data seen" data-pair="MOMENT-1 × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="only the training split was used, not the benchmark&#39;s test data (via Time Series Pile)" data-score="Rank 3 of 6 on this dataset · VUS-PR 0.387 (TSB-AD benchmark results and leaderboard (VUS-PR))"></a></td>
         <td class="sq lvl-train_seen gs" data-shade="3" style="--mark: var(--lvl-train_seen)"><a href="../contamination-map/models/moment-1.html#ts-classification--ucr-archive" aria-label="MOMENT-1 × UCR Time Series Classification Archive (2018): Training data seen" data-col="ts-classification--ucr-archive" data-level="train_seen" data-label="Training data seen" data-pair="MOMENT-1 × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="only the training split was used, not the benchmark&#39;s test data (via Time Series Pile)" data-score="Rank 5 of 6 on this dataset · Accuracy (frozen encoder + logistic regression) 0.798 (MantisV2 paper (Feofanov et al., arXiv 2602.17868v1): zero-shot feature-extraction comparison on UCR and UEA-27)"></a></td>
         <td class="sq lvl-train_seen" data-shade="4" style="--mark: var(--lvl-train_seen)"><a href="../contamination-map/models/moment-1.html#ts-classification--uea-archive" aria-label="MOMENT-1 × UEA Multivariate Time Series Classification Archive (2018): Training data seen" data-col="ts-classification--uea-archive" data-level="train_seen" data-label="Training data seen" data-pair="MOMENT-1 × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="only the training split was used, not the benchmark&#39;s test data (via Time Series Pile)" data-score="Rank 6 of 6 on this dataset · Accuracy (frozen encoder + logistic regression) 0.717 (MantisV2 paper (Feofanov et al., arXiv 2602.17868v1): zero-shot feature-extraction comparison on UCR and UEA-27)"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.755" data-col="known" data-tip="Known: 76%" data-pair="MOMENT-1" data-reason="37 of 49 benchmark datasets have a known level (not Unknown).">76%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.245" data-col="unknown" data-tip="Unknown: 24%" data-pair="MOMENT-1" data-reason="Not enough disclosed to tell on 12 of 49 benchmark datasets.">24%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.306" data-col="contaminated" data-tip="Contaminated: 31%" data-pair="MOMENT-1" data-reason="Test data seen or possibly seen on 15 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">31%</td>
         <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.58" data-pair="MOMENT-1" data-reason="Mean rank over 10 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.58</td>
       </tr>
@@ -1015,7 +1015,7 @@
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/nutime.html#ts-anomaly--nab" aria-label="NuTime × Numenta Anomaly Benchmark (NAB): Not seen" data-col="ts-anomaly--nab" data-level="not_seen" data-label="Not seen" data-pair="NuTime × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-train_seen gs" data-shade="4" style="--mark: var(--lvl-train_seen)"><a href="../contamination-map/models/nutime.html#ts-classification--ucr-archive" aria-label="NuTime × UCR Time Series Classification Archive (2018): Training data seen" data-col="ts-classification--ucr-archive" data-level="train_seen" data-label="Training data seen" data-pair="NuTime × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded" data-score="Rank 6 of 6 on this dataset · Accuracy (frozen encoder + logistic regression) 0.791 (MantisV2 paper (Feofanov et al., arXiv 2602.17868v1): zero-shot feature-extraction comparison on UCR and UEA-27)"></a></td>
         <td class="sq lvl-train_seen" data-shade="2" style="--mark: var(--lvl-train_seen)"><a href="../contamination-map/models/nutime.html#ts-classification--uea-archive" aria-label="NuTime × UEA Multivariate Time Series Classification Archive (2018): Training data seen" data-col="ts-classification--uea-archive" data-level="train_seen" data-label="Training data seen" data-pair="NuTime × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="only the training split was used, not the benchmark&#39;s test data; the test portion was explicitly excluded" data-score="Rank 3 of 6 on this dataset · Accuracy (frozen encoder + logistic regression) 0.749 (MantisV2 paper (Feofanov et al., arXiv 2602.17868v1): zero-shot feature-extraction comparison on UCR and UEA-27)"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="NuTime" data-reason="49 of 49 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="NuTime" data-reason="Not enough disclosed to tell on 0 of 49 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="NuTime" data-reason="Test data seen or possibly seen on 0 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score rate score-3 on-dark" data-col="avg-rank" data-tip="Average rank: 0.70" data-pair="NuTime" data-reason="Mean rank over 2 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.70</td>
       </tr>
@@ -1070,7 +1070,7 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/time-moe.html#ts-anomaly--nab" aria-label="Time-MoE × Numenta Anomaly Benchmark (NAB): Unknown" data-col="ts-anomaly--nab" data-level="unknown" data-label="Unknown" data-pair="Time-MoE × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown gs" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/time-moe.html#ts-classification--ucr-archive" aria-label="Time-MoE × UCR Time Series Classification Archive (2018): Unknown" data-col="ts-classification--ucr-archive" data-level="unknown" data-label="Unknown" data-pair="Time-MoE × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/time-moe.html#ts-classification--uea-archive" aria-label="Time-MoE × UEA Multivariate Time Series Classification Archive (2018): Unknown" data-col="ts-classification--uea-archive" data-level="unknown" data-label="Unknown" data-pair="Time-MoE × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.571" data-col="known" data-tip="Known: 57%" data-pair="Time-MoE" data-reason="28 of 49 benchmark datasets have a known level (not Unknown).">57%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.429" data-col="unknown" data-tip="Unknown: 43%" data-pair="Time-MoE" data-reason="Not enough disclosed to tell on 21 of 49 benchmark datasets.">43%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.429" data-col="contaminated" data-tip="Contaminated: 43%" data-pair="Time-MoE" data-reason="Test data seen or possibly seen on 21 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">43%</td>
         <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
@@ -1125,7 +1125,7 @@
         <td class="sq lvl-not_seen" data-shade="1" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/time-rcd.html#ts-anomaly--nab" aria-label="Time-RCD (TimeRCD) × Numenta Anomaly Benchmark (NAB): Not seen" data-col="ts-anomaly--nab" data-level="not_seen" data-label="Not seen" data-pair="Time-RCD (TimeRCD) × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="absent from the complete list of training data" data-score="Rank 2 of 6 on this dataset · VUS-PR 0.446 (TSB-AD benchmark results and leaderboard (VUS-PR))"></a></td>
         <td class="sq lvl-not_seen gs" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/time-rcd.html#ts-classification--ucr-archive" aria-label="Time-RCD (TimeRCD) × UCR Time Series Classification Archive (2018): Not seen" data-col="ts-classification--ucr-archive" data-level="not_seen" data-label="Not seen" data-pair="Time-RCD (TimeRCD) × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/time-rcd.html#ts-classification--uea-archive" aria-label="Time-RCD (TimeRCD) × UEA Multivariate Time Series Classification Archive (2018): Not seen" data-col="ts-classification--uea-archive" data-level="not_seen" data-label="Not seen" data-pair="Time-RCD (TimeRCD) × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="Time-RCD (TimeRCD)" data-reason="49 of 49 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="Time-RCD (TimeRCD)" data-reason="Not enough disclosed to tell on 0 of 49 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Time-RCD (TimeRCD)" data-reason="Test data seen or possibly seen on 0 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.24" data-pair="Time-RCD (TimeRCD)" data-reason="Mean rank over 10 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.24</td>
       </tr>
@@ -1180,7 +1180,7 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/sundial.html#ts-anomaly--nab" aria-label="Sundial (Timer 3.0) × Numenta Anomaly Benchmark (NAB): Unknown" data-col="ts-anomaly--nab" data-level="unknown" data-label="Unknown" data-pair="Sundial (Timer 3.0) × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-seen_split_unclear gs" data-shade="none" style="--mark: var(--lvl-seen_split_unclear)"><a href="../contamination-map/models/sundial.html#ts-classification--ucr-archive" aria-label="Sundial (Timer 3.0) × UCR Time Series Classification Archive (2018): Seen, split unclear" data-col="ts-classification--ucr-archive" data-level="seen_split_unclear" data-label="Seen, split unclear" data-pair="Sundial (Timer 3.0) × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="the dataset was used; the source does not say which part (via Unified Time Series Dataset (UTSD))"></a></td>
         <td class="sq lvl-seen_split_unclear" data-shade="none" style="--mark: var(--lvl-seen_split_unclear)"><a href="../contamination-map/models/sundial.html#ts-classification--uea-archive" aria-label="Sundial (Timer 3.0) × UEA Multivariate Time Series Classification Archive (2018): Seen, split unclear" data-col="ts-classification--uea-archive" data-level="seen_split_unclear" data-label="Seen, split unclear" data-pair="Sundial (Timer 3.0) × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="the dataset was used; the source does not say which part (via Unified Time Series Dataset (UTSD))"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.735" data-col="known" data-tip="Known: 73%" data-pair="Sundial (Timer 3.0)" data-reason="36 of 49 benchmark datasets have a known level (not Unknown).">73%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.265" data-col="unknown" data-tip="Unknown: 27%" data-pair="Sundial (Timer 3.0)" data-reason="Not enough disclosed to tell on 13 of 49 benchmark datasets.">27%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.122" data-col="contaminated" data-tip="Contaminated: 12%" data-pair="Sundial (Timer 3.0)" data-reason="Test data seen or possibly seen on 6 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">12%</td>
         <td class="stat stat-score rate score-3 on-dark" data-col="avg-rank" data-tip="Average rank: 0.72" data-pair="Sundial (Timer 3.0)" data-reason="Mean rank over 28 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.72</td>
       </tr>
@@ -1235,7 +1235,7 @@
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/timer.html#ts-anomaly--nab" aria-label="Timer × Numenta Anomaly Benchmark (NAB): Not seen" data-col="ts-anomaly--nab" data-level="not_seen" data-label="Not seen" data-pair="Timer × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-seen_split_unclear gs" data-shade="none" style="--mark: var(--lvl-seen_split_unclear)"><a href="../contamination-map/models/timer.html#ts-classification--ucr-archive" aria-label="Timer × UCR Time Series Classification Archive (2018): Seen, split unclear" data-col="ts-classification--ucr-archive" data-level="seen_split_unclear" data-label="Seen, split unclear" data-pair="Timer × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="the dataset was used; the source does not say which part (via Unified Time Series Dataset (UTSD))"></a></td>
         <td class="sq lvl-seen_split_unclear" data-shade="none" style="--mark: var(--lvl-seen_split_unclear)"><a href="../contamination-map/models/timer.html#ts-classification--uea-archive" aria-label="Timer × UEA Multivariate Time Series Classification Archive (2018): Seen, split unclear" data-col="ts-classification--uea-archive" data-level="seen_split_unclear" data-label="Seen, split unclear" data-pair="Timer × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="the dataset was used; the source does not say which part (via Unified Time Series Dataset (UTSD))"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="Timer" data-reason="49 of 49 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="Timer" data-reason="Not enough disclosed to tell on 0 of 49 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.429" data-col="contaminated" data-tip="Contaminated: 43%" data-pair="Timer" data-reason="Test data seen or possibly seen on 21 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">43%</td>
         <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
@@ -1290,7 +1290,7 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/timer-s1.html#ts-anomaly--nab" aria-label="Timer-S1 × Numenta Anomaly Benchmark (NAB): Unknown" data-col="ts-anomaly--nab" data-level="unknown" data-label="Unknown" data-pair="Timer-S1 × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-seen_split_unclear gs" data-shade="none" style="--mark: var(--lvl-seen_split_unclear)"><a href="../contamination-map/models/timer-s1.html#ts-classification--ucr-archive" aria-label="Timer-S1 × UCR Time Series Classification Archive (2018): Seen, split unclear" data-col="ts-classification--ucr-archive" data-level="seen_split_unclear" data-label="Seen, split unclear" data-pair="Timer-S1 × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="the dataset was used; the source does not say which part (via Unified Time Series Dataset (UTSD))"></a></td>
         <td class="sq lvl-seen_split_unclear" data-shade="none" style="--mark: var(--lvl-seen_split_unclear)"><a href="../contamination-map/models/timer-s1.html#ts-classification--uea-archive" aria-label="Timer-S1 × UEA Multivariate Time Series Classification Archive (2018): Seen, split unclear" data-col="ts-classification--uea-archive" data-level="seen_split_unclear" data-label="Seen, split unclear" data-pair="Timer-S1 × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="the dataset was used; the source does not say which part (via Unified Time Series Dataset (UTSD))"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.653" data-col="known" data-tip="Known: 65%" data-pair="Timer-S1" data-reason="32 of 49 benchmark datasets have a known level (not Unknown).">65%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.347" data-col="unknown" data-tip="Unknown: 35%" data-pair="Timer-S1" data-reason="Not enough disclosed to tell on 17 of 49 benchmark datasets.">35%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.061" data-col="contaminated" data-tip="Contaminated: 6%" data-pair="Timer-S1" data-reason="Test data seen or possibly seen on 3 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">6%</td>
         <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.40" data-pair="Timer-S1" data-reason="Mean rank over 28 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.40</td>
       </tr>
@@ -1345,7 +1345,7 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/timer-xl.html#ts-anomaly--nab" aria-label="Timer-XL (timer-base-84m) × Numenta Anomaly Benchmark (NAB): Unknown" data-col="ts-anomaly--nab" data-level="unknown" data-label="Unknown" data-pair="Timer-XL (timer-base-84m) × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-seen_split_unclear gs" data-shade="none" style="--mark: var(--lvl-seen_split_unclear)"><a href="../contamination-map/models/timer-xl.html#ts-classification--ucr-archive" aria-label="Timer-XL (timer-base-84m) × UCR Time Series Classification Archive (2018): Seen, split unclear" data-col="ts-classification--ucr-archive" data-level="seen_split_unclear" data-label="Seen, split unclear" data-pair="Timer-XL (timer-base-84m) × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="the dataset was used; the source does not say which part (via Unified Time Series Dataset (UTSD))"></a></td>
         <td class="sq lvl-seen_split_unclear" data-shade="none" style="--mark: var(--lvl-seen_split_unclear)"><a href="../contamination-map/models/timer-xl.html#ts-classification--uea-archive" aria-label="Timer-XL (timer-base-84m) × UEA Multivariate Time Series Classification Archive (2018): Seen, split unclear" data-col="ts-classification--uea-archive" data-level="seen_split_unclear" data-label="Seen, split unclear" data-pair="Timer-XL (timer-base-84m) × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="the dataset was used; the source does not say which part (via Unified Time Series Dataset (UTSD))"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.571" data-col="known" data-tip="Known: 57%" data-pair="Timer-XL (timer-base-84m)" data-reason="28 of 49 benchmark datasets have a known level (not Unknown).">57%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.429" data-col="unknown" data-tip="Unknown: 43%" data-pair="Timer-XL (timer-base-84m)" data-reason="Not enough disclosed to tell on 21 of 49 benchmark datasets.">43%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.429" data-col="contaminated" data-tip="Contaminated: 43%" data-pair="Timer-XL (timer-base-84m)" data-reason="Test data seen or possibly seen on 21 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">43%</td>
         <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
@@ -1400,7 +1400,7 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/timeradar.html#ts-anomaly--nab" aria-label="TimeRadar × Numenta Anomaly Benchmark (NAB): Unknown" data-col="ts-anomaly--nab" data-level="unknown" data-label="Unknown" data-pair="TimeRadar × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown gs" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/timeradar.html#ts-classification--ucr-archive" aria-label="TimeRadar × UCR Time Series Classification Archive (2018): Unknown" data-col="ts-classification--ucr-archive" data-level="unknown" data-label="Unknown" data-pair="TimeRadar × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/timeradar.html#ts-classification--uea-archive" aria-label="TimeRadar × UEA Multivariate Time Series Classification Archive (2018): Unknown" data-col="ts-classification--uea-archive" data-level="unknown" data-label="Unknown" data-pair="TimeRadar × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.184" data-col="known" data-tip="Known: 18%" data-pair="TimeRadar" data-reason="9 of 49 benchmark datasets have a known level (not Unknown).">18%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.816" data-col="unknown" data-tip="Unknown: 82%" data-pair="TimeRadar" data-reason="Not enough disclosed to tell on 40 of 49 benchmark datasets.">82%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.061" data-col="contaminated" data-tip="Contaminated: 6%" data-pair="TimeRadar" data-reason="Test data seen or possibly seen on 3 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">6%</td>
         <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
@@ -1455,7 +1455,7 @@
         <td class="sq lvl-unknown" data-shade="2" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/timesfm-1-0.html#ts-anomaly--nab" aria-label="TimesFM 1.0 × Numenta Anomaly Benchmark (NAB): Unknown" data-col="ts-anomaly--nab" data-level="unknown" data-label="Unknown" data-pair="TimesFM 1.0 × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="training data not disclosed in enough detail" data-score="Rank 4 of 6 on this dataset · VUS-PR 0.183 (TSB-AD benchmark results and leaderboard (VUS-PR))"></a></td>
         <td class="sq lvl-unknown gs" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/timesfm-1-0.html#ts-classification--ucr-archive" aria-label="TimesFM 1.0 × UCR Time Series Classification Archive (2018): Unknown" data-col="ts-classification--ucr-archive" data-level="unknown" data-label="Unknown" data-pair="TimesFM 1.0 × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/timesfm-1-0.html#ts-classification--uea-archive" aria-label="TimesFM 1.0 × UEA Multivariate Time Series Classification Archive (2018): Unknown" data-col="ts-classification--uea-archive" data-level="unknown" data-label="Unknown" data-pair="TimesFM 1.0 × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.265" data-col="known" data-tip="Known: 27%" data-pair="TimesFM 1.0" data-reason="13 of 49 benchmark datasets have a known level (not Unknown).">27%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.735" data-col="unknown" data-tip="Unknown: 73%" data-pair="TimesFM 1.0" data-reason="Not enough disclosed to tell on 36 of 49 benchmark datasets.">73%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.184" data-col="contaminated" data-tip="Contaminated: 18%" data-pair="TimesFM 1.0" data-reason="Test data seen or possibly seen on 9 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">18%</td>
         <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.62" data-pair="TimesFM 1.0" data-reason="Mean rank over 40 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.62</td>
       </tr>
@@ -1510,7 +1510,7 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/timesfm-2-0.html#ts-anomaly--nab" aria-label="TimesFM 2.0 × Numenta Anomaly Benchmark (NAB): Unknown" data-col="ts-anomaly--nab" data-level="unknown" data-label="Unknown" data-pair="TimesFM 2.0 × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown gs" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/timesfm-2-0.html#ts-classification--ucr-archive" aria-label="TimesFM 2.0 × UCR Time Series Classification Archive (2018): Unknown" data-col="ts-classification--ucr-archive" data-level="unknown" data-label="Unknown" data-pair="TimesFM 2.0 × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/timesfm-2-0.html#ts-classification--uea-archive" aria-label="TimesFM 2.0 × UEA Multivariate Time Series Classification Archive (2018): Unknown" data-col="ts-classification--uea-archive" data-level="unknown" data-label="Unknown" data-pair="TimesFM 2.0 × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.449" data-col="known" data-tip="Known: 45%" data-pair="TimesFM 2.0" data-reason="22 of 49 benchmark datasets have a known level (not Unknown).">45%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.551" data-col="unknown" data-tip="Unknown: 55%" data-pair="TimesFM 2.0" data-reason="Not enough disclosed to tell on 27 of 49 benchmark datasets.">55%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.429" data-col="contaminated" data-tip="Contaminated: 43%" data-pair="TimesFM 2.0" data-reason="Test data seen or possibly seen on 21 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">43%</td>
         <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.47" data-pair="TimesFM 2.0" data-reason="Mean rank over 28 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.47</td>
       </tr>
@@ -1565,7 +1565,7 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/timesfm-2-5.html#ts-anomaly--nab" aria-label="TimesFM 2.5 × Numenta Anomaly Benchmark (NAB): Unknown" data-col="ts-anomaly--nab" data-level="unknown" data-label="Unknown" data-pair="TimesFM 2.5 × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown gs" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/timesfm-2-5.html#ts-classification--ucr-archive" aria-label="TimesFM 2.5 × UCR Time Series Classification Archive (2018): Unknown" data-col="ts-classification--ucr-archive" data-level="unknown" data-label="Unknown" data-pair="TimesFM 2.5 × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/timesfm-2-5.html#ts-classification--uea-archive" aria-label="TimesFM 2.5 × UEA Multivariate Time Series Classification Archive (2018): Unknown" data-col="ts-classification--uea-archive" data-level="unknown" data-label="Unknown" data-pair="TimesFM 2.5 × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.041" data-col="known" data-tip="Known: 4%" data-pair="TimesFM 2.5" data-reason="2 of 49 benchmark datasets have a known level (not Unknown).">4%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.959" data-col="unknown" data-tip="Unknown: 96%" data-pair="TimesFM 2.5" data-reason="Not enough disclosed to tell on 47 of 49 benchmark datasets.">96%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.020" data-col="contaminated" data-tip="Contaminated: 2%" data-pair="TimesFM 2.5" data-reason="Test data seen or possibly seen on 1 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">2%</td>
         <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.36" data-pair="TimesFM 2.5" data-reason="Mean rank over 28 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.36</td>
       </tr>
@@ -1620,7 +1620,7 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/timesfm-3-0.html#ts-anomaly--nab" aria-label="TimesFM 3.0 × Numenta Anomaly Benchmark (NAB): Unknown" data-col="ts-anomaly--nab" data-level="unknown" data-label="Unknown" data-pair="TimesFM 3.0 × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown gs" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/timesfm-3-0.html#ts-classification--ucr-archive" aria-label="TimesFM 3.0 × UCR Time Series Classification Archive (2018): Unknown" data-col="ts-classification--ucr-archive" data-level="unknown" data-label="Unknown" data-pair="TimesFM 3.0 × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/timesfm-3-0.html#ts-classification--uea-archive" aria-label="TimesFM 3.0 × UEA Multivariate Time Series Classification Archive (2018): Unknown" data-col="ts-classification--uea-archive" data-level="unknown" data-label="Unknown" data-pair="TimesFM 3.0 × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.041" data-col="known" data-tip="Known: 4%" data-pair="TimesFM 3.0" data-reason="2 of 49 benchmark datasets have a known level (not Unknown).">4%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.959" data-col="unknown" data-tip="Unknown: 96%" data-pair="TimesFM 3.0" data-reason="Not enough disclosed to tell on 47 of 49 benchmark datasets.">96%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.020" data-col="contaminated" data-tip="Contaminated: 2%" data-pair="TimesFM 3.0" data-reason="Test data seen or possibly seen on 1 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">2%</td>
         <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.13" data-pair="TimesFM 3.0" data-reason="Mean rank over 28 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.13</td>
       </tr>
@@ -1675,7 +1675,7 @@
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/granite-ttm-r1.html#ts-anomaly--nab" aria-label="Granite-TimeSeries-TTM-R1 × Numenta Anomaly Benchmark (NAB): Not seen" data-col="ts-anomaly--nab" data-level="not_seen" data-label="Not seen" data-pair="Granite-TimeSeries-TTM-R1 × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen gs" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/granite-ttm-r1.html#ts-classification--ucr-archive" aria-label="Granite-TimeSeries-TTM-R1 × UCR Time Series Classification Archive (2018): Not seen" data-col="ts-classification--ucr-archive" data-level="not_seen" data-label="Not seen" data-pair="Granite-TimeSeries-TTM-R1 × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/granite-ttm-r1.html#ts-classification--uea-archive" aria-label="Granite-TimeSeries-TTM-R1 × UEA Multivariate Time Series Classification Archive (2018): Not seen" data-col="ts-classification--uea-archive" data-level="not_seen" data-label="Not seen" data-pair="Granite-TimeSeries-TTM-R1 × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="Granite-TimeSeries-TTM-R1" data-reason="49 of 49 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="Granite-TimeSeries-TTM-R1" data-reason="Not enough disclosed to tell on 0 of 49 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.082" data-col="contaminated" data-tip="Contaminated: 8%" data-pair="Granite-TimeSeries-TTM-R1" data-reason="Test data seen or possibly seen on 4 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">8%</td>
         <td class="stat stat-score rate score-4" data-col="avg-rank" data-tip="Average rank: 0.94" data-pair="Granite-TimeSeries-TTM-R1" data-reason="Mean rank over 28 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.94</td>
       </tr>
@@ -1730,7 +1730,7 @@
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/granite-ttm-r2.html#ts-anomaly--nab" aria-label="Granite-TimeSeries-TTM-R2 × Numenta Anomaly Benchmark (NAB): Not seen" data-col="ts-anomaly--nab" data-level="not_seen" data-label="Not seen" data-pair="Granite-TimeSeries-TTM-R2 × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen gs" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/granite-ttm-r2.html#ts-classification--ucr-archive" aria-label="Granite-TimeSeries-TTM-R2 × UCR Time Series Classification Archive (2018): Not seen" data-col="ts-classification--ucr-archive" data-level="not_seen" data-label="Not seen" data-pair="Granite-TimeSeries-TTM-R2 × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/granite-ttm-r2.html#ts-classification--uea-archive" aria-label="Granite-TimeSeries-TTM-R2 × UEA Multivariate Time Series Classification Archive (2018): Not seen" data-col="ts-classification--uea-archive" data-level="not_seen" data-label="Not seen" data-pair="Granite-TimeSeries-TTM-R2 × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="Granite-TimeSeries-TTM-R2" data-reason="49 of 49 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="Granite-TimeSeries-TTM-R2" data-reason="Not enough disclosed to tell on 0 of 49 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.082" data-col="contaminated" data-tip="Contaminated: 8%" data-pair="Granite-TimeSeries-TTM-R2" data-reason="Test data seen or possibly seen on 4 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">8%</td>
         <td class="stat stat-score rate score-4" data-col="avg-rank" data-tip="Average rank: 0.95" data-pair="Granite-TimeSeries-TTM-R2" data-reason="Mean rank over 28 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.95</td>
       </tr>
@@ -1785,7 +1785,7 @@
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/granite-ttm-r2-1.html#ts-anomaly--nab" aria-label="Granite-TimeSeries-TTM-R2.1 × Numenta Anomaly Benchmark (NAB): Not seen" data-col="ts-anomaly--nab" data-level="not_seen" data-label="Not seen" data-pair="Granite-TimeSeries-TTM-R2.1 × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen gs" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/granite-ttm-r2-1.html#ts-classification--ucr-archive" aria-label="Granite-TimeSeries-TTM-R2.1 × UCR Time Series Classification Archive (2018): Not seen" data-col="ts-classification--ucr-archive" data-level="not_seen" data-label="Not seen" data-pair="Granite-TimeSeries-TTM-R2.1 × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/granite-ttm-r2-1.html#ts-classification--uea-archive" aria-label="Granite-TimeSeries-TTM-R2.1 × UEA Multivariate Time Series Classification Archive (2018): Not seen" data-col="ts-classification--uea-archive" data-level="not_seen" data-label="Not seen" data-pair="Granite-TimeSeries-TTM-R2.1 × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="Granite-TimeSeries-TTM-R2.1" data-reason="49 of 49 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="Granite-TimeSeries-TTM-R2.1" data-reason="Not enough disclosed to tell on 0 of 49 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.143" data-col="contaminated" data-tip="Contaminated: 14%" data-pair="Granite-TimeSeries-TTM-R2.1" data-reason="Test data seen or possibly seen on 7 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">14%</td>
         <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
@@ -1840,7 +1840,7 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/granite-ttm-r3.html#ts-anomaly--nab" aria-label="Granite-TTM-R3 × Numenta Anomaly Benchmark (NAB): Unknown" data-col="ts-anomaly--nab" data-level="unknown" data-label="Unknown" data-pair="Granite-TTM-R3 × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown gs" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/granite-ttm-r3.html#ts-classification--ucr-archive" aria-label="Granite-TTM-R3 × UCR Time Series Classification Archive (2018): Unknown" data-col="ts-classification--ucr-archive" data-level="unknown" data-label="Unknown" data-pair="Granite-TTM-R3 × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/granite-ttm-r3.html#ts-classification--uea-archive" aria-label="Granite-TTM-R3 × UEA Multivariate Time Series Classification Archive (2018): Unknown" data-col="ts-classification--uea-archive" data-level="unknown" data-label="Unknown" data-pair="Granite-TTM-R3 × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.612" data-col="known" data-tip="Known: 61%" data-pair="Granite-TTM-R3" data-reason="30 of 49 benchmark datasets have a known level (not Unknown).">61%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.388" data-col="unknown" data-tip="Unknown: 39%" data-pair="Granite-TTM-R3" data-reason="Not enough disclosed to tell on 19 of 49 benchmark datasets.">39%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.020" data-col="contaminated" data-tip="Contaminated: 2%" data-pair="Granite-TTM-R3" data-reason="Test data seen or possibly seen on 1 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">2%</td>
         <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
@@ -1895,7 +1895,7 @@
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/ttm-research-r2.html#ts-anomaly--nab" aria-label="Tiny Time Mixer (TTM) Research-Use R2 × Numenta Anomaly Benchmark (NAB): Not seen" data-col="ts-anomaly--nab" data-level="not_seen" data-label="Not seen" data-pair="Tiny Time Mixer (TTM) Research-Use R2 × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen gs" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/ttm-research-r2.html#ts-classification--ucr-archive" aria-label="Tiny Time Mixer (TTM) Research-Use R2 × UCR Time Series Classification Archive (2018): Not seen" data-col="ts-classification--ucr-archive" data-level="not_seen" data-label="Not seen" data-pair="Tiny Time Mixer (TTM) Research-Use R2 × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/ttm-research-r2.html#ts-classification--uea-archive" aria-label="Tiny Time Mixer (TTM) Research-Use R2 × UEA Multivariate Time Series Classification Archive (2018): Not seen" data-col="ts-classification--uea-archive" data-level="not_seen" data-label="Not seen" data-pair="Tiny Time Mixer (TTM) Research-Use R2 × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="Tiny Time Mixer (TTM) Research-Use R2" data-reason="49 of 49 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="Tiny Time Mixer (TTM) Research-Use R2" data-reason="Not enough disclosed to tell on 0 of 49 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.122" data-col="contaminated" data-tip="Contaminated: 12%" data-pair="Tiny Time Mixer (TTM) Research-Use R2" data-reason="Test data seen or possibly seen on 6 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">12%</td>
         <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
@@ -1950,7 +1950,7 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/ttm-r3.html#ts-anomaly--nab" aria-label="TTM-R3 × Numenta Anomaly Benchmark (NAB): Unknown" data-col="ts-anomaly--nab" data-level="unknown" data-label="Unknown" data-pair="TTM-R3 × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown gs" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/ttm-r3.html#ts-classification--ucr-archive" aria-label="TTM-R3 × UCR Time Series Classification Archive (2018): Unknown" data-col="ts-classification--ucr-archive" data-level="unknown" data-label="Unknown" data-pair="TTM-R3 × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/ttm-r3.html#ts-classification--uea-archive" aria-label="TTM-R3 × UEA Multivariate Time Series Classification Archive (2018): Unknown" data-col="ts-classification--uea-archive" data-level="unknown" data-label="Unknown" data-pair="TTM-R3 × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.735" data-col="known" data-tip="Known: 73%" data-pair="TTM-R3" data-reason="36 of 49 benchmark datasets have a known level (not Unknown).">73%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.265" data-col="unknown" data-tip="Unknown: 27%" data-pair="TTM-R3" data-reason="Not enough disclosed to tell on 13 of 49 benchmark datasets.">27%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.020" data-col="contaminated" data-tip="Contaminated: 2%" data-pair="TTM-R3" data-reason="Test data seen or possibly seen on 1 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">2%</td>
         <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.60" data-pair="TTM-R3" data-reason="Mean rank over 28 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.60</td>
       </tr>
@@ -2005,7 +2005,7 @@
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/tirex.html#ts-anomaly--nab" aria-label="TiRex × Numenta Anomaly Benchmark (NAB): Not seen" data-col="ts-anomaly--nab" data-level="not_seen" data-label="Not seen" data-pair="TiRex × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen gs" data-shade="2" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/tirex.html#ts-classification--ucr-archive" aria-label="TiRex × UCR Time Series Classification Archive (2018): Not seen" data-col="ts-classification--ucr-archive" data-level="not_seen" data-label="Not seen" data-pair="TiRex × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data" data-score="Rank 4 of 6 on this dataset · Accuracy (frozen encoder + logistic regression) 0.82 (MantisV2 paper (Feofanov et al., arXiv 2602.17868v1): zero-shot feature-extraction comparison on UCR and UEA-27)"></a></td>
         <td class="sq lvl-not_seen" data-shade="2" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/tirex.html#ts-classification--uea-archive" aria-label="TiRex × UEA Multivariate Time Series Classification Archive (2018): Not seen" data-col="ts-classification--uea-archive" data-level="not_seen" data-label="Not seen" data-pair="TiRex × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data" data-score="Rank 4 of 6 on this dataset · Accuracy (frozen encoder + logistic regression) 0.725 (MantisV2 paper (Feofanov et al., arXiv 2602.17868v1): zero-shot feature-extraction comparison on UCR and UEA-27)"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="TiRex" data-reason="49 of 49 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="TiRex" data-reason="Not enough disclosed to tell on 0 of 49 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.163" data-col="contaminated" data-tip="Contaminated: 16%" data-pair="TiRex" data-reason="Test data seen or possibly seen on 8 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">16%</td>
         <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.60" data-pair="TiRex" data-reason="Mean rank over 2 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.60</td>
       </tr>
@@ -2060,7 +2060,7 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/tirex-1.1-gifteval.html#ts-anomaly--nab" aria-label="TiRex 1.1 (gifteval) × Numenta Anomaly Benchmark (NAB): Unknown" data-col="ts-anomaly--nab" data-level="unknown" data-label="Unknown" data-pair="TiRex 1.1 (gifteval) × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown gs" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/tirex-1.1-gifteval.html#ts-classification--ucr-archive" aria-label="TiRex 1.1 (gifteval) × UCR Time Series Classification Archive (2018): Unknown" data-col="ts-classification--ucr-archive" data-level="unknown" data-label="Unknown" data-pair="TiRex 1.1 (gifteval) × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/tirex-1.1-gifteval.html#ts-classification--uea-archive" aria-label="TiRex 1.1 (gifteval) × UEA Multivariate Time Series Classification Archive (2018): Unknown" data-col="ts-classification--uea-archive" data-level="unknown" data-label="Unknown" data-pair="TiRex 1.1 (gifteval) × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.612" data-col="known" data-tip="Known: 61%" data-pair="TiRex 1.1 (gifteval)" data-reason="30 of 49 benchmark datasets have a known level (not Unknown).">61%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.388" data-col="unknown" data-tip="Unknown: 39%" data-pair="TiRex 1.1 (gifteval)" data-reason="Not enough disclosed to tell on 19 of 49 benchmark datasets.">39%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="TiRex 1.1 (gifteval)" data-reason="Test data seen or possibly seen on 0 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.30" data-pair="TiRex 1.1 (gifteval)" data-reason="Mean rank over 28 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.30</td>
       </tr>
@@ -2115,7 +2115,7 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/tirex-2.html#ts-anomaly--nab" aria-label="TiRex-2 × Numenta Anomaly Benchmark (NAB): Unknown" data-col="ts-anomaly--nab" data-level="unknown" data-label="Unknown" data-pair="TiRex-2 × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown gs" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/tirex-2.html#ts-classification--ucr-archive" aria-label="TiRex-2 × UCR Time Series Classification Archive (2018): Unknown" data-col="ts-classification--ucr-archive" data-level="unknown" data-label="Unknown" data-pair="TiRex-2 × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/tirex-2.html#ts-classification--uea-archive" aria-label="TiRex-2 × UEA Multivariate Time Series Classification Archive (2018): Unknown" data-col="ts-classification--uea-archive" data-level="unknown" data-label="Unknown" data-pair="TiRex-2 × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.000" data-col="known" data-tip="Known: 0%" data-pair="TiRex-2" data-reason="0 of 49 benchmark datasets have a known level (not Unknown).">0%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 1.000" data-col="unknown" data-tip="Unknown: 100%" data-pair="TiRex-2" data-reason="Not enough disclosed to tell on 49 of 49 benchmark datasets.">100%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="TiRex-2" data-reason="Test data seen or possibly seen on 0 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
@@ -2170,7 +2170,7 @@
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/tirex-2-fevbench.html#ts-anomaly--nab" aria-label="TiRex-2-fevbench (TiRex-2-f) × Numenta Anomaly Benchmark (NAB): Not seen" data-col="ts-anomaly--nab" data-level="not_seen" data-label="Not seen" data-pair="TiRex-2-fevbench (TiRex-2-f) × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen gs" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/tirex-2-fevbench.html#ts-classification--ucr-archive" aria-label="TiRex-2-fevbench (TiRex-2-f) × UCR Time Series Classification Archive (2018): Not seen" data-col="ts-classification--ucr-archive" data-level="not_seen" data-label="Not seen" data-pair="TiRex-2-fevbench (TiRex-2-f) × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/tirex-2-fevbench.html#ts-classification--uea-archive" aria-label="TiRex-2-fevbench (TiRex-2-f) × UEA Multivariate Time Series Classification Archive (2018): Not seen" data-col="ts-classification--uea-archive" data-level="not_seen" data-label="Not seen" data-pair="TiRex-2-fevbench (TiRex-2-f) × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="TiRex-2-fevbench (TiRex-2-f)" data-reason="49 of 49 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="TiRex-2-fevbench (TiRex-2-f)" data-reason="Not enough disclosed to tell on 0 of 49 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.408" data-col="contaminated" data-tip="Contaminated: 41%" data-pair="TiRex-2-fevbench (TiRex-2-f)" data-reason="Test data seen or possibly seen on 20 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">41%</td>
         <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
@@ -2225,7 +2225,7 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/tirex-2-gifteval-pretrain.html#ts-anomaly--nab" aria-label="TiRex-2-gifteval-pretrain (TiRex-2-gp) × Numenta Anomaly Benchmark (NAB): Unknown" data-col="ts-anomaly--nab" data-level="unknown" data-label="Unknown" data-pair="TiRex-2-gifteval-pretrain (TiRex-2-gp) × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown gs" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/tirex-2-gifteval-pretrain.html#ts-classification--ucr-archive" aria-label="TiRex-2-gifteval-pretrain (TiRex-2-gp) × UCR Time Series Classification Archive (2018): Unknown" data-col="ts-classification--ucr-archive" data-level="unknown" data-label="Unknown" data-pair="TiRex-2-gifteval-pretrain (TiRex-2-gp) × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/tirex-2-gifteval-pretrain.html#ts-classification--uea-archive" aria-label="TiRex-2-gifteval-pretrain (TiRex-2-gp) × UEA Multivariate Time Series Classification Archive (2018): Unknown" data-col="ts-classification--uea-archive" data-level="unknown" data-label="Unknown" data-pair="TiRex-2-gifteval-pretrain (TiRex-2-gp) × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.612" data-col="known" data-tip="Known: 61%" data-pair="TiRex-2-gifteval-pretrain (TiRex-2-gp)" data-reason="30 of 49 benchmark datasets have a known level (not Unknown).">61%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.388" data-col="unknown" data-tip="Unknown: 39%" data-pair="TiRex-2-gifteval-pretrain (TiRex-2-gp)" data-reason="Not enough disclosed to tell on 19 of 49 benchmark datasets.">39%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.020" data-col="contaminated" data-tip="Contaminated: 2%" data-pair="TiRex-2-gifteval-pretrain (TiRex-2-gp)" data-reason="Test data seen or possibly seen on 1 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">2%</td>
         <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.27" data-pair="TiRex-2-gifteval-pretrain (TiRex-2-gp)" data-reason="Mean rank over 28 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.27</td>
       </tr>
@@ -2280,7 +2280,7 @@
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/tirex-2-gifteval-zs.html#ts-anomaly--nab" aria-label="TiRex-2-gifteval-zs (TiRex-2-g) × Numenta Anomaly Benchmark (NAB): Not seen" data-col="ts-anomaly--nab" data-level="not_seen" data-label="Not seen" data-pair="TiRex-2-gifteval-zs (TiRex-2-g) × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen gs" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/tirex-2-gifteval-zs.html#ts-classification--ucr-archive" aria-label="TiRex-2-gifteval-zs (TiRex-2-g) × UCR Time Series Classification Archive (2018): Not seen" data-col="ts-classification--ucr-archive" data-level="not_seen" data-label="Not seen" data-pair="TiRex-2-gifteval-zs (TiRex-2-g) × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/tirex-2-gifteval-zs.html#ts-classification--uea-archive" aria-label="TiRex-2-gifteval-zs (TiRex-2-g) × UEA Multivariate Time Series Classification Archive (2018): Not seen" data-col="ts-classification--uea-archive" data-level="not_seen" data-label="Not seen" data-pair="TiRex-2-gifteval-zs (TiRex-2-g) × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="absent from the complete list of training data"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="TiRex-2-gifteval-zs (TiRex-2-g)" data-reason="49 of 49 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="TiRex-2-gifteval-zs (TiRex-2-g)" data-reason="Not enough disclosed to tell on 0 of 49 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.041" data-col="contaminated" data-tip="Contaminated: 4%" data-pair="TiRex-2-gifteval-zs (TiRex-2-g)" data-reason="Test data seen or possibly seen on 2 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">4%</td>
         <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.32" data-pair="TiRex-2-gifteval-zs (TiRex-2-g)" data-reason="Mean rank over 28 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.32</td>
       </tr>
@@ -2335,7 +2335,7 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/toto-2024.html#ts-anomaly--nab" aria-label="Toto (2024 technical report) × Numenta Anomaly Benchmark (NAB): Unknown" data-col="ts-anomaly--nab" data-level="unknown" data-label="Unknown" data-pair="Toto (2024 technical report) × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown gs" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/toto-2024.html#ts-classification--ucr-archive" aria-label="Toto (2024 technical report) × UCR Time Series Classification Archive (2018): Unknown" data-col="ts-classification--ucr-archive" data-level="unknown" data-label="Unknown" data-pair="Toto (2024 technical report) × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/toto-2024.html#ts-classification--uea-archive" aria-label="Toto (2024 technical report) × UEA Multivariate Time Series Classification Archive (2018): Unknown" data-col="ts-classification--uea-archive" data-level="unknown" data-label="Unknown" data-pair="Toto (2024 technical report) × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.408" data-col="known" data-tip="Known: 41%" data-pair="Toto (2024 technical report)" data-reason="20 of 49 benchmark datasets have a known level (not Unknown).">41%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.592" data-col="unknown" data-tip="Unknown: 59%" data-pair="Toto (2024 technical report)" data-reason="Not enough disclosed to tell on 29 of 49 benchmark datasets.">59%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.388" data-col="contaminated" data-tip="Contaminated: 39%" data-pair="Toto (2024 technical report)" data-reason="Test data seen or possibly seen on 19 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">39%</td>
         <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
@@ -2390,7 +2390,7 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/toto-2.0.html#ts-anomaly--nab" aria-label="Toto 2.0 × Numenta Anomaly Benchmark (NAB): Unknown" data-col="ts-anomaly--nab" data-level="unknown" data-label="Unknown" data-pair="Toto 2.0 × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown gs" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/toto-2.0.html#ts-classification--ucr-archive" aria-label="Toto 2.0 × UCR Time Series Classification Archive (2018): Unknown" data-col="ts-classification--ucr-archive" data-level="unknown" data-label="Unknown" data-pair="Toto 2.0 × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/toto-2.0.html#ts-classification--uea-archive" aria-label="Toto 2.0 × UEA Multivariate Time Series Classification Archive (2018): Unknown" data-col="ts-classification--uea-archive" data-level="unknown" data-label="Unknown" data-pair="Toto 2.0 × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.755" data-col="known" data-tip="Known: 76%" data-pair="Toto 2.0" data-reason="37 of 49 benchmark datasets have a known level (not Unknown).">76%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.245" data-col="unknown" data-tip="Unknown: 24%" data-pair="Toto 2.0" data-reason="Not enough disclosed to tell on 12 of 49 benchmark datasets.">24%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="Toto 2.0" data-reason="Test data seen or possibly seen on 0 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.28" data-pair="Toto 2.0" data-reason="Mean rank over 28 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.28</td>
       </tr>
@@ -2445,7 +2445,7 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/toto-2.0-2.5b-ft.html#ts-anomaly--nab" aria-label="Toto-2.0-2.5B-FT × Numenta Anomaly Benchmark (NAB): Unknown" data-col="ts-anomaly--nab" data-level="unknown" data-label="Unknown" data-pair="Toto-2.0-2.5B-FT × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown gs" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/toto-2.0-2.5b-ft.html#ts-classification--ucr-archive" aria-label="Toto-2.0-2.5B-FT × UCR Time Series Classification Archive (2018): Unknown" data-col="ts-classification--ucr-archive" data-level="unknown" data-label="Unknown" data-pair="Toto-2.0-2.5B-FT × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/toto-2.0-2.5b-ft.html#ts-classification--uea-archive" aria-label="Toto-2.0-2.5B-FT × UEA Multivariate Time Series Classification Archive (2018): Unknown" data-col="ts-classification--uea-archive" data-level="unknown" data-label="Unknown" data-pair="Toto-2.0-2.5B-FT × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.735" data-col="known" data-tip="Known: 73%" data-pair="Toto-2.0-2.5B-FT" data-reason="36 of 49 benchmark datasets have a known level (not Unknown).">73%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.265" data-col="unknown" data-tip="Unknown: 27%" data-pair="Toto-2.0-2.5B-FT" data-reason="Not enough disclosed to tell on 13 of 49 benchmark datasets.">27%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.020" data-col="contaminated" data-tip="Contaminated: 2%" data-pair="Toto-2.0-2.5B-FT" data-reason="Test data seen or possibly seen on 1 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">2%</td>
         <td class="stat stat-score rate score-1 on-dark" data-col="avg-rank" data-tip="Average rank: 0.16" data-pair="Toto-2.0-2.5B-FT" data-reason="Mean rank over 28 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.16</td>
       </tr>
@@ -2500,7 +2500,7 @@
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/toto-1.0.html#ts-anomaly--nab" aria-label="Toto-Open-Base-1.0 × Numenta Anomaly Benchmark (NAB): Unknown" data-col="ts-anomaly--nab" data-level="unknown" data-label="Unknown" data-pair="Toto-Open-Base-1.0 × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown gs" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/toto-1.0.html#ts-classification--ucr-archive" aria-label="Toto-Open-Base-1.0 × UCR Time Series Classification Archive (2018): Unknown" data-col="ts-classification--ucr-archive" data-level="unknown" data-label="Unknown" data-pair="Toto-Open-Base-1.0 × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
         <td class="sq lvl-unknown" data-shade="none" style="--mark: var(--lvl-unknown)"><a href="../contamination-map/models/toto-1.0.html#ts-classification--uea-archive" aria-label="Toto-Open-Base-1.0 × UEA Multivariate Time Series Classification Archive (2018): Unknown" data-col="ts-classification--uea-archive" data-level="unknown" data-label="Unknown" data-pair="Toto-Open-Base-1.0 × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="training data not disclosed in enough detail"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 0.633" data-col="known" data-tip="Known: 63%" data-pair="Toto-Open-Base-1.0" data-reason="31 of 49 benchmark datasets have a known level (not Unknown).">63%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.367" data-col="unknown" data-tip="Unknown: 37%" data-pair="Toto-Open-Base-1.0" data-reason="Not enough disclosed to tell on 18 of 49 benchmark datasets.">37%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.041" data-col="contaminated" data-tip="Contaminated: 4%" data-pair="Toto-Open-Base-1.0" data-reason="Test data seen or possibly seen on 2 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">4%</td>
         <td class="stat stat-score rate score-2 on-dark" data-col="avg-rank" data-tip="Average rank: 0.52" data-pair="Toto-Open-Base-1.0" data-reason="Mean rank over 28 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">0.52</td>
       </tr>
@@ -2555,7 +2555,7 @@
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/units.html#ts-anomaly--nab" aria-label="UniTS × Numenta Anomaly Benchmark (NAB): Not seen" data-col="ts-anomaly--nab" data-level="not_seen" data-label="Not seen" data-pair="UniTS × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="absent from the complete list of training data"></a></td>
         <td class="sq lvl-train_seen gs" data-shade="none" style="--mark: var(--lvl-train_seen)"><a href="../contamination-map/models/units.html#ts-classification--ucr-archive" aria-label="UniTS × UCR Time Series Classification Archive (2018): Training data seen" data-col="ts-classification--ucr-archive" data-level="train_seen" data-label="Training data seen" data-pair="UniTS × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="only the training split was used, not the benchmark&#39;s test data"></a></td>
         <td class="sq lvl-train_seen" data-shade="none" style="--mark: var(--lvl-train_seen)"><a href="../contamination-map/models/units.html#ts-classification--uea-archive" aria-label="UniTS × UEA Multivariate Time Series Classification Archive (2018): Training data seen" data-col="ts-classification--uea-archive" data-level="train_seen" data-label="Training data seen" data-pair="UniTS × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="only the training split was used, not the benchmark&#39;s test data"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="UniTS" data-reason="49 of 49 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="UniTS" data-reason="Not enough disclosed to tell on 0 of 49 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="UniTS" data-reason="Test data seen or possibly seen on 0 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score rate score-4" data-col="avg-rank" data-tip="Average rank: 1.00" data-pair="UniTS" data-reason="Mean rank over 4 datasets with a comparable score, each rank scaled from 0 (best) to 1 (worst) so that datasets with different numbers of models count the same.">1.00</td>
       </tr>
@@ -2610,64 +2610,64 @@
         <td class="sq lvl-not_seen" data-shade="none" style="--mark: var(--lvl-not_seen)"><a href="../contamination-map/models/units-few-shot-anomaly-detection.html#ts-anomaly--nab" aria-label="UniTS few-shot anomaly detection checkpoints × Numenta Anomaly Benchmark (NAB): Not seen" data-col="ts-anomaly--nab" data-level="not_seen" data-label="Not seen" data-pair="UniTS few-shot anomaly detection checkpoints × Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="absent from the complete list of training data and from its base models&#39; data"></a></td>
         <td class="sq lvl-train_seen gs" data-shade="none" style="--mark: var(--lvl-train_seen)"><a href="../contamination-map/models/units-few-shot-anomaly-detection.html#ts-classification--ucr-archive" aria-label="UniTS few-shot anomaly detection checkpoints × UCR Time Series Classification Archive (2018): Training data seen" data-col="ts-classification--ucr-archive" data-level="train_seen" data-label="Training data seen" data-pair="UniTS few-shot anomaly detection checkpoints × UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="via base model UniTS: only the training split was used, not the benchmark&#39;s test data"></a></td>
         <td class="sq lvl-train_seen" data-shade="none" style="--mark: var(--lvl-train_seen)"><a href="../contamination-map/models/units-few-shot-anomaly-detection.html#ts-classification--uea-archive" aria-label="UniTS few-shot anomaly detection checkpoints × UEA Multivariate Time Series Classification Archive (2018): Training data seen" data-col="ts-classification--uea-archive" data-level="train_seen" data-label="Training data seen" data-pair="UniTS few-shot anomaly detection checkpoints × UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="via base model UniTS: only the training split was used, not the benchmark&#39;s test data"></a></td>
-        <td class="stat ss rate rate-known" style="--v: 1.000" data-col="known" data-tip="Known: 100%" data-pair="UniTS few-shot anomaly detection checkpoints" data-reason="49 of 49 benchmark datasets have a known level (not Unknown).">100%</td>
+        <td class="stat ss rate rate-unknown" style="--v: 0.000" data-col="unknown" data-tip="Unknown: 0%" data-pair="UniTS few-shot anomaly detection checkpoints" data-reason="Not enough disclosed to tell on 0 of 49 benchmark datasets.">0%</td>
         <td class="stat rate rate-contaminated" style="--v: 0.000" data-col="contaminated" data-tip="Contaminated: 0%" data-pair="UniTS few-shot anomaly detection checkpoints" data-reason="Test data seen or possibly seen on 0 of 49 benchmark datasets. A lower bound: Unknown cells may be contaminated too.">0%</td>
         <td class="stat stat-score muted" data-col="avg-rank" title="No comparable score">—</td>
       </tr>
     </tbody>
     <tfoot>
       <tr class="fs-stat">
-        <th scope="row" class="stat-label">Known</th>
-        <td class="stat vstat gs rate rate-known" style="--v: 0.711" data-col="gift-eval--jena-weather" data-tip="Known: 71%" data-pair="Jena Weather (GIFT-Eval) (GIFT-Eval)" data-reason="32 of 45 models have a known level (not Unknown)."><span>71%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.689" data-col="gift-eval--bizitobs-application" data-tip="Known: 69%" data-pair="BizITObs - Application (GIFT-Eval)" data-reason="31 of 45 models have a known level (not Unknown)."><span>69%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.689" data-col="gift-eval--bizitobs-service" data-tip="Known: 69%" data-pair="BizITObs - Service (GIFT-Eval)" data-reason="31 of 45 models have a known level (not Unknown)."><span>69%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.689" data-col="gift-eval--bizitobs-l2c" data-tip="Known: 69%" data-pair="BizITObs - L2C (GIFT-Eval)" data-reason="31 of 45 models have a known level (not Unknown)."><span>69%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.689" data-col="gift-eval--bitbrains-fast-storage" data-tip="Known: 69%" data-pair="Bitbrains - Fast Storage (GIFT-Eval)" data-reason="31 of 45 models have a known level (not Unknown)."><span>69%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.689" data-col="gift-eval--bitbrains-rnd" data-tip="Known: 69%" data-pair="Bitbrains - rnd (GIFT-Eval)" data-reason="31 of 45 models have a known level (not Unknown)."><span>69%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.778" data-col="gift-eval--recruit-restaurant" data-tip="Known: 78%" data-pair="Restaurant (Recruit Restaurant Visitor Forecasting) (GIFT-Eval)" data-reason="35 of 45 models have a known level (not Unknown)."><span>78%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.711" data-col="gift-eval--ett1" data-tip="Known: 71%" data-pair="ETT1 (GIFT-Eval) (GIFT-Eval)" data-reason="32 of 45 models have a known level (not Unknown)."><span>71%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.711" data-col="gift-eval--ett2" data-tip="Known: 71%" data-pair="ETT2 (GIFT-Eval) (GIFT-Eval)" data-reason="32 of 45 models have a known level (not Unknown)."><span>71%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.778" data-col="gift-eval--loop-seattle" data-tip="Known: 78%" data-pair="Loop Seattle (LibCity) (GIFT-Eval)" data-reason="35 of 45 models have a known level (not Unknown)."><span>78%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.778" data-col="gift-eval--sz-taxi" data-tip="Known: 78%" data-pair="SZ-Taxi (LibCity) (GIFT-Eval)" data-reason="35 of 45 models have a known level (not Unknown)."><span>78%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.778" data-col="gift-eval--m-dense" data-tip="Known: 78%" data-pair="M_DENSE (LibCity) (GIFT-Eval)" data-reason="35 of 45 models have a known level (not Unknown)."><span>78%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.733" data-col="gift-eval--lstnet-solar" data-tip="Known: 73%" data-pair="Solar (LSTNet, 137 Alabama PV plants) (GIFT-Eval)" data-reason="33 of 45 models have a known level (not Unknown)."><span>73%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.778" data-col="gift-eval--hierarchical-sales" data-tip="Known: 78%" data-pair="Hierarchical Sales (Mancuso et al., 2020) (GIFT-Eval)" data-reason="35 of 45 models have a known level (not Unknown)."><span>78%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.822" data-col="gift-eval--m4-yearly" data-tip="Known: 82%" data-pair="M4 Yearly (GIFT-Eval)" data-reason="37 of 45 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.822" data-col="gift-eval--m4-quarterly" data-tip="Known: 82%" data-pair="M4 Quarterly (GIFT-Eval)" data-reason="37 of 45 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.844" data-col="gift-eval--m4-monthly" data-tip="Known: 84%" data-pair="M4 Monthly (GIFT-Eval)" data-reason="38 of 45 models have a known level (not Unknown)."><span>84%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.844" data-col="gift-eval--m4-weekly" data-tip="Known: 84%" data-pair="M4 Weekly (GIFT-Eval)" data-reason="38 of 45 models have a known level (not Unknown)."><span>84%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.844" data-col="gift-eval--m4-daily" data-tip="Known: 84%" data-pair="M4 Daily (GIFT-Eval)" data-reason="38 of 45 models have a known level (not Unknown)."><span>84%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.844" data-col="gift-eval--m4-hourly" data-tip="Known: 84%" data-pair="M4 Hourly (GIFT-Eval)" data-reason="38 of 45 models have a known level (not Unknown)."><span>84%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.800" data-col="gift-eval--hospital" data-tip="Known: 80%" data-pair="Hospital (GIFT-Eval)" data-reason="36 of 45 models have a known level (not Unknown)."><span>80%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.800" data-col="gift-eval--covid-deaths" data-tip="Known: 80%" data-pair="COVID Deaths (GIFT-Eval)" data-reason="36 of 45 models have a known level (not Unknown)."><span>80%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.844" data-col="gift-eval--us-births" data-tip="Known: 84%" data-pair="US Births (GIFT-Eval)" data-reason="38 of 45 models have a known level (not Unknown)."><span>84%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.844" data-col="gift-eval--saugeen-river-flow" data-tip="Known: 84%" data-pair="Saugeen River Flow (GIFT-Eval)" data-reason="38 of 45 models have a known level (not Unknown)."><span>84%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.822" data-col="gift-eval--temperature-rain" data-tip="Known: 82%" data-pair="Temperature Rain (GIFT-Eval)" data-reason="37 of 45 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.867" data-col="gift-eval--kdd-cup-2018" data-tip="Known: 87%" data-pair="KDD Cup 2018 (GIFT-Eval)" data-reason="39 of 45 models have a known level (not Unknown)."><span>87%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.800" data-col="gift-eval--car-parts" data-tip="Known: 80%" data-pair="Car Parts (GIFT-Eval)" data-reason="36 of 45 models have a known level (not Unknown)."><span>80%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.800" data-col="gift-eval--uci-electricity-load-diagrams" data-tip="Known: 80%" data-pair="ElectricityLoadDiagrams20112014 (UCI) (GIFT-Eval)" data-reason="36 of 45 models have a known level (not Unknown)."><span>80%</span></td>
-        <td class="stat vstat gs rate rate-known" style="--v: 0.667" data-col="long-horizon--etth1" data-tip="Known: 67%" data-pair="ETTh1 (Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI))" data-reason="30 of 45 models have a known level (not Unknown)."><span>67%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.667" data-col="long-horizon--etth2" data-tip="Known: 67%" data-pair="ETTh2 (Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI))" data-reason="30 of 45 models have a known level (not Unknown)."><span>67%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.667" data-col="long-horizon--ettm1" data-tip="Known: 67%" data-pair="ETTm1 (Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI))" data-reason="30 of 45 models have a known level (not Unknown)."><span>67%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.667" data-col="long-horizon--ettm2" data-tip="Known: 67%" data-pair="ETTm2 (Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI))" data-reason="30 of 45 models have a known level (not Unknown)."><span>67%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.711" data-col="long-horizon--electricity-321" data-tip="Known: 71%" data-pair="Electricity (ECL, 321 clients) (Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI))" data-reason="32 of 45 models have a known level (not Unknown)."><span>71%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.844" data-col="long-horizon--traffic-862" data-tip="Known: 84%" data-pair="Traffic (PeMS San Francisco Bay, 862 sensors) (Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI))" data-reason="38 of 45 models have a known level (not Unknown)."><span>84%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.644" data-col="long-horizon--weather-jena-2020" data-tip="Known: 64%" data-pair="Weather (Jena, 2020; Autoformer) (Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI))" data-reason="29 of 45 models have a known level (not Unknown)."><span>64%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.556" data-col="long-horizon--exchange-rate" data-tip="Known: 56%" data-pair="Exchange-Rate (Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI))" data-reason="25 of 45 models have a known level (not Unknown)."><span>56%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.822" data-col="long-horizon--ili" data-tip="Known: 82%" data-pair="ILI (CDC influenza-like illness, national) (Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI))" data-reason="37 of 45 models have a known level (not Unknown)."><span>82%</span></td>
-        <td class="stat vstat gs rate rate-known" style="--v: 0.511" data-col="ts-anomaly--tsb-ad-u" data-tip="Known: 51%" data-pair="TSB-AD-U (TSB-AD univariate) (Time-series anomaly detection)" data-reason="23 of 45 models have a known level (not Unknown)."><span>51%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.489" data-col="ts-anomaly--tsb-ad-m" data-tip="Known: 49%" data-pair="TSB-AD-M (TSB-AD multivariate) (Time-series anomaly detection)" data-reason="22 of 45 models have a known level (not Unknown)."><span>49%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.533" data-col="ts-anomaly--ucr-anomaly-archive" data-tip="Known: 53%" data-pair="UCR Time Series Anomaly Archive (Hexagon ML/UCR, KDD Cup 2021) (Time-series anomaly detection)" data-reason="24 of 45 models have a known level (not Unknown)."><span>53%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.533" data-col="ts-anomaly--smd" data-tip="Known: 53%" data-pair="Server Machine Dataset (SMD) (Time-series anomaly detection)" data-reason="24 of 45 models have a known level (not Unknown)."><span>53%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.533" data-col="ts-anomaly--msl" data-tip="Known: 53%" data-pair="Mars Science Laboratory (MSL) telemetry anomaly dataset (Time-series anomaly detection)" data-reason="24 of 45 models have a known level (not Unknown)."><span>53%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.533" data-col="ts-anomaly--smap" data-tip="Known: 53%" data-pair="Soil Moisture Active Passive (SMAP) telemetry anomaly dataset (Time-series anomaly detection)" data-reason="24 of 45 models have a known level (not Unknown)."><span>53%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.511" data-col="ts-anomaly--psm" data-tip="Known: 51%" data-pair="Pooled Server Metrics (PSM) (Time-series anomaly detection)" data-reason="23 of 45 models have a known level (not Unknown)."><span>51%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.511" data-col="ts-anomaly--swat" data-tip="Known: 51%" data-pair="Secure Water Treatment (SWaT) (Time-series anomaly detection)" data-reason="23 of 45 models have a known level (not Unknown)."><span>51%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.511" data-col="ts-anomaly--yahoo-s5" data-tip="Known: 51%" data-pair="Yahoo S5 Labeled Anomaly Detection Dataset (Yahoo Webscope S5) (Time-series anomaly detection)" data-reason="23 of 45 models have a known level (not Unknown)."><span>51%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.511" data-col="ts-anomaly--nab" data-tip="Known: 51%" data-pair="Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="23 of 45 models have a known level (not Unknown)."><span>51%</span></td>
-        <td class="stat vstat gs rate rate-known" style="--v: 0.578" data-col="ts-classification--ucr-archive" data-tip="Known: 58%" data-pair="UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="26 of 45 models have a known level (not Unknown)."><span>58%</span></td>
-        <td class="stat vstat rate rate-known" style="--v: 0.578" data-col="ts-classification--uea-archive" data-tip="Known: 58%" data-pair="UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="26 of 45 models have a known level (not Unknown)."><span>58%</span></td>
-        <td class="stat stat-total ss rate rate-known" style="--v: 0.702" data-col="known" data-tip="Known, whole map: 70%" data-pair="All time series models and benchmark datasets" data-reason="1547 of 2205 cells have a known level (not Unknown).">70%</td>
+        <th scope="row" class="stat-label">Unknown</th>
+        <td class="stat vstat gs rate rate-unknown" style="--v: 0.289" data-col="gift-eval--jena-weather" data-tip="Unknown: 29%" data-pair="Jena Weather (GIFT-Eval) (GIFT-Eval)" data-reason="13 of 45 models have an Unknown level (not enough disclosed to tell)."><span>29%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.311" data-col="gift-eval--bizitobs-application" data-tip="Unknown: 31%" data-pair="BizITObs - Application (GIFT-Eval)" data-reason="14 of 45 models have an Unknown level (not enough disclosed to tell)."><span>31%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.311" data-col="gift-eval--bizitobs-service" data-tip="Unknown: 31%" data-pair="BizITObs - Service (GIFT-Eval)" data-reason="14 of 45 models have an Unknown level (not enough disclosed to tell)."><span>31%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.311" data-col="gift-eval--bizitobs-l2c" data-tip="Unknown: 31%" data-pair="BizITObs - L2C (GIFT-Eval)" data-reason="14 of 45 models have an Unknown level (not enough disclosed to tell)."><span>31%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.311" data-col="gift-eval--bitbrains-fast-storage" data-tip="Unknown: 31%" data-pair="Bitbrains - Fast Storage (GIFT-Eval)" data-reason="14 of 45 models have an Unknown level (not enough disclosed to tell)."><span>31%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.311" data-col="gift-eval--bitbrains-rnd" data-tip="Unknown: 31%" data-pair="Bitbrains - rnd (GIFT-Eval)" data-reason="14 of 45 models have an Unknown level (not enough disclosed to tell)."><span>31%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.222" data-col="gift-eval--recruit-restaurant" data-tip="Unknown: 22%" data-pair="Restaurant (Recruit Restaurant Visitor Forecasting) (GIFT-Eval)" data-reason="10 of 45 models have an Unknown level (not enough disclosed to tell)."><span>22%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.289" data-col="gift-eval--ett1" data-tip="Unknown: 29%" data-pair="ETT1 (GIFT-Eval) (GIFT-Eval)" data-reason="13 of 45 models have an Unknown level (not enough disclosed to tell)."><span>29%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.289" data-col="gift-eval--ett2" data-tip="Unknown: 29%" data-pair="ETT2 (GIFT-Eval) (GIFT-Eval)" data-reason="13 of 45 models have an Unknown level (not enough disclosed to tell)."><span>29%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.222" data-col="gift-eval--loop-seattle" data-tip="Unknown: 22%" data-pair="Loop Seattle (LibCity) (GIFT-Eval)" data-reason="10 of 45 models have an Unknown level (not enough disclosed to tell)."><span>22%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.222" data-col="gift-eval--sz-taxi" data-tip="Unknown: 22%" data-pair="SZ-Taxi (LibCity) (GIFT-Eval)" data-reason="10 of 45 models have an Unknown level (not enough disclosed to tell)."><span>22%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.222" data-col="gift-eval--m-dense" data-tip="Unknown: 22%" data-pair="M_DENSE (LibCity) (GIFT-Eval)" data-reason="10 of 45 models have an Unknown level (not enough disclosed to tell)."><span>22%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.267" data-col="gift-eval--lstnet-solar" data-tip="Unknown: 27%" data-pair="Solar (LSTNet, 137 Alabama PV plants) (GIFT-Eval)" data-reason="12 of 45 models have an Unknown level (not enough disclosed to tell)."><span>27%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.222" data-col="gift-eval--hierarchical-sales" data-tip="Unknown: 22%" data-pair="Hierarchical Sales (Mancuso et al., 2020) (GIFT-Eval)" data-reason="10 of 45 models have an Unknown level (not enough disclosed to tell)."><span>22%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.178" data-col="gift-eval--m4-yearly" data-tip="Unknown: 18%" data-pair="M4 Yearly (GIFT-Eval)" data-reason="8 of 45 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.178" data-col="gift-eval--m4-quarterly" data-tip="Unknown: 18%" data-pair="M4 Quarterly (GIFT-Eval)" data-reason="8 of 45 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.156" data-col="gift-eval--m4-monthly" data-tip="Unknown: 16%" data-pair="M4 Monthly (GIFT-Eval)" data-reason="7 of 45 models have an Unknown level (not enough disclosed to tell)."><span>16%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.156" data-col="gift-eval--m4-weekly" data-tip="Unknown: 16%" data-pair="M4 Weekly (GIFT-Eval)" data-reason="7 of 45 models have an Unknown level (not enough disclosed to tell)."><span>16%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.156" data-col="gift-eval--m4-daily" data-tip="Unknown: 16%" data-pair="M4 Daily (GIFT-Eval)" data-reason="7 of 45 models have an Unknown level (not enough disclosed to tell)."><span>16%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.156" data-col="gift-eval--m4-hourly" data-tip="Unknown: 16%" data-pair="M4 Hourly (GIFT-Eval)" data-reason="7 of 45 models have an Unknown level (not enough disclosed to tell)."><span>16%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.200" data-col="gift-eval--hospital" data-tip="Unknown: 20%" data-pair="Hospital (GIFT-Eval)" data-reason="9 of 45 models have an Unknown level (not enough disclosed to tell)."><span>20%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.200" data-col="gift-eval--covid-deaths" data-tip="Unknown: 20%" data-pair="COVID Deaths (GIFT-Eval)" data-reason="9 of 45 models have an Unknown level (not enough disclosed to tell)."><span>20%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.156" data-col="gift-eval--us-births" data-tip="Unknown: 16%" data-pair="US Births (GIFT-Eval)" data-reason="7 of 45 models have an Unknown level (not enough disclosed to tell)."><span>16%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.156" data-col="gift-eval--saugeen-river-flow" data-tip="Unknown: 16%" data-pair="Saugeen River Flow (GIFT-Eval)" data-reason="7 of 45 models have an Unknown level (not enough disclosed to tell)."><span>16%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.178" data-col="gift-eval--temperature-rain" data-tip="Unknown: 18%" data-pair="Temperature Rain (GIFT-Eval)" data-reason="8 of 45 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.133" data-col="gift-eval--kdd-cup-2018" data-tip="Unknown: 13%" data-pair="KDD Cup 2018 (GIFT-Eval)" data-reason="6 of 45 models have an Unknown level (not enough disclosed to tell)."><span>13%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.200" data-col="gift-eval--car-parts" data-tip="Unknown: 20%" data-pair="Car Parts (GIFT-Eval)" data-reason="9 of 45 models have an Unknown level (not enough disclosed to tell)."><span>20%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.200" data-col="gift-eval--uci-electricity-load-diagrams" data-tip="Unknown: 20%" data-pair="ElectricityLoadDiagrams20112014 (UCI) (GIFT-Eval)" data-reason="9 of 45 models have an Unknown level (not enough disclosed to tell)."><span>20%</span></td>
+        <td class="stat vstat gs rate rate-unknown" style="--v: 0.333" data-col="long-horizon--etth1" data-tip="Unknown: 33%" data-pair="ETTh1 (Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI))" data-reason="15 of 45 models have an Unknown level (not enough disclosed to tell)."><span>33%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.333" data-col="long-horizon--etth2" data-tip="Unknown: 33%" data-pair="ETTh2 (Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI))" data-reason="15 of 45 models have an Unknown level (not enough disclosed to tell)."><span>33%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.333" data-col="long-horizon--ettm1" data-tip="Unknown: 33%" data-pair="ETTm1 (Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI))" data-reason="15 of 45 models have an Unknown level (not enough disclosed to tell)."><span>33%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.333" data-col="long-horizon--ettm2" data-tip="Unknown: 33%" data-pair="ETTm2 (Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI))" data-reason="15 of 45 models have an Unknown level (not enough disclosed to tell)."><span>33%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.289" data-col="long-horizon--electricity-321" data-tip="Unknown: 29%" data-pair="Electricity (ECL, 321 clients) (Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI))" data-reason="13 of 45 models have an Unknown level (not enough disclosed to tell)."><span>29%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.156" data-col="long-horizon--traffic-862" data-tip="Unknown: 16%" data-pair="Traffic (PeMS San Francisco Bay, 862 sensors) (Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI))" data-reason="7 of 45 models have an Unknown level (not enough disclosed to tell)."><span>16%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.356" data-col="long-horizon--weather-jena-2020" data-tip="Unknown: 36%" data-pair="Weather (Jena, 2020; Autoformer) (Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI))" data-reason="16 of 45 models have an Unknown level (not enough disclosed to tell)."><span>36%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.444" data-col="long-horizon--exchange-rate" data-tip="Unknown: 44%" data-pair="Exchange-Rate (Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI))" data-reason="20 of 45 models have an Unknown level (not enough disclosed to tell)."><span>44%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.178" data-col="long-horizon--ili" data-tip="Unknown: 18%" data-pair="ILI (CDC influenza-like illness, national) (Long-horizon forecasting (ETT, Electricity, Traffic, Weather, Exchange, ILI))" data-reason="8 of 45 models have an Unknown level (not enough disclosed to tell)."><span>18%</span></td>
+        <td class="stat vstat gs rate rate-unknown" style="--v: 0.489" data-col="ts-anomaly--tsb-ad-u" data-tip="Unknown: 49%" data-pair="TSB-AD-U (TSB-AD univariate) (Time-series anomaly detection)" data-reason="22 of 45 models have an Unknown level (not enough disclosed to tell)."><span>49%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.511" data-col="ts-anomaly--tsb-ad-m" data-tip="Unknown: 51%" data-pair="TSB-AD-M (TSB-AD multivariate) (Time-series anomaly detection)" data-reason="23 of 45 models have an Unknown level (not enough disclosed to tell)."><span>51%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.467" data-col="ts-anomaly--ucr-anomaly-archive" data-tip="Unknown: 47%" data-pair="UCR Time Series Anomaly Archive (Hexagon ML/UCR, KDD Cup 2021) (Time-series anomaly detection)" data-reason="21 of 45 models have an Unknown level (not enough disclosed to tell)."><span>47%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.467" data-col="ts-anomaly--smd" data-tip="Unknown: 47%" data-pair="Server Machine Dataset (SMD) (Time-series anomaly detection)" data-reason="21 of 45 models have an Unknown level (not enough disclosed to tell)."><span>47%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.467" data-col="ts-anomaly--msl" data-tip="Unknown: 47%" data-pair="Mars Science Laboratory (MSL) telemetry anomaly dataset (Time-series anomaly detection)" data-reason="21 of 45 models have an Unknown level (not enough disclosed to tell)."><span>47%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.467" data-col="ts-anomaly--smap" data-tip="Unknown: 47%" data-pair="Soil Moisture Active Passive (SMAP) telemetry anomaly dataset (Time-series anomaly detection)" data-reason="21 of 45 models have an Unknown level (not enough disclosed to tell)."><span>47%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.489" data-col="ts-anomaly--psm" data-tip="Unknown: 49%" data-pair="Pooled Server Metrics (PSM) (Time-series anomaly detection)" data-reason="22 of 45 models have an Unknown level (not enough disclosed to tell)."><span>49%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.489" data-col="ts-anomaly--swat" data-tip="Unknown: 49%" data-pair="Secure Water Treatment (SWaT) (Time-series anomaly detection)" data-reason="22 of 45 models have an Unknown level (not enough disclosed to tell)."><span>49%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.489" data-col="ts-anomaly--yahoo-s5" data-tip="Unknown: 49%" data-pair="Yahoo S5 Labeled Anomaly Detection Dataset (Yahoo Webscope S5) (Time-series anomaly detection)" data-reason="22 of 45 models have an Unknown level (not enough disclosed to tell)."><span>49%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.489" data-col="ts-anomaly--nab" data-tip="Unknown: 49%" data-pair="Numenta Anomaly Benchmark (NAB) (Time-series anomaly detection)" data-reason="22 of 45 models have an Unknown level (not enough disclosed to tell)."><span>49%</span></td>
+        <td class="stat vstat gs rate rate-unknown" style="--v: 0.422" data-col="ts-classification--ucr-archive" data-tip="Unknown: 42%" data-pair="UCR Time Series Classification Archive (2018) (Time-series classification)" data-reason="19 of 45 models have an Unknown level (not enough disclosed to tell)."><span>42%</span></td>
+        <td class="stat vstat rate rate-unknown" style="--v: 0.422" data-col="ts-classification--uea-archive" data-tip="Unknown: 42%" data-pair="UEA Multivariate Time Series Classification Archive (2018) (Time-series classification)" data-reason="19 of 45 models have an Unknown level (not enough disclosed to tell)."><span>42%</span></td>
+        <td class="stat stat-total ss rate rate-unknown" style="--v: 0.298" data-col="unknown" data-tip="Unknown, whole map: 30%" data-pair="All time series models and benchmark datasets" data-reason="658 of 2205 cells have an Unknown level (not enough disclosed to tell).">30%</td>
         <td class="stat"></td>
 <td class="stat stat-score"></td>      </tr>
       <tr>
@@ -2727,7 +2727,7 @@
     </tfoot>
   </table>
   </div>
-  <p class="muted small">Rows are models, grouped by family; columns are benchmark datasets. Hover a square for the reason, click it for the evidence. The last columns and rows summarise each model and dataset: <strong>Known</strong> is the share of squares whose level is known, <strong>Contaminated</strong> the share where test data was seen or possibly seen (a lower bound, since Unknown squares may be contaminated too); in Scores mode, <strong>Avg. rank</strong> averages each model's ranks, scaled from 0 (best) to 1 (worst). Empty outlines mark benchmarks a model cannot take (e.g. image benchmarks for text-only models).</p>
+  <p class="muted small">Rows are models, grouped by family; columns are benchmark datasets. Hover a square for the reason, click it for the evidence. The last columns and rows summarise each model and dataset: <strong>Unknown</strong> is the share of grey squares (not enough disclosed to tell), <strong>Contaminated</strong> the share where test data was seen or possibly seen (a lower bound, since Unknown squares may be contaminated too); in Scores mode, <strong>Avg. rank</strong> averages each model's ranks, scaled from 0 (best) to 1 (worst). Empty outlines mark benchmarks a model cannot take (e.g. image benchmarks for text-only models).</p>
 </section>
 
 <section>
@@ -2768,322 +2768,322 @@
   <h2>Models</h2>
   <div class="table-wrap">
   <table class="data">
-    <thead><tr><th>Model</th><th>Organisation</th><th>Released</th><th>Disclosure</th><th title="Share of benchmark cells whose level is not Unknown">Known</th></tr></thead>
+    <thead><tr><th>Model</th><th>Organisation</th><th>Released</th><th>Disclosure</th><th title="Share of benchmark cells whose level is Unknown">Unknown</th></tr></thead>
     <tbody>
       <tr>
         <td><a href="../contamination-map/models/chronos-t5.html">Chronos (T5)</a></td>
         <td>Amazon</td>
         <td class="num">2024-03-13</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/chronos-2.html">Chronos-2</a></td>
         <td>Amazon</td>
         <td class="num">2025-10-20</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/chronos-2-synth.html">Chronos-2-Synth</a></td>
         <td>Amazon</td>
         <td class="num">2025-11-24</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/chronos-bolt.html">Chronos-Bolt</a></td>
         <td>Amazon</td>
         <td class="num">2024-11-26</td>
         <td><span class="disc disc-partial_list">Partial list</span></td>
-        <td class="num">18%</td>
+        <td class="num">82%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/dada.html">DADA (General Time Series Anomaly Detector with Adaptive Bottlenecks and Dual Adversarial Decoders)</a></td>
         <td>East China Normal University / Aalborg University / Huawei Noah&#39;s Ark Lab</td>
         <td class="num">2024-05-24</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">24%</td>
+        <td class="num">76%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/tspulse-r1.html">TSPulse r1</a></td>
         <td>IBM Research</td>
         <td class="num">2025-06-03</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/lag-llama.html">Lag-Llama</a></td>
         <td>Lag-Llama authors (ServiceNow Research, Mila, Morgan Stanley et al.)</td>
         <td class="num">2023-10-12</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/mantis-8m.html">Mantis (Mantis-8M)</a></td>
         <td>Huawei Noah&#39;s Ark Lab (Paris)</td>
         <td class="num">2025-02-21</td>
         <td><span class="disc disc-partial_list">Partial list</span></td>
-        <td class="num">4%</td>
+        <td class="num">96%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/mantis-plus.html">Mantis+ (MantisPlus)</a></td>
         <td>Huawei Noah&#39;s Ark Lab (Paris)</td>
         <td class="num">2026-02-19</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/mantis-v2.html">MantisV2</a></td>
         <td>Huawei Noah&#39;s Ark Lab (Paris)</td>
         <td class="num">2026-02-19</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/moirai-1.0-r.html">Moirai-1.0-R</a></td>
         <td>Salesforce AI Research</td>
         <td class="num">2024-02-04</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/moirai-1.1-r.html">Moirai-1.1-R</a></td>
         <td>Salesforce AI Research</td>
         <td class="num">2024-06-14</td>
         <td><span class="disc disc-none">None</span></td>
-        <td class="num">0%</td>
+        <td class="num">100%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/moirai-2.0-r.html">Moirai-2.0-R</a></td>
         <td>Salesforce AI Research</td>
         <td class="num">2025-08-06</td>
         <td><span class="disc disc-partial_list">Partial list</span></td>
-        <td class="num">73%</td>
+        <td class="num">27%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/moirai-moe-1.0-r.html">Moirai-MoE-1.0-R</a></td>
         <td>Salesforce AI Research</td>
         <td class="num">2024-10-14</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/moment-1.html">MOMENT-1</a></td>
         <td>Auton Lab, Carnegie Mellon University</td>
         <td class="num">2024-02-06</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">75%</td>
+        <td class="num">24%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/nutime.html">NuTime</a></td>
         <td>Peking University / Microsoft</td>
         <td class="num">2024-11-12</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/time-moe.html">Time-MoE</a></td>
         <td>Xiaohongshu Inc., Princeton University, Squirrel Ai Learning, Griffith University</td>
         <td class="num">2024-09-24</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">57%</td>
+        <td class="num">43%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/time-rcd.html">Time-RCD (TimeRCD)</a></td>
         <td>Tsinghua University (thu-sail-lab)</td>
         <td class="num">2025-10-18</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/sundial.html">Sundial (Timer 3.0)</a></td>
         <td>Tsinghua University (THUML)</td>
         <td class="num">2025-02-02</td>
         <td><span class="disc disc-partial_list">Partial list</span></td>
-        <td class="num">73%</td>
+        <td class="num">27%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/timer.html">Timer</a></td>
         <td>Tsinghua University (THUML)</td>
         <td class="num">2024-02-04</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/timer-s1.html">Timer-S1</a></td>
         <td>Tsinghua University (THUML) &amp; ByteDance</td>
         <td class="num">2026-03-05</td>
         <td><span class="disc disc-partial_list">Partial list</span></td>
-        <td class="num">65%</td>
+        <td class="num">35%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/timer-xl.html">Timer-XL (timer-base-84m)</a></td>
         <td>Tsinghua University (THUML)</td>
         <td class="num">2024-10-07</td>
         <td><span class="disc disc-partial_list">Partial list</span></td>
-        <td class="num">57%</td>
+        <td class="num">43%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/timeradar.html">TimeRadar</a></td>
         <td>Singapore Management University (mala-lab)</td>
         <td class="num">2026-02-22</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">18%</td>
+        <td class="num">82%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/timesfm-1-0.html">TimesFM 1.0</a></td>
         <td>Google Research</td>
         <td class="num">2024-05-03</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">26%</td>
+        <td class="num">73%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/timesfm-2-0.html">TimesFM 2.0</a></td>
         <td>Google Research</td>
         <td class="num">2024-12-30</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">44%</td>
+        <td class="num">55%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/timesfm-2-5.html">TimesFM 2.5</a></td>
         <td>Google Research</td>
         <td class="num">2025-09-15</td>
         <td><span class="disc disc-partial_list">Partial list</span></td>
-        <td class="num">4%</td>
+        <td class="num">96%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/timesfm-3-0.html">TimesFM 3.0</a></td>
         <td>Google Research</td>
         <td class="num">2026-08-31</td>
         <td><span class="disc disc-partial_list">Partial list</span></td>
-        <td class="num">4%</td>
+        <td class="num">96%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/granite-ttm-r1.html">Granite-TimeSeries-TTM-R1</a></td>
         <td>IBM Research</td>
         <td class="num">2024-04-05</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/granite-ttm-r2.html">Granite-TimeSeries-TTM-R2</a></td>
         <td>IBM Research</td>
         <td class="num">2024-10-08</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/granite-ttm-r2-1.html">Granite-TimeSeries-TTM-R2.1</a></td>
         <td>IBM Research</td>
         <td class="num">2025-01-31</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/granite-ttm-r3.html">Granite-TTM-R3</a></td>
         <td>IBM Research</td>
         <td class="num">2026-05-21</td>
         <td><span class="disc disc-partial_list">Partial list</span></td>
-        <td class="num">61%</td>
+        <td class="num">39%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/ttm-research-r2.html">Tiny Time Mixer (TTM) Research-Use R2</a></td>
         <td>IBM Research</td>
         <td class="num">2024-10-03</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/ttm-r3.html">TTM-R3</a></td>
         <td>IBM Research</td>
         <td class="num">2026-02-09</td>
         <td><span class="disc disc-partial_list">Partial list</span></td>
-        <td class="num">73%</td>
+        <td class="num">27%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/tirex.html">TiRex</a></td>
         <td>NXAI</td>
         <td class="num">2025-05-29</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/tirex-1.1-gifteval.html">TiRex 1.1 (gifteval)</a></td>
         <td>NXAI</td>
         <td class="num">2025-10-06</td>
         <td><span class="disc disc-partial_list">Partial list</span></td>
-        <td class="num">61%</td>
+        <td class="num">39%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/tirex-2.html">TiRex-2</a></td>
         <td>NXAI</td>
         <td class="num">2026-07-01</td>
         <td><span class="disc disc-partial_list">Partial list</span></td>
-        <td class="num">0%</td>
+        <td class="num">100%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/tirex-2-fevbench.html">TiRex-2-fevbench (TiRex-2-f)</a></td>
         <td>NXAI</td>
         <td class="num">2026-07-01</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/tirex-2-gifteval-pretrain.html">TiRex-2-gifteval-pretrain (TiRex-2-gp)</a></td>
         <td>NXAI</td>
         <td class="num">2026-07-01</td>
         <td><span class="disc disc-partial_list">Partial list</span></td>
-        <td class="num">61%</td>
+        <td class="num">39%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/tirex-2-gifteval-zs.html">TiRex-2-gifteval-zs (TiRex-2-g)</a></td>
         <td>NXAI</td>
         <td class="num">2026-07-01</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/toto-2024.html">Toto (2024 technical report)</a></td>
         <td>Datadog</td>
         <td class="num">2024-07-10</td>
         <td><span class="disc disc-partial_list">Partial list</span></td>
-        <td class="num">40%</td>
+        <td class="num">59%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/toto-2.0.html">Toto 2.0</a></td>
         <td>Datadog</td>
         <td class="num">2026-05-19</td>
         <td><span class="disc disc-vague">Vague</span></td>
-        <td class="num">75%</td>
+        <td class="num">24%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/toto-2.0-2.5b-ft.html">Toto-2.0-2.5B-FT</a></td>
         <td>Datadog</td>
         <td class="num">2026-05-19</td>
         <td><span class="disc disc-partial_list">Partial list</span></td>
-        <td class="num">73%</td>
+        <td class="num">27%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/toto-1.0.html">Toto-Open-Base-1.0</a></td>
         <td>Datadog</td>
         <td class="num">2025-05-20</td>
         <td><span class="disc disc-partial_list">Partial list</span></td>
-        <td class="num">63%</td>
+        <td class="num">37%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/units.html">UniTS</a></td>
         <td>Harvard University (MIMS lab)</td>
         <td class="num">2024-02-29</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
       <tr>
         <td><a href="../contamination-map/models/units-few-shot-anomaly-detection.html">UniTS few-shot anomaly detection checkpoints</a></td>
         <td>Harvard University (MIMS lab)</td>
         <td class="num">2024-02-29</td>
         <td><span class="disc disc-full_list">Full list</span></td>
-        <td class="num">100%</td>
+        <td class="num">0%</td>
       </tr>
     </tbody>
   </table>
