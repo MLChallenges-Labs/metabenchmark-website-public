@@ -756,7 +756,13 @@ h3, .h3 {
    Milestones — timeline
    ========================================================= */
 
+/* The track is filled up to the current milestone: set --step (1-based) and --steps on
+   .timeline in the template. Horizontally, item k's marker is centred at (2k - 1) / 2n of the
+   width; vertically (narrow screens), the track runs from the first marker to the last. */
 .timeline {
+  --step: 3;
+  --steps: 5;
+  --fill-at: calc((2 * var(--step) - 1) / (2 * var(--steps)) * 100%);
   position: relative;
   padding-top: var(--space-2);
 }
@@ -770,8 +776,8 @@ h3, .h3 {
   background: linear-gradient(
     to right,
     var(--blue-900) 0%,
-    var(--blue-900) 50%,
-    var(--gray-200) 50%,
+    var(--blue-900) var(--fill-at),
+    var(--gray-200) var(--fill-at),
     var(--gray-200) 100%
   );
 }
@@ -866,8 +872,8 @@ h3, .h3 {
   background: linear-gradient(
     to right,
     var(--blue-400) 0%,
-    var(--blue-400) 50%,
-    var(--navy-700) 50%,
+    var(--blue-400) var(--fill-at),
+    var(--navy-700) var(--fill-at),
     var(--navy-700) 100%
   );
 }
@@ -904,6 +910,7 @@ h3, .h3 {
 
 @media (max-width: 900px) {
   .timeline {
+    --fill-at: calc((var(--step) - 1) / (var(--steps) - 1) * 100%);
     padding-bottom: var(--space-2);
   }
   .timeline__track {
@@ -916,8 +923,8 @@ h3, .h3 {
     background: linear-gradient(
       to bottom,
       var(--blue-900) 0%,
-      var(--blue-900) 50%,
-      var(--gray-200) 50%,
+      var(--blue-900) var(--fill-at),
+      var(--gray-200) var(--fill-at),
       var(--gray-200) 100%
     );
   }
@@ -925,8 +932,8 @@ h3, .h3 {
     background: linear-gradient(
       to bottom,
       var(--blue-400) 0%,
-      var(--blue-400) 50%,
-      var(--navy-700) 50%,
+      var(--blue-400) var(--fill-at),
+      var(--navy-700) var(--fill-at),
       var(--navy-700) 100%
     );
   }
