@@ -58,88 +58,127 @@
     </div>
   </section>
 
-  <!-- 2. The Problem -->
-  <section id="problem" class="section section--warm">
+  <!-- 2. Problem -> solution -->
+  <section id="problem" class="section section--light">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow">The Problem</p>
+        <p class="eyebrow">Why MetaBenchmark</p>
         <h2 class="h3">Today's platforms aren't built for high-stakes AI</h2>
-        <p class="body-lead">Existing benchmarking platforms like Kaggle, CodaLab, and Codabench have done a lot to bring people together around AI challenges, but they still fall short on the basics that matter most in high-stakes settings: statistical rigor, data privacy, and whether the winning solution actually works in production.</p>
+        <p class="body-lead">Kaggle, CodaLab and Codabench brought people together around AI challenges.
+          High-stakes settings need more: statistical rigor, data privacy, and evidence that the
+          winner works in production. MetaBenchmark is built from scratch around these three needs.</p>
       </div>
 
-      <ul class="pillar-list">
-        <li class="pillar">
-          <span class="pillar__index">01</span>
-          <div>
+      <div class="ps-cols" aria-hidden="true">
+        <span class="ps-cols__problem">The problem</span>
+        <span class="ps-cols__solution">MetaBenchmark's answer</span>
+      </div>
+      <ol class="ps-list" id="solution">
+        <li class="ps-row">
+          <div class="ps-card ps-card--problem">
+            <span class="ps-card__index">01</span>
             <h3>Methodological fragility</h3>
-            <p>Most leaderboards prioritize raw performance scores over statistical
-              significance. Without confidence intervals or control over the baseline, marginal
-              gains become indistinguishable from noise — and nothing stops repeated submissions
-              from exhausting the test set.</p>
+            <p>Leaderboards rank raw scores without confidence intervals or baselines: marginal
+              gains look like progress, and repeated submissions overfit the test set.</p>
+          </div>
+          <span class="ps-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15m-5-5 5 5-5 5"/></svg></span>
+          <div class="ps-card ps-card--solution">
+            <h3>Rigorous methodology</h3>
+            <p>Benchmarking as a statistical experiment: principled ranking functions, hidden
+              test sets, baseline comparisons and bootstrap confidence intervals.</p>
           </div>
         </li>
-        <li class="pillar">
-          <span class="pillar__index">02</span>
-          <div>
-            <h3>Constraints on sensitive data</h3>
-            <p>Current benchmarking platforms typically require data to be hosted on a central
-              server. This excludes sectors governed by strict privacy rules — healthcare,
-              finance, defense — since they can't risk exposing sensitive datasets.</p>
+        <li class="ps-row">
+          <div class="ps-card ps-card--problem">
+            <span class="ps-card__index">02</span>
+            <h3>Sensitive data can't be shared</h3>
+            <p>Platforms require data on a central server, which shuts out healthcare, finance
+              and defense.</p>
+          </div>
+          <span class="ps-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15m-5-5 5 5-5 5"/></svg></span>
+          <div class="ps-card ps-card--solution">
+            <h3>Data stays with its owner</h3>
+            <p>Containerized submissions run on the organizer's own servers: the raw data never
+              leaves their infrastructure.</p>
           </div>
         </li>
-        <li class="pillar">
-          <span class="pillar__index">03</span>
-          <div>
+        <li class="ps-row">
+          <div class="ps-card ps-card--problem">
+            <span class="ps-card__index">03</span>
             <h3>Narrow evaluation metrics</h3>
-            <p>There's a disconnect between leaderboard performance and production readiness.
-              Platforms focus almost exclusively on accuracy, F1-score, or RMSE, ignoring
-              computational efficiency, inference latency, and energy consumption.</p>
+            <p>Accuracy, F1 or RMSE alone ignore compute cost, latency and energy, so the winner
+              may not be fit for production.</p>
+          </div>
+          <span class="ps-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15m-5-5 5 5-5 5"/></svg></span>
+          <div class="ps-card ps-card--solution">
+            <h3>Production-aware evaluation</h3>
+            <p>Every submission is profiled for inference latency, peak memory and estimated
+              carbon footprint, alongside its accuracy.</p>
           </div>
         </li>
-      </ul>
+      </ol>
     </div>
   </section>
 
-  <!-- 3. The Solution -->
-  <section id="solution" class="section section--cool">
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">The Solution</p>
-        <h2 class="h3">MetaBenchmark: a rigorous, sovereign, production-aware framework</h2>
-        <p class="body-lead">MetaBenchmark is designed and built from scratch, not bolted onto an existing tool, so that methodological rigor and strong data protection are part of the platform's foundation rather than an afterthought.</p>
+  <!-- 3. Illustrative leaderboard (logic: static/leaderboard.js) -->
+  <section id="leaderboard" class="section section--tint">
+    <div class="container lbx">
+      <div class="lbx__text">
+        <p class="eyebrow">Prototype</p>
+        <h2 class="h3">A leaderboard is a statistical experiment</h2>
+        <p class="body-lead">This illustrative leaderboard prototypes the ideas behind MetaBenchmark's
+          results pages. Choose the criteria that matter to you: the ranking reorders itself, and
+          its uncertainty changes too.</p>
+        <ul class="lbx__points">
+          <li><strong>Error bars and ties.</strong> Every score carries a 95% bootstrap interval;
+            methods that can't be told apart from #1 share its highlight.</li>
+          <li><strong>Ranks that respect ties.</strong> On each criterion, a method's rank is 1 + the
+            number of methods significantly better than it, so tied methods share a rank. When score
+            and rank disagree, the choice of aggregation is what decides.</li>
+          <li><strong>A baseline for reference.</strong> The dashed line marks a plain logistic
+            regression.</li>
+          <li><strong>Costs count.</strong> Latency and energy are measured on the same hardware
+            for every submission. Add <em>Energy</em> and watch the fine-tuned LLM drop.</li>
+        </ul>
       </div>
 
-      <ul class="pillar-list">
-        <li class="pillar">
-          <span class="pillar__index">01</span>
-          <div>
-            <h3>Rigorous methodology</h3>
-            <p>MetaBenchmark treats benchmarking as a statistical experiment rather than a static list
-              of scores: principled ranking functions, hidden evaluation sets to avoid
-              overfitting, baseline comparisons, and uncertainty quantification through
-              bootstrap resampling.</p>
-          </div>
-        </li>
-        <li class="pillar">
-          <span class="pillar__index">02</span>
-          <div>
-            <h3>Handling sensitive data</h3>
-            <p>Data is stored in a decentralized way with restricted access to compute. By
-              leveraging containerized environments, organizers can evaluate third-party models
-              on local, private servers without the sensitive raw data ever leaving the host's
-              infrastructure.</p>
-          </div>
-        </li>
-        <li class="pillar">
-          <span class="pillar__index">03</span>
-          <div>
-            <h3>Evaluating real-world applicability</h3>
-            <p>MetaBenchmark expands the definition of performance to include the hidden costs of AI.
-              Every submission is profiled across inference latency, peak memory usage, and
-              estimated carbon footprint — not just accuracy on paper.</p>
-          </div>
-        </li>
-      </ul>
+      <figure class="lbx__card" data-leaderboard>
+        <figcaption class="lbx__head">
+          <span class="lbx__title">Example task: tabular binary classification</span>
+          <span class="lbx__badge">Fictional data</span>
+        </figcaption>
+        <p class="lbx__prov">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/></svg>
+          <span><strong>Private test set:</strong> the data never left the organizer's servers.
+            <a href="#architecture">How?</a></span>
+        </p>
+        <div class="crit" role="group" aria-label="Evaluation criteria">
+          <button type="button" class="chip" data-k="acc" aria-pressed="true" title="Accuracy on the hidden test set (counts double)">Accuracy<span class="chip__w" aria-label="weight 2">×2</span></button>
+          <button type="button" class="chip" data-k="speed" aria-pressed="false" title="Inference latency per prediction">Speed</button>
+          <button type="button" class="chip" data-k="energy" aria-pressed="false" title="Energy per 1,000 predictions">
+            Energy<svg class="chip__leaf" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.6 2.4C8 2 3.4 4.6 3.1 9.4c-.1 1.3.3 2.5 1 3.4C5.6 9.9 8 7.7 10.6 6.4 8.4 8 6.4 10.3 5.1 13.6c.9.4 1.9.6 2.9.5 4.7-.4 6.2-6.3 5.6-11.7Z"/></svg>
+          </button>
+          <button type="button" class="chip" data-k="rob" aria-pressed="false" title="Accuracy under distribution shift">Robustness</button>
+          <button type="button" class="chip" data-k="fair" aria-pressed="false" title="Worst-group accuracy across demographic groups">Fairness</button>
+        </div>
+        <div class="lb-legend">
+          <span class="lb-legend__item"><span class="sw sw--tie"></span>#1 and statistical ties</span>
+          <span class="lb-legend__item"><span class="sw sw--base"></span>Baseline</span>
+        </div>
+        <div class="lb-cols" aria-hidden="true">
+          <span class="lb-cols__ax">Combined score<span class="lb-cols__more"> ± 95% interval</span></span>
+          <span class="lb-cols__v">Score</span>
+          <span class="lb-cols__ar" title="Average rank across the selected criteria; methods statistically tied on a criterion share its rank">Avg. rank</span>
+        </div>
+        <div class="lb" aria-hidden="true"></div>
+        <div class="lb-axis" aria-hidden="true"></div>
+        <div class="lb-tip" hidden></div>
+        <p class="sr-only lb-live" aria-live="polite"></p>
+        <p class="lbx__note">Illustrative prototype, not real benchmark results. Combined score:
+          weighted mean of the selected criteria on a 0–100 scale, accuracy counting double (latency
+          and energy on a log scale, −5 points per tenfold increase). Average rank uses the same
+          weights. Intervals and significance tests come from 1,000 bootstrap draws.</p>
+      </figure>
     </div>
   </section>
 
@@ -666,5 +705,6 @@
       <span>Made in France 🇫🇷</span>
     </div>
   </footer>
-<script src="static/script.js"></script></body>
+<script src="static/script.js"></script>
+<script src="static/leaderboard.js"></script></body>
 </html>
